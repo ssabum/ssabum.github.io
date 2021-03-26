@@ -7,14 +7,396 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Fri, 26 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>OOP</title>
+        <link>https://ssabum.github.io/p/oop/</link>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/oop/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/oop/oop.jpg" alt="Featured image of post OOP" /&gt;&lt;p&gt;&lt;code&gt;Object-Oriented Programming&lt;/code&gt;의 약자로 &lt;code&gt;객체지향프로그래밍&lt;/code&gt;이다.&lt;/p&gt;
+&lt;h2 id=&#34;쉽게-말해&#34;&gt;쉽게 말해&lt;/h2&gt;
+&lt;p&gt;주어 동사 형태로 프로그래밍하는 것!&lt;/p&gt;
+&lt;h2 id=&#34;1-절차-지향-프로그래밍&#34;&gt;1. 절차 지향 프로그래밍&lt;/h2&gt;
+&lt;p&gt;물이 위에서 아래로 흐르듯 순차적인 처리가 중요합니다. 프로그램 전체가 유기적으로 연결되도록 만드는 프로그래밍 기법입니다.&lt;/p&gt;
+&lt;h2 id=&#34;2-객체-지향-프로그래밍&#34;&gt;2. 객체 지향 프로그래밍&lt;/h2&gt;
+&lt;p&gt;실제 세계를 모델링해 소프트웨어를 개발하는 방법입니다. 객체지향 프로그래밍에서는 데이터와 절차를 하나의 덩어리로 묶어서 생각합니다. 마치 컴퓨터 부품을 하나씩 구매해 컴퓨터를 조립하는 것과 같은 방식입니다.&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 170; flex-basis: 408px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/oop/oop.PNG&#34; data-size=&#34;712x418&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/oop/oop.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/oop/oop_huf06d5544e5069df405ac6709e4a0fe14_327198_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/oop/oop_huf06d5544e5069df405ac6709e4a0fe14_327198_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;712&#34;
+				height=&#34;418&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
         <title>SQLD</title>
         <link>https://ssabum.github.io/p/sqld/</link>
         <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
         
         <guid>https://ssabum.github.io/p/sqld/</guid>
-        <description>&lt;img src="https://ssabum.github.io/p/sqld/pmain.jpg" alt="Featured image of post SQLD" /&gt;&lt;p&gt;SQLD란 무엇일까?&lt;/p&gt;
+        <description>&lt;img src="https://ssabum.github.io/p/sqld/sql.png" alt="Featured image of post SQLD" /&gt;&lt;p&gt;SQLD란 무엇일까?&lt;/p&gt;
 &lt;p&gt;한국데이터산업진흥원에서 주관하는 시험으로, Structured  Query Language Developer의 줄임말로 데이터베이스 SQL국가공인 자격증이다😎&lt;/p&gt;
 &lt;p&gt;저번주 올해 첫 시험인 03.20(토) 시험을 접수했고 앞으로 3주 가량 남은 상황, 오늘부터 SQLD 공부를 시작한다!!&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>기술블로그 소개</title>
+        <link>https://ssabum.github.io/p/%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%86%8C%EA%B0%9C/</link>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%86%8C%EA%B0%9C/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%86%8C%EA%B0%9C/tech.jpg" alt="Featured image of post 기술블로그 소개" /&gt;&lt;h2 id=&#34;국내-it기업-기술-블로그&#34;&gt;국내 IT기업 기술 블로그&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://d2.naver.com/home&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Naver D2&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 국내 최대 포털사이트 네이버의 기술블로그 Naver D2입니다. NAVER 개발자들이 직접 정리한 실전 개발 경험과 지식, 주요 개발자 행사 소식과 후기를 업로드합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://tech.kakao.com/blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;kakao Tech&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 카카오의 기술 블로그로, 카카오 서비스를 만드는 개발자들의 실제 개발 사례를 중심으로 기술과 노하우를 전달합니다. 이벤트와 오픈소스, 채용 정보도 확인할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://medium.com/coupang-tech/technote/home&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;쿠팡 기술블로그&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 국내 온라인 쇼핑 사이트 쿠팡의 기술블로그입니다. 쿠팡 글로벌 개발팀이 쿠팡을 만들고 진화시키면서 배운 점과 얻은 교훈을 비롯해 다양한 테크 관련 이야기를 전달합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://medium.com/watcha&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;WATCHA 팀 블로그&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 국내 OTT 서비스의 대표 주자 왓챠의 팀 블로그입니다. 개발, 테크, 기술이 가장 메인 주제입니다. 종종 왓챠팀의 문화, 브랜딩 소식을 올리기도 합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://medium.com/daangn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;당근마켓 기술 블로그&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 2020년 6월 누적 2천만 다운로드, 월 순 방문자수 800만 명을 돌파한 중고거래 앱 서비스 당근마켓의 팀 블로그입니다. 개발, 테크 관련 콘텐츠가 주를 이룹니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://woowabros.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;우아한형제들 기술 블로그&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 국내 대표 푸드 테크 서비스 배달의민족을 운영하는 우아한형제들의 기술 블로그입니다. 우아한 형제들의 대표적 개발자 양성 프로그램인 우아한 테크코스의 후기 포스팅이 올라오기도 합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://engineering.linecorp.com/ko/blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;LINE Engineering&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 글로벌 메신저 서비스 LINE이 운영하는 기술 블로그입니다. 블로그 포스팅과 더불어 오픈소스와 채용정보도 확인하실 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://helloworld.kurly.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;마켓컬리 Tech Blog&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 코로나19 사태로 인해 최근 가장 주목 받는 기업 중 하나가 된 푸드 테크 기업 마켓컬리의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;9)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://blog.banksalad.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;뱅크샐러드 기술 블로그&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 금융플랫폼 서비스 뱅크샐러드의 공식 블로그입니다. 기술, 개발, 테크 관련 콘텐츠가 주를 이루고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;10)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://meetup.toast.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;NHN 기술블로그 TOAST Meetup!&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 종합 IT 기업 NHN의 기술 블로그입니다. 블로그 메인화면에서 기술을 공유하고 함께 성장해가는 개발 문화를 추구한다고 밝히고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;11)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://blog.gangnamunni.com/blog/tech/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;강남언니 공식 블로그&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 미용 의료 분야의 Tech 기업 강남언니의 공식 블로그입니다. 기술, 테크 주제의 콘텐츠와 함께 브랜드, 조직문화에 대해서도 공유합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://medium.com/deliverytechkorea&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Delivery Tech Korea&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 푸드 테크 기업 딜리버리코리아의 기술 블로그입니다. 요기요&amp;amp;배달통 서비스 개발 및 협업 방식과 문화에 대한 포스팅을 업로드합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;13)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://hyperconnect.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;HYPER CONNECT 기술 블로그&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 실시간 영상채팅 서비스 아자르(Azar)를 제작한 비디오 및 인공지능 기술 기반의 영상 기술 기업 하이퍼커넥트의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;14)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://spoqa.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Spoqa 기술 블로그&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 매장 마케팅 솔루션 도도 포인트를 서비스하는 스포카의 기술 블로그입니다. 블로그 소개에서 건강한 오픈소스 커뮤니티 형성을 위해 배우고 개선한 것들을 오픈소스로 공개한다고 말합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;15)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://tech.socarcorp.kr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;쏘카 기술블로그&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 그린카와 더불어 국내 대표 카셰어링 서비스 쏘카의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;16)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.ridicorp.com/blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;리디 Tech blog&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 리디북스를 비롯해, 리디셀렉트, 리디페이퍼, 아웃스탠딩 등의 콘텐츠 플랫폼 서비스를 제공하는 리디코퍼레이션의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;17)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://blog.est.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;이스트소프트 AI PLUS TECH&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 알집, 알약으로 익숙한 이스트소프트의 기술 블로그입니다. 주로 AI 주제의 콘텐츠를 포스팅합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;18)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://medium.com/platfarm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;플랫팜 팀 블로그&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 이모티콘 콘텐츠 플랫폼이자 메신저 기업을 대상으로 하는 B2B 솔루션 Mojitok을 서비스하는 플랫팜의 팀 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;19)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://tech.lezhin.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;레진 기술 블로그&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 웹툰 서비스인 레진코믹스를 제작하는 레진엔터테인먼트가 운영하는 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;20)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://snack.planetarium.dev/kor/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;플라네타리움 엔지니어링 스낵&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 게임에 특화된 오픈 소스 P2P 라이브러리 Libplanet과, 중앙 서버 없는 온라인 게임 나인 크로니클을 제작하는 테크 기업, 플라네타리움의 기술 블로그입니다.&lt;/p&gt;
+&lt;h2 id=&#34;국내-기술-콘텐츠-플랫폼&#34;&gt;국내 기술 콘텐츠 플랫폼&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://velog.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Velog&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 개인 기술 블로그와 최신 콘텐츠를 찾을 수 있는, 기술 블로그 콘텐츠 큐레이션 플랫폼입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://news.hada.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;GeekNews&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 개발, 기술, IT 소식, 스타트업 등을 전하는 뉴스 큐레이션 플랫폼입니다. 해외 기술 동향과 관련된 소식을 확인하실 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://blog.gaerae.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;개발자스럽다&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 개발자를 위한 주요 소식과 뉴스레터를 공유하는 사이트입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.44bits.io/ko&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;44BITS&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 당근마켓 개발자를 비롯해, 총 5명의 개발자가 프로그래밍과 클라우드를 주요 주제로 운영하는 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://programmers.co.kr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;프로그래머스&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 기술 중심 개발자 채용 플랫폼입니다. 기술 블로그는 아니지만 개발, IT 직군의 주요 채용 공고를 확인하실 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;해외-it-기업-기술-블로그&#34;&gt;해외 IT 기업 기술 블로그&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://engineering.fb.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Facebook Engineering&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 세계 최대 소셜 미디어 페이스북의 기술 블로그입니다. 인스타그램도 검색하면 기술 블로그는 나오지만 2019년 이후로 업데이트가 되지 않고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://developer.amazon.com/en-US/blogs/alexa&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Amazon Alexa&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 세계 최대 이커머스 플랫폼 아마존의 기술 블로그입니다. Alexa는 아마존이 개발한 인공지능 플랫폼의 이름입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Apple Developer&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 앱스토어 내 앱 제작 등 애플 관련 서비스를 사용해야 하는 개발자들을 위해 만들어진 애플의 기술 블로그입니다. 애플 관련 주요 소식을 전달하는 뉴스룸에 더 가깝습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://netflixtechblog.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;THE NETFLIX TECH BLOG&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 세계적인 동영상 스트리밍 서비스 기업 넷플릭스의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://developers.googleblog.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Google Devlopers&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 세계 최대 테크 기업 구글의 기술 블로그입니다. 구글과 관련한 기술, 뉴스, 업데이트 내용을 주로 다룹니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://techcommunity.microsoft.com/t5/custom/page/page-id/Blogs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Microsoft Tech Community&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 세계 최대 소프트웨어 기업 마이크로소프트도 기술 블로그를 운영하고 있습니다. 개발자들끼리 궁금한 점을 묻고 답할 수 있는 테크 커뮤니티도 잘 형성되어 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://engineering.linkedin.com/blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Linkedin Engineering&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 채용 중심의 소셜 미디어 링크드인의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://slack.engineering/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Slack Engineering&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 세계 대 협업 메신저인 슬랙의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;9)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://engineering.atspotify.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Spotify Engineering&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 머지 않은 미래에 한국 출시가 예상되는, 음원 스트리밍 플랫폼 스포티파이의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;10)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://medium.com/paypal-engineering&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;PayPal Engineering Blog&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 미국의 간편 결제 서비스 페이팔의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;11)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://tech.ebayinc.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;ebay Tech Blog&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 국내에서는 G마켓, 옥션, G9를 서비스 중인 세계적인 오픈마켓 이베이의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://blog.twitter.com/engineering/en_us.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Twitter Engineering&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 페이스북과 더불어 대표적 소셜 미디어 중 하나인 트위터의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;13)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://technology.riotgames.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;RIOT GAMES TECHBLOG&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 롤이라는 이름으로 널리 알려진 인기 게임, 리그 오브 레전드를 서비스하는 라이엇 게임즈의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;14)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.figma.com/blog/section/engineering/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Figma Blog Engineering&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 스케치의 뒤를 이어 최근 많은 주목을 받고 있는 웹/앱 디자인 협업툴 피그마의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;15)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://medium.com/airbnb-engineering&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Airbnb Engineering &amp;amp; Data Science&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 숙박 공유 플랫폼 에어비앤비의 기술 블로그입니다. 블로그 이름에서 알 수 있든 데이터 사이언스 관련 포스팅이 많습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;16)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://medium.com/zoom-developer-blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Zoom Developer Blog&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 코로나19 사태의 수혜를 받은 대표적 기업, 화상회의 플랫폼 줌의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;17)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://medium.com/@Pinterest_Engineering&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Pinterest Engineering&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 디자이너와 그림에 관심 있는 분들의 필수 사이트, 핀터레스트의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;18)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://eng.uber.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Uber Engineering&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 차량 공유 서비스 (Rider Sharing) 우버의 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;19)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://medium.com/googleplaydev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Google Play Apps &amp;amp; Games&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 구글 플레이 관련 기술적 팁, 트렌드, 지식을 제공하는 구글 플레이 기술 블로그입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;20)&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://dropbox.tech/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Drpbox Tech&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;· 웹 기반 파일 공유 서비스 드롭박스의 기술 블로그입니다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>알고리즘 기초이론</title>
+        <link>https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/</link>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/algorithm.png" alt="Featured image of post 알고리즘 기초이론" /&gt;&lt;p&gt;Algorithm기본 이론에 대해 알아보자&lt;/p&gt;
+&lt;h2 id=&#34;big-oh-notation&#34;&gt;Big-Oh Notation&lt;/h2&gt;
+&lt;p&gt;시간 복잡도 함수 중에서 가장 큰 영향력을 주는 n에 대한 항만을 표시&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 194; flex-basis: 466px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84.PNG&#34; data-size=&#34;744x383&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84_hua9bd9d58cc6ee3e5a99adde20f6be420_88853_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84_hua9bd9d58cc6ee3e5a99adde20f6be420_88853_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;744&#34;
+				height=&#34;383&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;배열&#34;&gt;배열&lt;/h2&gt;
+&lt;p&gt;일정한 자료형의 변수들을 하나의 이름으로 열거하여 사요하는 자료구조&lt;/p&gt;
+&lt;h2 id=&#34;완전검색brute-force&#34;&gt;완전검색(Brute-force)&lt;/h2&gt;
+&lt;p&gt;완전 검색 방법은 문제의 해법으로 생각할 수 있는 모든 경우의 수를 나열해보고 확인하는 기법&lt;/p&gt;
+&lt;h2 id=&#34;정렬-알고리즘&#34;&gt;정렬 알고리즘&lt;/h2&gt;
+&lt;p&gt;학습한 정렬 알고리즘의 특성&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 194; flex-basis: 466px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/sort.PNG&#34; data-size=&#34;751x386&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/sort.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/sort_hu36adc3d1da0e40d24c808d2d69069fa8_91559_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/sort_hu36adc3d1da0e40d24c808d2d69069fa8_91559_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;751&#34;
+				height=&#34;386&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;너비우선탐색bfs--큐queue&#34;&gt;너비우선탐색(BFS) 👉 큐(queue)&lt;/h2&gt;
+&lt;p&gt;매 단계에서 가능한 경우의 수들을 모두 확인하면서 탐색, 트리를 넓히면서 탐색하는 알고리즘&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 74; flex-basis: 178px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS.PNG&#34; data-size=&#34;340x457&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS_hucfe361b2ebebf3807c1838b1023ba040_40862_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS_hucfe361b2ebebf3807c1838b1023ba040_40862_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;340&#34;
+				height=&#34;457&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;깊이우선탐색dfs--스택stack&#34;&gt;깊이우선탐색(DFS) 👉 스택(stack)&lt;/h2&gt;
+&lt;p&gt;여러 경우의 수 중 하나를 선택, 선택 후 가능한 여러 경우의 수 중 하나를 선택&lt;/p&gt;
+&lt;p&gt;매 단계에서 가능한 것 중 일단 하나를 선택해 끝을 볼 때까지 확인&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 140; flex-basis: 337px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS.PNG&#34; data-size=&#34;591x420&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS_hu7a8641cf791136f45bb26948a1926c82_50537_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS_hu7a8641cf791136f45bb26948a1926c82_50537_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;591&#34;
+				height=&#34;420&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;스택stack&#34;&gt;스택(Stack)&lt;/h2&gt;
+&lt;p&gt;자료를 차곡차곡 쌓는 것&lt;/p&gt;
+&lt;p&gt;Last In First Out 👉 후입선출&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 82; flex-basis: 198px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/stack.PNG&#34; data-size=&#34;262x316&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/stack.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/stack_hu70112c4b6e22f0ac62cd7c5b83b21b15_21798_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/stack_hu70112c4b6e22f0ac62cd7c5b83b21b15_21798_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;262&#34;
+				height=&#34;316&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;큐queue&#34;&gt;큐(Queue)&lt;/h2&gt;
+&lt;p&gt;줄을 서서 기다리는 것&lt;/p&gt;
+&lt;p&gt;First In First Out  👉 선입선출&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 239; flex-basis: 573px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/que.PNG&#34; data-size=&#34;440x184&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/que.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/que_hu8057b371c97227bb5708afff91523267_20600_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/que_hu8057b371c97227bb5708afff91523267_20600_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;440&#34;
+				height=&#34;184&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;구현-순차&#34;&gt;구현 순차&lt;/h2&gt;
+&lt;h3 id=&#34;dfs---깊이우선탐색&#34;&gt;DFS - 깊이우선탐색&lt;/h3&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 106; flex-basis: 256px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS%EA%B5%AC%ED%98%84.PNG&#34; data-size=&#34;481x450&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS%EA%B5%AC%ED%98%84.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS%EA%B5%AC%ED%98%84_hu4c4f935e131bae62a2a41d448dbac421_83721_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS%EA%B5%AC%ED%98%84_hu4c4f935e131bae62a2a41d448dbac421_83721_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;481&#34;
+				height=&#34;450&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 359; flex-basis: 862px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS%EA%B5%AC%ED%98%842.PNG&#34; data-size=&#34;1013x282&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS%EA%B5%AC%ED%98%842.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS%EA%B5%AC%ED%98%842_hu2b5821004fca053ae20babef34a1ad83_234219_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/DFS%EA%B5%AC%ED%98%842_hu2b5821004fca053ae20babef34a1ad83_234219_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;1013&#34;
+				height=&#34;282&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;루트 노드 (시작점) 인 &lt;code&gt;A&lt;/code&gt; 를 스택에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;A&lt;/code&gt; 를 &lt;code&gt;Pop&lt;/code&gt; 하면서 &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, &lt;code&gt;A&lt;/code&gt; 는 지우고 &lt;code&gt;A&lt;/code&gt; 의 자식인 &lt;code&gt;B&lt;/code&gt;, &lt;code&gt;C&lt;/code&gt;, &lt;code&gt;D&lt;/code&gt; 를 스택에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스택의 맨 위에 있는 &lt;code&gt;B&lt;/code&gt; 를 &lt;code&gt;Pop&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, &lt;code&gt;B&lt;/code&gt; 는 지우고 &lt;code&gt;B&lt;/code&gt; 의 자식인 &lt;code&gt;E&lt;/code&gt; 를 스택에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스택의 맨 위에 있는 &lt;code&gt;E&lt;/code&gt; 를 &lt;code&gt;Pop&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, &lt;code&gt;E&lt;/code&gt; 는 지우고 &lt;code&gt;E&lt;/code&gt; 의 자식인 &lt;code&gt;I&lt;/code&gt;, &lt;code&gt;J&lt;/code&gt; 를 스택에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스택의 맨 위에 있는 &lt;code&gt;I&lt;/code&gt; 를 &lt;code&gt;Pop&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 이 때, &lt;code&gt;I&lt;/code&gt; 는 자식이 없으므로 (끝에 도달했으므로) 스택에 넣을 것이 없습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스택의 맨 위에 있는 &lt;code&gt;J&lt;/code&gt; 를 &lt;code&gt;Pop&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 이 때, &lt;code&gt;J&lt;/code&gt; 또한 자식이 없으므로 스택에 넣을 것이 없습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스택의 맨 위에 있는 &lt;code&gt;C&lt;/code&gt; 를 &lt;code&gt;Pop&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, &lt;code&gt;C&lt;/code&gt; 는 지우고 &lt;code&gt;C&lt;/code&gt; 의 자식인 &lt;code&gt;F&lt;/code&gt; 를 스택에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스택의 맨 위에 있는 &lt;code&gt;F&lt;/code&gt; 를 &lt;code&gt;Pop&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 이 때, &lt;code&gt;F&lt;/code&gt; 는 자식이 없으므로 스택에 넣을 것이 없습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스택 맨 위에 있는 &lt;code&gt;D&lt;/code&gt; 를 &lt;code&gt;Pop&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, &lt;code&gt;D&lt;/code&gt; 는 지우고 &lt;code&gt;D&lt;/code&gt; 의 자식인 &lt;code&gt;H&lt;/code&gt;, &lt;code&gt;K&lt;/code&gt; 를 스택에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스택의 맨 위에 있는 &lt;code&gt;G&lt;/code&gt; 를 &lt;code&gt;Pop&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 이 때, &lt;code&gt;G&lt;/code&gt; 는 자식이 없으므로 스택에 넣을 것이 없습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스택의 맨 위에 있는 &lt;code&gt;H&lt;/code&gt; 를 &lt;code&gt;Pop&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 이 때, &lt;code&gt;H&lt;/code&gt; 는 자식이 없으므로 스택에 넣을 것이 없습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스택의 맨 위에 있는 &lt;code&gt;K&lt;/code&gt; 를 &lt;code&gt;Pop&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 이 때, &lt;code&gt;K&lt;/code&gt; 는 자식이 없으므로 스택에 넣을 것이 없습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스택이 비었습니다. 이 말은 모든 노드를 탐색했다는 뜻이죠!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;bfs---너비우선탐색&#34;&gt;BFS - 너비우선탐색&lt;/h3&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 103; flex-basis: 249px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS%EA%B5%AC%ED%98%84.PNG&#34; data-size=&#34;501x482&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS%EA%B5%AC%ED%98%84.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS%EA%B5%AC%ED%98%84_hudcdd5505edf22163725a5a2ee85d4aeb_86072_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS%EA%B5%AC%ED%98%84_hudcdd5505edf22163725a5a2ee85d4aeb_86072_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;501&#34;
+				height=&#34;482&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 37; flex-basis: 89px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS%EA%B5%AC%ED%98%842.PNG&#34; data-size=&#34;289x776&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS%EA%B5%AC%ED%98%842.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS%EA%B5%AC%ED%98%842_hu2d05b62c95c29493a8baebd036133100_84906_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/BFS%EA%B5%AC%ED%98%842_hu2d05b62c95c29493a8baebd036133100_84906_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;289&#34;
+				height=&#34;776&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;루트 노드 (시작점) 인 &lt;code&gt;A&lt;/code&gt; 를 큐에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A&lt;code&gt;를&lt;/code&gt;Dequeue&lt;code&gt;하면서&lt;/code&gt;Expand&lt;code&gt;합니다. 즉,&lt;/code&gt;A&lt;code&gt;는 지우고&lt;/code&gt;A&lt;code&gt;의 바로 다음 자식인&lt;/code&gt;B&lt;code&gt;, &lt;/code&gt;C&lt;code&gt;, &lt;/code&gt;D`를 큐의 오른쪽에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;큐의 맨 왼쪽에 있는 B 를 &lt;code&gt;Dequeue&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, B 는 지우고 B 의 바로 다음 자식인 E 만 큐에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;큐의 맨 왼쪽에 있는 &lt;code&gt;C&lt;/code&gt; 를 &lt;code&gt;Dequeue&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, &lt;code&gt;C&lt;/code&gt; 는 지우고 &lt;code&gt;C&lt;/code&gt; 의 바로 다음 자식인 &lt;code&gt;F&lt;/code&gt; 를 큐에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;큐의 맨 왼쪽에 있는 &lt;code&gt;D&lt;/code&gt; 를 &lt;code&gt;Dequeue&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, &lt;code&gt;D&lt;/code&gt; 는 지우고 &lt;code&gt;C&lt;/code&gt; 의 바로 다음 자식인 &lt;code&gt;G&lt;/code&gt;, &lt;code&gt;H&lt;/code&gt; 를 큐에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;큐의 맨 왼쪽에 있는 &lt;code&gt;E&lt;/code&gt; 를 &lt;code&gt;Dequeue&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, &lt;code&gt;E&lt;/code&gt; 는 지우고 &lt;code&gt;E&lt;/code&gt; 의 바로 다음 자식인 &lt;code&gt;I&lt;/code&gt;, &lt;code&gt;J&lt;/code&gt; 를 큐에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;큐의 맨 왼쪽에 있는 &lt;code&gt;F&lt;/code&gt; 를 &lt;code&gt;Dequeue&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 이 때, &lt;code&gt;F&lt;/code&gt; 는 자식이 없으므로 큐에 넣을 것이 없습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;큐의 맨 왼쪽에 있는 &lt;code&gt;G&lt;/code&gt; 를 &lt;code&gt;Dequeue&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 이 때, &lt;code&gt;G&lt;/code&gt; 는 자식이 없으므로 큐에 넣을 것이 없습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;큐의 맨 왼쪽에 있는 &lt;code&gt;H&lt;/code&gt; 를 &lt;code&gt;Dequeue&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, &lt;code&gt;H&lt;/code&gt; 는 지우고 &lt;code&gt;H&lt;/code&gt; 의 바로 다음 자식인 &lt;code&gt;K&lt;/code&gt; 를 큐에 넣습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;큐의 맨 왼쪽에 있는 &lt;code&gt;I&lt;/code&gt; 를 &lt;code&gt;Dequeue&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 이 때, &lt;code&gt;I&lt;/code&gt; 는 자식이 없으므로 큐에 넣을 것이 없습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;큐의 맨 왼쪽에 있는 &lt;code&gt;J&lt;/code&gt; 를 &lt;code&gt;Dequeue&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 이 때, &lt;code&gt;J&lt;/code&gt; 는 자식이 없으므로 큐에 넣을 것이 없습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;큐의 맨 왼쪽에 있는 &lt;code&gt;K&lt;/code&gt; 를 &lt;code&gt;Dequeue&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 이 때, &lt;code&gt;K&lt;/code&gt; 는 자식이 없으므로 큐에 넣을 것이 없습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;큐가 비었습니다. 모든 노드를 탐색했다는 뜻이죠!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
         </item>
         
     </channel>

@@ -5,6 +5,25 @@
     <link>https://ssabum.github.io/categories/til/</link>
     <description>Recent content in TIL on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ssabum.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OOP</title>
+      <link>https://ssabum.github.io/p/oop/</link>
+      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/oop/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Object-Oriented Programming&lt;/code&gt;의 약자로 &lt;code&gt;객체지향프로그래밍&lt;/code&gt;이다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>알고리즘 기초이론</title>
+      <link>https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/</link>
+      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/</guid>
+      <description>&lt;p&gt;Algorithm기본 이론에 대해 알아보자&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

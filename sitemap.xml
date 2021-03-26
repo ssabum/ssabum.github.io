@@ -3,7 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ssabum.github.io/tags/algorithm/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/big-o/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ssabum.github.io/categories/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/contents-platform/</loc>
     <lastmod>2021-03-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -13,12 +28,27 @@
   </url>
   
   <url>
+    <loc>https://ssabum.github.io/tags/it/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ssabum.github.io/tags/license/</loc>
     <lastmod>2021-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://ssabum.github.io/p/oop/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ssabum.github.io/post/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/python/</loc>
     <lastmod>2021-03-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,6 +78,26 @@
   </url>
   
   <url>
+    <loc>https://ssabum.github.io/tags/tech-blog/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/categories/til/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/p/%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%86%8C%EA%B0%9C/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ssabum.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url>
@@ -67,10 +117,6 @@
   
   <url>
     <loc>https://ssabum.github.io/search/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/categories/til/</loc>
   </url>
   
   <url>
