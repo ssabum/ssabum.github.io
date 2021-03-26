@@ -1195,7 +1195,7 @@ self - 개별 요소
 &lt;p&gt;루트 노드 (시작점) 인 &lt;code&gt;A&lt;/code&gt; 를 큐에 넣습니다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;A&lt;code&gt;를&lt;/code&gt;Dequeue&lt;code&gt;하면서&lt;/code&gt;Expand&lt;code&gt;합니다. 즉,&lt;/code&gt;A&lt;code&gt;는 지우고&lt;/code&gt;A&lt;code&gt;의 바로 다음 자식인&lt;/code&gt;B&lt;code&gt;, &lt;/code&gt;C&lt;code&gt;, &lt;/code&gt;D`를 큐의 오른쪽에 넣습니다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;A&lt;/code&gt;를 &lt;code&gt;Dequeue&lt;/code&gt; 하면서 &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, &lt;code&gt;A&lt;/code&gt; 는 지우고 &lt;code&gt;A&lt;/code&gt; 의 바로 다음 자식인 &lt;code&gt;B&lt;/code&gt;, &lt;code&gt;C&lt;/code&gt;, &lt;code&gt;D&lt;/code&gt;를 큐의 오른쪽에 넣습니다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;큐의 맨 왼쪽에 있는 B 를 &lt;code&gt;Dequeue&lt;/code&gt; and &lt;code&gt;Expand&lt;/code&gt; 합니다. 즉, B 는 지우고 B 의 바로 다음 자식인 E 만 큐에 넣습니다.&lt;/p&gt;
