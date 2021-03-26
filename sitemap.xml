@@ -3,6 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ssabum.github.io/categories/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/categories/diary/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/license/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/post/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/sql/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/p/sqld/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/sqld/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ssabum.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url>
@@ -13,16 +58,7 @@
   </url>
   
   <url>
-    <loc>https://ssabum.github.io/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ssabum.github.io/categories/algorithm/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/categories/</loc>
   </url>
   
   <url>
@@ -30,15 +66,7 @@
   </url>
   
   <url>
-    <loc>https://ssabum.github.io/categories/diary/</loc>
-  </url>
-  
-  <url>
     <loc>https://ssabum.github.io/search/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/tags/</loc>
   </url>
   
   <url>
