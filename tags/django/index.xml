@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>django on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/django/</link>
+    <description>Recent content in django on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django 기본</title>
+      <link>https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/</link>
+      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/</guid>
+      <description>Django wep programming  파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크
+즉, 쉽고 빠르게 웹사이트를 개발할 수 있도록 돕는 구성요소로 이루어진 웹 프레임워크
+여기서 프레임워크란, 애플리케이션 개발에 바탕이 되는 템플릿과 같은 역할을 하는 클래스들과 인터페이스의 집합
+ 기본 생성 파일  mysite: 프로젝트를 담는 공간 manage.py: 프로젝트와 다양한 방법으로 상호작용 하는 커맨드라인의 유틸리티 init.py: 파이썬으로 하여금 이 디렉토리를 패키지처럼 다루라고 알려주는 용도의 빈 파일 setting.py: 현재 프로젝트의 환경 및 구성을 저장 urls.</description>
+    </item>
+    
+  </channel>
+</rss>

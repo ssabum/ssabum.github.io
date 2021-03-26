@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='프론트엔드 CSS의 기초에 대해 두번째'><title>CSS기초 레이아웃</title>
+
+<link rel='canonical' href='https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='CSS기초 레이아웃'>
+<meta property='og:description' content='프론트엔드 CSS의 기초에 대해 두번째'>
+<meta property='og:url' content='https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/'>
+<meta property='og:site_name' content='Ssabum&#39;s Devlog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='python' /><meta property='article:tag' content='css' /><meta property='article:published_time' content='2021-03-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-03-26T00:00:00&#43;00:00'/><meta property='og:image' content='https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/css.png' />
+<meta name="twitter:title" content="CSS기초 레이아웃">
+<meta name="twitter:description" content="프론트엔드 CSS의 기초에 대해 두번째"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/css.png' />
+    <link rel="shortcut icon" href="fav.ico" />
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/image_hu5b1ed73fe36e0369d78710b778381c4e_70796_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">💻</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://ssabum.github.io/">Ssabum&#39;s Devlog</a></h1>
+        <h2 class="site-description">Lazy beginner developer</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://github.com/ssabum'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+                
+                <span>Github</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://github.com/ssabum/algorithm_study'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+</svg>
+                
+                <span>AlgoStudy</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://ssabum.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/">
+                <img src="/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/css_hu42497fb400a464be61c8fe27b05f0811_45708_800x0_resize_box_2.png"
+                        srcset="/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/css_hu42497fb400a464be61c8fe27b05f0811_45708_800x0_resize_box_2.png 800w, /p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/css_hu42497fb400a464be61c8fe27b05f0811_45708_1600x0_resize_box_2.png 1600w"
+                        width="800" 
+                        height="400" 
+                        loading="lazy"
+                        alt="Featured image of post CSS기초 레이아웃" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/til/" style="background-color: #2a9d8f; color: #fff;">
+                TIL
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/">CSS기초 레이아웃</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        프론트엔드 CSS의 기초에 대해 두번째
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Mar 26, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h1 id="css-layout">CSS Layout</h1>
+<blockquote>
+<p>웹페이지에 포함되는 요소들을 어떻게 취합하고 그것들이 어느 위치에 놓일 것인지를 제어한다.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h2 id="float">float</h2>
+<blockquote>
+<p>한 요소(element)가 정상 흐름(normal flow)으로부터 빠져 텍스트 및 인라인(inline) 요소가 그 주위를 감싸 자기 컨테이너의 좌,우측을 따라 배치되어야 함을 지정한다.</p>
+</blockquote>
+<p><strong>clearfix</strong></p>
+<ul>
+<li>
+<p>float 요소와 다른 텍스트가아닌 block 요소간의 레이아웃 깨짐을 막기 위해 다음과 같이 작성한다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/* float 속성을 적용한 요소의 부모요소에 적용한다. */</span>
+<span class="c">/* 부모 태그 다음에 가상 요소(::after)로 내용이 빈(content:&#34;&#34;) 블럭(display: block;)을 만들고 */</span>
+<span class="c">/* 이 가상요소는 float left,right(both)를 초기화 한다는 뜻 */</span>
+  
+<span class="p">.</span><span class="nc">clearfix</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
+  <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+  <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>정리</strong></p>
+<ul>
+<li>flexbox 및 그리드 레이아웃과 같은 기술이 나오기 이전에 float는 열 레이아웃을 만드는데 사용되었다.</li>
+<li>mdn에서는 더 새롭고 나은 레이아웃 기술이 나와있으므로 레거시 레이아웃 기술로 분류해놓기도 했다.</li>
+<li>결국 원래 텍스트 블록 내에서 float 이미지를 위한 역할로 돌아간 것이다.</li>
+<li>여전히 사용하는 경우도 있다. (ex. naver nav bar)</li>
+</ul>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="flexbox">flexbox</h2>
+<blockquote>
+<p>일명 flexbox라 불리는 Flexible Box module은 flexbox 인터페이스 내의 아이템 간 공간 배분과 강력한 정렬 기능을 제공하기 위한 1차원 레이아웃 모델로 설계되었다.</p>
+<p>웹페이지의 컨테이너에 아이템의 폭과 높이 또는 순서를 변경해서 웹페이지의 사용 가능한 공간을 최대한 채우고 이를 디바이스 종류에 따라 유연하게 반영하도록 하는 개념</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><strong>핵심 개념</strong></p>
+<ul>
+<li>요소
+<ul>
+<li>flex container</li>
+<li>flex items</li>
+</ul>
+</li>
+<li>축
+<ul>
+<li>maix axis (주축)</li>
+<li>cros axis (교차축)</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>flex container</strong></p>
+<ul>
+<li>flexbox 레이아웃을 형성하는 가장 기본적인 모델</li>
+<li>flexbox가 놓여있는 영역</li>
+<li>flex 컨테이너를 생성하려면 영역 내의 컨테이너 요소의 display 값을 flex 혹은 inline-flex로 지정</li>
+<li>flex 컨테이너를 선언시 아래와 같이 기본 값이 지정
+<ul>
+<li>item은 행으로 나열</li>
+<li>item은 주축의 시작 선에서 시작</li>
+<li>item은 교차축의 크기를 채우기 위해 늘어남</li>
+<li><code>flex-wrap</code> 속성은 <code>nowrap</code>으로 지정</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<pre><code>Tip !
+
+justify - main axis
+align - cross axis
+
+content - 여러 줄
+items - 한 줄
+self - 개별 요소
+</code></pre><!-- raw HTML omitted -->
+<p><strong>flex-direction</strong></p>
+<blockquote>
+<p>쌓이는 방향 설정 (main-axis 의 방향만 바뀜. flex 는 single-direction layout concept 이기 때문)</p>
+</blockquote>
+<ul>
+<li>row (기본값)
+<ul>
+<li>가로로 요소가 쌓임</li>
+<li>row 는 주축의 방향을 왼쪽에서 오른쪽으로 흐르게 한다.</li>
+</ul>
+</li>
+<li>row-reverse</li>
+<li>column
+<ul>
+<li>세로로 요소가 쌓임</li>
+<li>column 은 주축의 방향을 위에서 아래로 흐르게 한다.</li>
+</ul>
+</li>
+<li>column-reverse</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>flex-wrap</strong></p>
+<blockquote>
+<p>item들이 강제로 한 줄에 배치 되게 할 것인지 여부 설정</p>
+</blockquote>
+<ul>
+<li>nowrap (기본 값)
+<ul>
+<li>모든 아이템들 한 줄에 나타내려고 함 (그래서 자리가 없어도 튀어나옴)</li>
+</ul>
+</li>
+<li>wrap : 넘치면 그 다음 줄로</li>
+<li>wrap-reverse : 넘치면 그 윗줄로 (역순)</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>flex-flow</strong></p>
+<blockquote>
+<p>flex-direction 과 flex-wrap 의 shorthand</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">flex-flow</span><span class="o">:</span> <span class="nt">row</span> <span class="nt">nowrap</span><span class="o">;</span>
+</code></pre></div><!-- raw HTML omitted -->
+<p><strong>justify-content</strong></p>
+<blockquote>
+<p>main axis 정렬</p>
+<p><code>flex-direction: row</code> 기준으로 작성됨</p>
+</blockquote>
+<ul>
+<li>flex-start (기본 값)
+<ul>
+<li>시작 지점에서 쌓임(왼쪽 → 오른쪽)</li>
+</ul>
+</li>
+<li>flex-end
+<ul>
+<li>쌓이는 방향이 반대 (<code>flex-direction: row-reverse</code> 와는 다르다. 아이템의 순서는 그대로 정렬만 우측에 되는 것.)</li>
+</ul>
+</li>
+<li>center</li>
+<li>space-between
+<ul>
+<li>좌우 정렬 (item 들 간격 동일)</li>
+</ul>
+</li>
+<li>space-around
+<ul>
+<li>균등 좌우 정렬 (내부 요소 여백은 외곽 여백의 2배)</li>
+</ul>
+</li>
+<li>space-evenly
+<ul>
+<li>균등 정렬 (내부 요소 여백과 외각 여백 모두 동일)</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>align-items</strong></p>
+<blockquote>
+<p>cross axis 여러 줄 정렬</p>
+<p><code>flex-direction: row</code> 기준으로 작성됨</p>
+</blockquote>
+<ul>
+<li>stretch (기본 값)
+<ul>
+<li>컨테이너를 가득 채움</li>
+</ul>
+</li>
+<li>flex-start
+<ul>
+<li>위</li>
+</ul>
+</li>
+<li>flex-end
+<ul>
+<li>아래</li>
+</ul>
+</li>
+<li>center</li>
+<li>baseline
+<ul>
+<li>item 내부의 text에 기준선을 맞춤</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>align-self</strong></p>
+<blockquote>
+<p>align-items 와 동일 (단, 개별 item 에 적용)</p>
+</blockquote>
+<ul>
+<li>auto (기본 값)</li>
+<li>flex-start</li>
+<li>flex-end</li>
+<li>center</li>
+<li>baseline</li>
+<li>stretch
+<ul>
+<li>부모 컨테이너에 자동으로 맞춰서 늘어난다. (Stretch &lsquo;auto&rsquo;-sized items to fit the container)</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>order</strong></p>
+<ul>
+<li>기본 값 : 0</li>
+<li>작은 숫자 일수록 앞(왼쪽)으로 이동.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>flex-grow</strong></p>
+<ul>
+<li>기본 값 : 0</li>
+<li>주축에서 남는 공간을 항목들에게 분배하는 방법</li>
+<li>각 아이템의 상대적 비율을 정하는 것이 아님</li>
+<li>음수는 불가능</li>
+</ul>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="bootstrap">Bootstrap</h2>
+<blockquote>
+<p>The most popular HTML, CSS, and JS library in the world.</p>
+</blockquote>
+<ul>
+<li>
+<p>트위터에서 시작된 오픈 소스 프론트엔드 라이브러리</p>
+</li>
+<li>
+<p>웹 페이지에서 많이 쓰이는 요소를 거의 전부 내장하고 있다.</p>
+</li>
+<li>
+<p>디자인을 할 시간이 크게 줄어들고, 여러 웹 브라우저를 지원하기 위한 크로스 브라우징에 골머리를 썩일 필요가 없다.</p>
+</li>
+<li>
+<p>웹 브라우저 크기에 따라 자동으로 정렬되는 &ldquo;그리드 시스템&quot;을 지원하며,</p>
+</li>
+<li>
+<p><em>&ldquo;one souce multi use&rdquo;</em> → 반응형 웹 디자인을 추구한다.</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>Responsive web design</strong></p>
+<ul>
+<li>layout은 방문자의 화면 해상도를 고려하여야 한다.</li>
+<li>스마트폰이나 태블릿 등 모바일 기기는 화면이 작기 때문에 가독성에 더욱 신경써야 한다.</li>
+<li>보통 웹사이트가 축소되어 가로 스크롤 없이 콘텐츠를 볼 수 있으나 글자가 너무 작아지기 때문이다.</li>
+<li>데스크탑용, 테블릿용, 모바일용 웹사이트를 별도 구축할 수도 있지만 One Source Multi Use의 관점에서 올바른 해결책은 아니다.</li>
+<li>반응형 웹 디자인(Responsive Web Design)은 화면 해상도에 따라 가로폭이나 배치를 변경하여 가독성을 높여 이러한 문제를 해결한다.</li>
+<li>즉, 하나의 웹사이트를 구축하여 다양한 디바이스의 화면 해상도에 최적화된 웹사이트를 제공하는 것이다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="bootstrap-grid-system">Bootstrap Grid System</h2>
+<p><strong>Grid System</strong></p>
+<ul>
+<li>부트스트랩의 grid system 은 containers, rows 그리고 columns 를 사용해서 컨텐츠를 레이아웃하고 정렬한다.</li>
+<li>모바일 우선 flexbox grid 를 사용하여 12개의 column 시스템을 가지고 있다.</li>
+<li>왜 12 columns 일까 ?
+<ul>
+<li>12는 약수가 가장 많기 때문에 한 줄에 표시할 수 있는 종류가 제일 많다.</li>
+</ul>
+</li>
+<li>다음과 같은 구조로 사용한다.
+<ul>
+<li>.container &gt; .row &gt; col-*</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>.row</strong></p>
+<ul>
+<li>row 는 columns 의 wrapper 이다.</li>
+<li>각 column 에는 공간 사이를 제어하기 위한 좌우 padding 값이 있는데 이를 <code>gutter</code> 라고도 한다.
+<ul>
+<li>row 의 margin 값과 gutter 를 제거하려면 .row 에 <code>.no-gutters</code> class 를 사용한다.</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>.col /  .col-</strong>*</p>
+<ul>
+<li>column class 는 row 당 가능한 12개 중 사용하려는 columns 수를 나타낸다.</li>
+<li>columns 너비는 백분율로 설정 되므로 항상 부모 요소를 기준으로 유동적으로 크기가 조정된다.</li>
+<li>grid layout 에서 내용은 반드시 columns 안에 있어야 하며 그리고 오직 columns 만 row 의 바로 하위 자식 일 수 있다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>offset</strong></p>
+<ul>
+<li><code>offset-*</code> 은 지정한 만큼의 column 공간을 무시하고 다음 공간부터 컨텐츠를 적용한다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>Nesting</strong></p>
+<ul>
+<li>.row &gt; .col-* &gt; .row &gt; .col-* 의 방식으로 중첩 사용 가능하다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>Grid breakpoints</strong></p>
+<ul>
+<li>부트스트랩 grid system 은 다양한 디바이스에서 적용하기 위해 특정 px 조건에 대한 지점을 정해 두었는데 이를 breakpoints 라고 한다.</li>
+<li>부트스트랩은 대부분의 크기를 정의하기 위해 em 또는 rem 을 사용하지만 px 는 그리드  breakpoint 에 사용된다. (뷰포트 너비가 픽셀 단위이고 글꼴 크기에 따라 변하지 않기 때문)</li>
+</ul>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="마무리">마무리</h2>
+<blockquote>
+<p>각각의 기술은 저마다 용도가 있고, 장단점이 있으며, 독립적인 용도를 갖추도록 설계된 기술은 없다.</p>
+<p>특정 상황에 어떤 기술이 가장 적합한 도구가 될 것인지 파악하는 데에는 많은 경험이 필요하다.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="참고문헌">참고문헌</h2>
+<p><a href="https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Introduction">https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Introduction</a></p>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/CSS/float">https://developer.mozilla.org/ko/docs/Web/CSS/float</a></p>
+<p><a href="https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Floats">https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Floats</a></p>
+<p><a href="https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Flexbox">https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Flexbox</a></p>
+<p><a class="link" href="https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox%ec%9d%98_%ea%b8%b0%eb%b3%b8_%ea%b0%9c%eb%85%90"  target="_blank" rel="noopener"
+    >https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox%EC%9D%98_%EA%B8%B0%EB%B3%B8_%EA%B0%9C%EB%85%90</a></p>
+<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/python/">python</a>
+        
+            <a href="/tags/css/">css</a>
+        
+    </section>
+
+
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">관련 글</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/css%EA%B8%B0%EC%B4%88/">
+        
+        
+            <div class="article-image">
+                <img src="/p/css%EA%B8%B0%EC%B4%88/css.a6664c4e9cafde9a54bc372360b436e3_hu42497fb400a464be61c8fe27b05f0811_45708_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-pmZMTpyv3ppUvDcjYLQ24w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CSS기초</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/django-%EA%B8%B0%EB%B3%B8/">
+        
+        
+            <div class="article-image">
+                <img src="/p/django-%EA%B8%B0%EB%B3%B8/icon.1d528e2cb5fbc29ad16c74e5d883c371_hu080e9ab032fb83faecb2fd0168b96dc6_15390_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-HVKOLLX7wprRbHTl2IPDcQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Django 기본</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/html%EA%B8%B0%EC%B4%88/">
+        
+        
+            <div class="article-image">
+                <img src="/p/html%EA%B8%B0%EC%B4%88/html.f7f7a110726b9719a545201b3ce84214_hu5ae5770cb34043b5079993437294d24c_21751_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-9/ehEHJrlxmlRSAbPOhCFA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">HTML기초</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/oop/">
+        
+        
+            <div class="article-image">
+                <img src="/p/oop/oop.3eb8170c9a2ed13ee707547870af9c18_hu77071c61b22f59609cf235d78dd545c9_23490_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-PrgXDJou0T7nB1R4cK&#43;cGA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">OOP</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/algorithm.b18140096ea1e03a0ee075f358006811_hue59cc96f39be3bdd739f8972409a29e2_15547_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-sYFACW6h4DoO4HXzWABoEQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">알고리즘 기초이론</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="ssabum/comments"
+        issue-term="pathname"
+        
+        theme="github-light"
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.body.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Ssabum&#39;s Devlog
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

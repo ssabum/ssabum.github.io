@@ -8,6 +8,56 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 26 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>CSS기초</title>
+      <link>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88/</link>
+      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88/</guid>
+      <description>CSS  스타일, 레이아웃 등을 통해 HTML이 사용자에게 어떻게 표시 되는지를 지정하는 언어
+사용자에게 문서(HTML)를 표시하는 방법을 지정하는 언어
+ CSS 구문  구문은 선택자와 함께 열린다. 스타일을 지정할 html 요소를 선택. 다음 중괄호가 있는데 이 안에는 속성과 값 쌍 형태를 가지는 하나 또는 그 이상의 선언(declaration)이 있다. 각 쌍은 우리가 선택한 요소의 속성을 지정하고 속성에 부여할 값을 지정한다.  선언문
+ 속성 (Property)  사람이 읽을 수 있는 식별자로, 어떤 (글꼴, 너비, 배경색 등) 스타일 기능을 변경할지 나타냅니다.</description>
+    </item>
+    
+    <item>
+      <title>CSS기초 레이아웃</title>
+      <link>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</link>
+      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</guid>
+      <description>CSS Layout  웹페이지에 포함되는 요소들을 어떻게 취합하고 그것들이 어느 위치에 놓일 것인지를 제어한다.
+ float  한 요소(element)가 정상 흐름(normal flow)으로부터 빠져 텍스트 및 인라인(inline) 요소가 그 주위를 감싸 자기 컨테이너의 좌,우측을 따라 배치되어야 함을 지정한다.
+ clearfix
+  float 요소와 다른 텍스트가아닌 block 요소간의 레이아웃 깨짐을 막기 위해 다음과 같이 작성한다.
+/* float 속성을 적용한 요소의 부모요소에 적용한다. */ /* 부모 태그 다음에 가상 요소(::after)로 내용이 빈(content:&amp;#34;&amp;#34;) 블럭(display: block;)을 만들고 */ /* 이 가상요소는 float left,right(both)를 초기화 한다는 뜻 */ .</description>
+    </item>
+    
+    <item>
+      <title>Django 기본</title>
+      <link>https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/</link>
+      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/</guid>
+      <description>Django wep programming  파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크
+즉, 쉽고 빠르게 웹사이트를 개발할 수 있도록 돕는 구성요소로 이루어진 웹 프레임워크
+여기서 프레임워크란, 애플리케이션 개발에 바탕이 되는 템플릿과 같은 역할을 하는 클래스들과 인터페이스의 집합
+ 기본 생성 파일  mysite: 프로젝트를 담는 공간 manage.py: 프로젝트와 다양한 방법으로 상호작용 하는 커맨드라인의 유틸리티 init.py: 파이썬으로 하여금 이 디렉토리를 패키지처럼 다루라고 알려주는 용도의 빈 파일 setting.py: 현재 프로젝트의 환경 및 구성을 저장 urls.</description>
+    </item>
+    
+    <item>
+      <title>HTML기초</title>
+      <link>https://ssabum.github.io/p/html%EA%B8%B0%EC%B4%88/</link>
+      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/html%EA%B8%B0%EC%B4%88/</guid>
+      <description>HTML  &amp;ldquo;웹 컨텐츠의 의미와 구조를 정의할 때 사용하는 언어&amp;rdquo;
+ HTML 기초 Hyper
+ 텍스트 등의 정보가 동일 선상에 있는 것이 아니라 다중으로 연결되어 있는 상태  Hyper Text
+ 참조(하이퍼링크)를 통해 사용자가 한 문서에서 다른 문서로 즉시 접근 할 수 잇는 텍스트 하이퍼 텍스트가 쓰인 기술등 중 가장 중요한 2가지 (http, html)  Markup Language
+ 특정 텍스트에 역할을 부여하는, 따라서 &amp;ldquo;마크업을 한다&amp;rdquo; 라고 하는 건 제목이 제목이라하고 본문이 본문이라고 마킹을 하는 것 ex) h1 tag는 단순히 글자가 커지는 것이 아니라 의미론적으로 그 페이지에서 가장 핵심 주제를 의미하는 것  HTML 기본 구조 DOM</description>
+    </item>
+    
+    <item>
       <title>OOP</title>
       <link>https://ssabum.github.io/p/oop/</link>
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>

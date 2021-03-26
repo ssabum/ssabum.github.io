@@ -7,6 +7,840 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Fri, 26 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CSS기초</title>
+        <link>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88/</link>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88/css.png" alt="Featured image of post CSS기초" /&gt;&lt;h1 id=&#34;css&#34;&gt;CSS&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;스타일, 레이아웃 등을 통해 HTML이 사용자에게 어떻게 표시 되는지를 지정하는 언어&lt;/p&gt;
+&lt;p&gt;사용자에게 문서(HTML)를 표시하는 방법을 지정하는 언어&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;css-구문&#34;&gt;CSS 구문&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;구문은 선택자와 함께 열린다.&lt;/li&gt;
+&lt;li&gt;스타일을 지정할 html 요소를 선택.&lt;/li&gt;
+&lt;li&gt;다음 중괄호가 있는데 이 안에는 속성과 값 쌍 형태를 가지는 하나 또는 그 이상의 선언(declaration)이 있다.&lt;/li&gt;
+&lt;li&gt;각 쌍은 우리가 선택한 요소의 속성을 지정하고 속성에 부여할 값을 지정한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;선언문&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;속성 (Property)
+&lt;ul&gt;
+&lt;li&gt;사람이 읽을 수 있는 식별자로, 어떤 (글꼴, 너비, 배경색 등) 스타일 기능을 변경할지 나타냅니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;값 (Value)
+&lt;ul&gt;
+&lt;li&gt;각 속성에는 값을 부여한다.&lt;/li&gt;
+&lt;li&gt;값은 어떻게 (글꼴을 이걸로, 배경 색을 저걸로 등)스타일 기능을 변경할 건지 나타낸다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;CSS 정의 방법&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Inline style&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;내부 참조 (&lt;code&gt;Embedding style&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;외부 참조 (&lt;code&gt;Link style&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;css-selector&#34;&gt;CSS Selector&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;선택자는 스타일을 지정할 웹 페이지의 HTML 요소를 대상으로 하는 데 사용&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;클래스(class) 선택자&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스 선택자는 마침표( .) 문자로 시작 하며 해당 클래스가 적용된 문서의 모든 항목을 선택&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;아이디(id) 선택자&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;아이디 선택자는 &lt;code&gt;#&lt;/code&gt; 문자로 시작하며 기본적으로 클래스 선택자와 같은 방식으로 사용&lt;/li&gt;
+&lt;li&gt;그러나 아이디는 문서 당 한 번만 사용할 수 있으며 요소에는 단일 id값만 적용 할 수 있다&lt;/li&gt;
+&lt;li&gt;문서에서 동일한 아이디를 여러 번 사용해도 동작하나 그렇게 하면 안된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;결합자&lt;/strong&gt;(combinators)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;자손 결합자
+&lt;ul&gt;
+&lt;li&gt;셀렉터A  &lt;code&gt; &lt;/code&gt;(공백) 셀렉터B&lt;/li&gt;
+&lt;li&gt;셀렉터A의 모든 후손 요소(level n) 중 셀렉터B와 일치하는 요소 선택&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;자식 결합자
+&lt;ul&gt;
+&lt;li&gt;셀렉터A &lt;code&gt;&amp;gt;&lt;/code&gt; 셀렉터B&lt;/li&gt;
+&lt;li&gt;셀렉터A의 모든 자식 요소(level 1) 중 셀렉터B와 일치하는 요소 선택&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;일반 형제 결합자
+&lt;ul&gt;
+&lt;li&gt;셀렉터A &lt;code&gt;~&lt;/code&gt; 셀렉터B&lt;/li&gt;
+&lt;li&gt;셀렉터A의 형제 요소 중 셀렉터A 뒤에 위치하는 셀렉터B 요소를 모두 선택&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;인접 형제 결합자
+&lt;ul&gt;
+&lt;li&gt;셀렉터A &lt;code&gt;+&lt;/code&gt; 셀렉터B&lt;/li&gt;
+&lt;li&gt;셀렉터A의 형제 요소 중 셀렉터A 바로 뒤에 위치하는 셀렉터B 요소를 선택&lt;/li&gt;
+&lt;li&gt;단, A와 B 사이에 다른 요소가 존재하면 선택되지 않음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;적용 우선순위&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;!important&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;다른 사람들의 코드에서 발견할 때 그 의미를 알 수 있는 것은 좋다.&lt;/li&gt;
+&lt;li&gt;하지만 반드시 필요한 경우가 아니면 절대 사용하지 않는 것이 좋다.,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;!important&lt;/code&gt; 는 cascading이 정상적으로 작동하는 방식을 변경하므로, CSS 스타일 문제를 해결하기가 어렵습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;inline style&lt;/li&gt;
+&lt;li&gt;id 선택자
+&lt;ul&gt;
+&lt;li&gt;id는 대부분의 다른 선택자보다 우선순위가 높기 때문에 다루기가 어려워 질 수 있다.&lt;/li&gt;
+&lt;li&gt;대부분의 경우 id 보다는 모두  class 선택자로 작성하는 것이 좋다.&lt;/li&gt;
+&lt;li&gt;만약 문서 내 &lt;code&gt;링크 이동&lt;/code&gt;이나 &lt;code&gt;for&lt;/code&gt;를 사용하는 특별한 경우에만 아이디를 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;class 선택자&lt;/li&gt;
+&lt;li&gt;요소 선택자&lt;/li&gt;
+&lt;li&gt;소스 순서&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;css-단위&#34;&gt;CSS 단위&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;(상대) 크기 단위&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;px&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;모니터 해상도의 한 화소인 &amp;lsquo;픽셀&amp;rsquo;을 기준&lt;/li&gt;
+&lt;li&gt;픽셀의 크기는 변하지 않기 때문에 고정적인 단위&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;%&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;백분율 단위&lt;/li&gt;
+&lt;li&gt;가변적인 레이아웃에서 자주 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;em&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;em은 상속의 영향 받음, rem은 최상위 요소(html)를 기준으로 결정됨.&lt;/li&gt;
+&lt;li&gt;상황에 따라 각기 다른 값을 가질 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;rem&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;최상위 요소인 html(root em)을  절대 단위를 기준으로 삼음. 상속의 영향을 받지 않음.&lt;/li&gt;
+&lt;li&gt;상속에 영향을 받지 않기 때문에 대부분의 경우 &lt;code&gt;rem&lt;/code&gt; 을 많이 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;viewport&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(스크롤을 내리지 않은 상태에서) 웹 페이지를 방문한 유저에게 현재 보이는 웹 컨텐츠의 영역&lt;/li&gt;
+&lt;li&gt;viewport를 기준으로한 상대적인 사이즈&lt;/li&gt;
+&lt;li&gt;주로 스마트폰이나 테블릿 디바이스의 화면을 일컫는 용어로 사용된다.&lt;/li&gt;
+&lt;li&gt;vw, vh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;색상 표현 단위&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;색상 키워드
+&lt;ul&gt;
+&lt;li&gt;색상 키워드는 대소문자를 구분하지 않는 식별자로, red, blue, black처럼 특정 색을 나타낸다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;RGB 색상
+&lt;ul&gt;
+&lt;li&gt;빨강, 초록, 파랑을 통해 특정 색을 표현&lt;/li&gt;
+&lt;li&gt;16진수 표기법이나 함수형 표기법으로 사용&lt;/li&gt;
+&lt;li&gt;a는 alpha(투명도)가 추가된 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HSL 색상
+&lt;ul&gt;
+&lt;li&gt;색상, 채도, 명도를 통해 특정 색상을 표현&lt;/li&gt;
+&lt;li&gt;a는 alpha(투명도)가 추가된 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;box-model&#34;&gt;Box Model&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;웹 디자인은 contents를 담을 box model을 정의하고 CSS 속성을 통해 스타일(배경, 폰트와 텍스트 등)과 위치 및 정렬을 지정하는 것.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 HTML 요소는 box 형태로 되어있다.&lt;/li&gt;
+&lt;li&gt;하나의 박스는 네 부분(영역)으로 이루어 진다.
+&lt;ul&gt;
+&lt;li&gt;content / padding / border / margin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ol&gt;
+&lt;li&gt;Content
+&lt;ul&gt;
+&lt;li&gt;글이나 이미지, 비디오 등 요소의 실제 내용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Padding (안쪽 여백)
+&lt;ul&gt;
+&lt;li&gt;Border(테두리) 안쪽의 내부 여백&lt;/li&gt;
+&lt;li&gt;배경색, 이미지 지정 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Border&lt;/li&gt;
+&lt;li&gt;Margin (바깥쪽 여백)
+&lt;ul&gt;
+&lt;li&gt;테두리 바깥의 외부 여백&lt;/li&gt;
+&lt;li&gt;배경색 지정 불가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;마진 상쇄&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;block의 top 및 bottom margin이 때로는 (결합되는 마진 중 크기가) 가장 큰 한 마진으로 결합(combine, 상쇄(collapsed))된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;display&#34;&gt;Display&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;display CSS 속성은 요소를 블록과 인라인 요소 중 어느 쪽으로 처리할지와 함께 자식 요소를 배치할 때 사용할 레이아웃을 설정한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;block&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;쌓이는 박스&lt;/li&gt;
+&lt;li&gt;요소는 블록 요소 상자를 생성하여 일반 흐름에서 요소 앞뒤에 줄 바꿈을 생성한다.&lt;/li&gt;
+&lt;li&gt;블록 레벨 요소안에 인라인 레벨 요소가 들어갈 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;inline&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;줄바꿈이 일어나지 않는 행의 일부 요소&lt;/li&gt;
+&lt;li&gt;content 너비만큼 가로 폭을 차지&lt;/li&gt;
+&lt;li&gt;width, height, margin-top, margin-bottom을 지정할 수 없음&lt;/li&gt;
+&lt;li&gt;상하 여백은 line-height로 지정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;inline-block&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;inline 처럼 텍스트 흐름대로 나열, block처럼 박스 형태이기 block 속성 사용가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;none&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 요소를 화면에서 사라지게 하며 요소의 공간조차 사라지게 한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;visibility: hidden;&lt;/code&gt;은 해당 요소를 화면에서 사라지게는 하나 공간은 사라지지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;position&#34;&gt;Position&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;박스의 위치 속성 &amp;amp; 값&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;position
+&lt;ul&gt;
+&lt;li&gt;static / absolute / relative / fixed&lt;/li&gt;
+&lt;li&gt;z-index&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;기본 개념&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;static (기본 위치)
+&lt;ul&gt;
+&lt;li&gt;모든 태그의 기본&lt;/li&gt;
+&lt;li&gt;태그의 default 값&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;relative (상대 위치)
+&lt;ul&gt;
+&lt;li&gt;기본 위치(static)를 기준으로 좌표 속성을 사용해 위치 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;absolute (절대 위치)
+&lt;ul&gt;
+&lt;li&gt;static 이 아닌 부모/조상 요소를 기준으로 좌표 속성 만큼 이동&lt;/li&gt;
+&lt;li&gt;부모 요소를 찾아가고 나아가 없다면 body에 붙는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;fixed (고정 위치)
+&lt;ul&gt;
+&lt;li&gt;부모/조상 요소와 관계없이 브라우저의 viewport를 기준으로 좌표 속성 만큼 이동&lt;/li&gt;
+&lt;li&gt;스크롤을 내리거나 올려도 화면에서 사라지지 않고 항상 같은 곳에 위치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;absolute&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;absolute&lt;/code&gt;는 원래 위치해 있었던 과거 위치에 있던 공간은 더 이상 존재하지 않는다는 점이 특징이다.&lt;/li&gt;
+&lt;li&gt;즉, 다른 모든 것과는 별개로 독자적인 곳에 놓이게 된다.&lt;/li&gt;
+&lt;li&gt;대체 언제 쓸까?
+&lt;ul&gt;
+&lt;li&gt;페이지의 다른 요소의 위치와 간섭하지 않는 격리된 사용자 인터페이스 기능을 만들 수 있다.&lt;/li&gt;
+&lt;li&gt;팝업 정보 상자 및 제어 메뉴, 롤오버 패널, 페이지 어느 곳에서나 끌어서 놓기할 수 있는 유저 인터페이스 페이지 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;참고문헌&#34;&gt;참고문헌&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance&#34;&gt;https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Web/CSS/inheritance&#34;&gt;https://developer.mozilla.org/ko/docs/Web/CSS/inheritance&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Web/HTML/Block-level_elements&#34;&gt;https://developer.mozilla.org/ko/docs/Web/HTML/Block-level_elements&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Web/HTML/Inline_elements&#34;&gt;https://developer.mozilla.org/ko/docs/Web/HTML/Inline_elements&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Web/CSS/display&#34;&gt;https://developer.mozilla.org/ko/docs/Web/CSS/display&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.emmet.io/cheat-sheet/&#34;&gt;https://docs.emmet.io/cheat-sheet/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>CSS기초 레이아웃</title>
+        <link>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</link>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/css.png" alt="Featured image of post CSS기초 레이아웃" /&gt;&lt;h1 id=&#34;css-layout&#34;&gt;CSS Layout&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;웹페이지에 포함되는 요소들을 어떻게 취합하고 그것들이 어느 위치에 놓일 것인지를 제어한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;float&#34;&gt;float&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;한 요소(element)가 정상 흐름(normal flow)으로부터 빠져 텍스트 및 인라인(inline) 요소가 그 주위를 감싸 자기 컨테이너의 좌,우측을 따라 배치되어야 함을 지정한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;clearfix&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;float 요소와 다른 텍스트가아닌 block 요소간의 레이아웃 깨짐을 막기 위해 다음과 같이 작성한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;c&#34;&gt;/* float 속성을 적용한 요소의 부모요소에 적용한다. */&lt;/span&gt;
+&lt;span class=&#34;c&#34;&gt;/* 부모 태그 다음에 가상 요소(::after)로 내용이 빈(content:&amp;#34;&amp;#34;) 블럭(display: block;)을 만들고 */&lt;/span&gt;
+&lt;span class=&#34;c&#34;&gt;/* 이 가상요소는 float left,right(both)를 초기화 한다는 뜻 */&lt;/span&gt;
+  
+&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;clearfix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;after&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;block&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;clear&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;both&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;정리&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;flexbox 및 그리드 레이아웃과 같은 기술이 나오기 이전에 float는 열 레이아웃을 만드는데 사용되었다.&lt;/li&gt;
+&lt;li&gt;mdn에서는 더 새롭고 나은 레이아웃 기술이 나와있으므로 레거시 레이아웃 기술로 분류해놓기도 했다.&lt;/li&gt;
+&lt;li&gt;결국 원래 텍스트 블록 내에서 float 이미지를 위한 역할로 돌아간 것이다.&lt;/li&gt;
+&lt;li&gt;여전히 사용하는 경우도 있다. (ex. naver nav bar)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;flexbox&#34;&gt;flexbox&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;일명 flexbox라 불리는 Flexible Box module은 flexbox 인터페이스 내의 아이템 간 공간 배분과 강력한 정렬 기능을 제공하기 위한 1차원 레이아웃 모델로 설계되었다.&lt;/p&gt;
+&lt;p&gt;웹페이지의 컨테이너에 아이템의 폭과 높이 또는 순서를 변경해서 웹페이지의 사용 가능한 공간을 최대한 채우고 이를 디바이스 종류에 따라 유연하게 반영하도록 하는 개념&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;핵심 개념&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;요소
+&lt;ul&gt;
+&lt;li&gt;flex container&lt;/li&gt;
+&lt;li&gt;flex items&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;축
+&lt;ul&gt;
+&lt;li&gt;maix axis (주축)&lt;/li&gt;
+&lt;li&gt;cros axis (교차축)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;flex container&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;flexbox 레이아웃을 형성하는 가장 기본적인 모델&lt;/li&gt;
+&lt;li&gt;flexbox가 놓여있는 영역&lt;/li&gt;
+&lt;li&gt;flex 컨테이너를 생성하려면 영역 내의 컨테이너 요소의 display 값을 flex 혹은 inline-flex로 지정&lt;/li&gt;
+&lt;li&gt;flex 컨테이너를 선언시 아래와 같이 기본 값이 지정
+&lt;ul&gt;
+&lt;li&gt;item은 행으로 나열&lt;/li&gt;
+&lt;li&gt;item은 주축의 시작 선에서 시작&lt;/li&gt;
+&lt;li&gt;item은 교차축의 크기를 채우기 위해 늘어남&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-wrap&lt;/code&gt; 속성은 &lt;code&gt;nowrap&lt;/code&gt;으로 지정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;Tip !
+
+justify - main axis
+align - cross axis
+
+content - 여러 줄
+items - 한 줄
+self - 개별 요소
+&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;flex-direction&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;쌓이는 방향 설정 (main-axis 의 방향만 바뀜. flex 는 single-direction layout concept 이기 때문)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;row (기본값)
+&lt;ul&gt;
+&lt;li&gt;가로로 요소가 쌓임&lt;/li&gt;
+&lt;li&gt;row 는 주축의 방향을 왼쪽에서 오른쪽으로 흐르게 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;row-reverse&lt;/li&gt;
+&lt;li&gt;column
+&lt;ul&gt;
+&lt;li&gt;세로로 요소가 쌓임&lt;/li&gt;
+&lt;li&gt;column 은 주축의 방향을 위에서 아래로 흐르게 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;column-reverse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;flex-wrap&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;item들이 강제로 한 줄에 배치 되게 할 것인지 여부 설정&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;nowrap (기본 값)
+&lt;ul&gt;
+&lt;li&gt;모든 아이템들 한 줄에 나타내려고 함 (그래서 자리가 없어도 튀어나옴)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;wrap : 넘치면 그 다음 줄로&lt;/li&gt;
+&lt;li&gt;wrap-reverse : 넘치면 그 윗줄로 (역순)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;flex-flow&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;flex-direction 과 flex-wrap 의 shorthand&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;nt&#34;&gt;flex-flow&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;row&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;nowrap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;justify-content&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;main axis 정렬&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;flex-direction: row&lt;/code&gt; 기준으로 작성됨&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;flex-start (기본 값)
+&lt;ul&gt;
+&lt;li&gt;시작 지점에서 쌓임(왼쪽 → 오른쪽)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;flex-end
+&lt;ul&gt;
+&lt;li&gt;쌓이는 방향이 반대 (&lt;code&gt;flex-direction: row-reverse&lt;/code&gt; 와는 다르다. 아이템의 순서는 그대로 정렬만 우측에 되는 것.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;center&lt;/li&gt;
+&lt;li&gt;space-between
+&lt;ul&gt;
+&lt;li&gt;좌우 정렬 (item 들 간격 동일)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;space-around
+&lt;ul&gt;
+&lt;li&gt;균등 좌우 정렬 (내부 요소 여백은 외곽 여백의 2배)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;space-evenly
+&lt;ul&gt;
+&lt;li&gt;균등 정렬 (내부 요소 여백과 외각 여백 모두 동일)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;align-items&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cross axis 여러 줄 정렬&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;flex-direction: row&lt;/code&gt; 기준으로 작성됨&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;stretch (기본 값)
+&lt;ul&gt;
+&lt;li&gt;컨테이너를 가득 채움&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;flex-start
+&lt;ul&gt;
+&lt;li&gt;위&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;flex-end
+&lt;ul&gt;
+&lt;li&gt;아래&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;center&lt;/li&gt;
+&lt;li&gt;baseline
+&lt;ul&gt;
+&lt;li&gt;item 내부의 text에 기준선을 맞춤&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;align-self&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;align-items 와 동일 (단, 개별 item 에 적용)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;auto (기본 값)&lt;/li&gt;
+&lt;li&gt;flex-start&lt;/li&gt;
+&lt;li&gt;flex-end&lt;/li&gt;
+&lt;li&gt;center&lt;/li&gt;
+&lt;li&gt;baseline&lt;/li&gt;
+&lt;li&gt;stretch
+&lt;ul&gt;
+&lt;li&gt;부모 컨테이너에 자동으로 맞춰서 늘어난다. (Stretch &amp;lsquo;auto&amp;rsquo;-sized items to fit the container)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;order&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;기본 값 : 0&lt;/li&gt;
+&lt;li&gt;작은 숫자 일수록 앞(왼쪽)으로 이동.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;flex-grow&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;기본 값 : 0&lt;/li&gt;
+&lt;li&gt;주축에서 남는 공간을 항목들에게 분배하는 방법&lt;/li&gt;
+&lt;li&gt;각 아이템의 상대적 비율을 정하는 것이 아님&lt;/li&gt;
+&lt;li&gt;음수는 불가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The most popular HTML, CSS, and JS library in the world.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;트위터에서 시작된 오픈 소스 프론트엔드 라이브러리&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;웹 페이지에서 많이 쓰이는 요소를 거의 전부 내장하고 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;디자인을 할 시간이 크게 줄어들고, 여러 웹 브라우저를 지원하기 위한 크로스 브라우징에 골머리를 썩일 필요가 없다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;웹 브라우저 크기에 따라 자동으로 정렬되는 &amp;ldquo;그리드 시스템&amp;quot;을 지원하며,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;one souce multi use&amp;rdquo;&lt;/em&gt; → 반응형 웹 디자인을 추구한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;Responsive web design&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;layout은 방문자의 화면 해상도를 고려하여야 한다.&lt;/li&gt;
+&lt;li&gt;스마트폰이나 태블릿 등 모바일 기기는 화면이 작기 때문에 가독성에 더욱 신경써야 한다.&lt;/li&gt;
+&lt;li&gt;보통 웹사이트가 축소되어 가로 스크롤 없이 콘텐츠를 볼 수 있으나 글자가 너무 작아지기 때문이다.&lt;/li&gt;
+&lt;li&gt;데스크탑용, 테블릿용, 모바일용 웹사이트를 별도 구축할 수도 있지만 One Source Multi Use의 관점에서 올바른 해결책은 아니다.&lt;/li&gt;
+&lt;li&gt;반응형 웹 디자인(Responsive Web Design)은 화면 해상도에 따라 가로폭이나 배치를 변경하여 가독성을 높여 이러한 문제를 해결한다.&lt;/li&gt;
+&lt;li&gt;즉, 하나의 웹사이트를 구축하여 다양한 디바이스의 화면 해상도에 최적화된 웹사이트를 제공하는 것이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;bootstrap-grid-system&#34;&gt;Bootstrap Grid System&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Grid System&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;부트스트랩의 grid system 은 containers, rows 그리고 columns 를 사용해서 컨텐츠를 레이아웃하고 정렬한다.&lt;/li&gt;
+&lt;li&gt;모바일 우선 flexbox grid 를 사용하여 12개의 column 시스템을 가지고 있다.&lt;/li&gt;
+&lt;li&gt;왜 12 columns 일까 ?
+&lt;ul&gt;
+&lt;li&gt;12는 약수가 가장 많기 때문에 한 줄에 표시할 수 있는 종류가 제일 많다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;다음과 같은 구조로 사용한다.
+&lt;ul&gt;
+&lt;li&gt;.container &amp;gt; .row &amp;gt; col-*&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;.row&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;row 는 columns 의 wrapper 이다.&lt;/li&gt;
+&lt;li&gt;각 column 에는 공간 사이를 제어하기 위한 좌우 padding 값이 있는데 이를 &lt;code&gt;gutter&lt;/code&gt; 라고도 한다.
+&lt;ul&gt;
+&lt;li&gt;row 의 margin 값과 gutter 를 제거하려면 .row 에 &lt;code&gt;.no-gutters&lt;/code&gt; class 를 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;.col /  .col-&lt;/strong&gt;*&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;column class 는 row 당 가능한 12개 중 사용하려는 columns 수를 나타낸다.&lt;/li&gt;
+&lt;li&gt;columns 너비는 백분율로 설정 되므로 항상 부모 요소를 기준으로 유동적으로 크기가 조정된다.&lt;/li&gt;
+&lt;li&gt;grid layout 에서 내용은 반드시 columns 안에 있어야 하며 그리고 오직 columns 만 row 의 바로 하위 자식 일 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;offset&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;offset-*&lt;/code&gt; 은 지정한 만큼의 column 공간을 무시하고 다음 공간부터 컨텐츠를 적용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;Nesting&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;.row &amp;gt; .col-* &amp;gt; .row &amp;gt; .col-* 의 방식으로 중첩 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;Grid breakpoints&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;부트스트랩 grid system 은 다양한 디바이스에서 적용하기 위해 특정 px 조건에 대한 지점을 정해 두었는데 이를 breakpoints 라고 한다.&lt;/li&gt;
+&lt;li&gt;부트스트랩은 대부분의 크기를 정의하기 위해 em 또는 rem 을 사용하지만 px 는 그리드  breakpoint 에 사용된다. (뷰포트 너비가 픽셀 단위이고 글꼴 크기에 따라 변하지 않기 때문)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;마무리&#34;&gt;마무리&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;각각의 기술은 저마다 용도가 있고, 장단점이 있으며, 독립적인 용도를 갖추도록 설계된 기술은 없다.&lt;/p&gt;
+&lt;p&gt;특정 상황에 어떤 기술이 가장 적합한 도구가 될 것인지 파악하는 데에는 많은 경험이 필요하다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;참고문헌&#34;&gt;참고문헌&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Introduction&#34;&gt;https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Introduction&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Web/CSS/float&#34;&gt;https://developer.mozilla.org/ko/docs/Web/CSS/float&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Floats&#34;&gt;https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Floats&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Flexbox&#34;&gt;https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Flexbox&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox%ec%9d%98_%ea%b8%b0%eb%b3%b8_%ea%b0%9c%eb%85%90&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox%EC%9D%98_%EA%B8%B0%EB%B3%B8_%EA%B0%9C%EB%85%90&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&#34;&gt;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Django 기본</title>
+        <link>https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/</link>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/icon.png" alt="Featured image of post Django 기본" /&gt;&lt;h1 id=&#34;django-wep-programming&#34;&gt;Django wep programming&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크&lt;/p&gt;
+&lt;p&gt;즉, 쉽고 빠르게 웹사이트를 개발할 수 있도록 돕는 구성요소로 이루어진 웹 프레임워크&lt;/p&gt;
+&lt;p&gt;여기서 프레임워크란, 애플리케이션 개발에 바탕이 되는 템플릿과 같은 역할을 하는 클래스들과 인터페이스의 집합&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;기본-생성-파일&#34;&gt;기본 생성 파일&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;mysite: 프로젝트를 담는 공간&lt;/li&gt;
+&lt;li&gt;manage.py: 프로젝트와 다양한 방법으로 상호작용 하는 커맨드라인의 유틸리티&lt;/li&gt;
+&lt;li&gt;init.py: 파이썬으로 하여금 이 디렉토리를 패키지처럼 다루라고 알려주는 용도의 빈 파일&lt;/li&gt;
+&lt;li&gt;setting.py: 현재 프로젝트의 환경 및 구성을 저장&lt;/li&gt;
+&lt;li&gt;urls.py: 현재 프로젝트의 URL선언을 저장&lt;/li&gt;
+&lt;li&gt;wsgi.py: 현재 프로젝트를 서비스하기 위한 WSGI 호환 웹 서비의 진입점&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;django-cycle&#34;&gt;django cycle&lt;/h2&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 70; flex-basis: 169px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/cycle.jpg&#34; data-size=&#34;600x848&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/cycle.jpg&#34;
+				srcset=&#34;https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/cycle_hu8f247dc7b2ed912aa7dfae59c851bfd4_630666_480x0_resize_q75_box.jpg 480w, https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/cycle_hu8f247dc7b2ed912aa7dfae59c851bfd4_630666_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;600&#34;
+				height=&#34;848&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;django-명령어&#34;&gt;django 명령어&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 프로젝트 생성&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;django&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;admin&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;startproject&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;프로젝트명&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 앱 생성&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;startapp&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;앱명&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 서버가 제대로 동작하는지 로컬에서 확인, http://127.0.0.1:8000/에서 출력&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;runserver&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# INSTALLED_APPS 설정을 탐색하여 데이터베이스 생성&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;migrate&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 데이터베이스에 테이블을 생성할 수 있도록 설계도를 작성&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;makemigrations&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;polls&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 데이터베이스에 실제 테이블을 생성&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;migrate&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# API를 사용하기 위해&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 생성한 모델을 추가&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;polls.models&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Choice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Question&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 관리자 생성&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# winpty: windows 콘솔과 통신이 가능한 인터페이스를 제공하는 windows software package&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;winpty&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;createsuperuser&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;프로젝트와-앱&#34;&gt;프로젝트와 앱&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;앱: 특정한 기능을 수행하는 웹 어플리케이션, 다수의 프로젝트에 포함될 수 있다.&lt;/li&gt;
+&lt;li&gt;프로젝트: 특정 웹 사이트를 위한 앱들과 각 설정들을 한데 묶어놓은 것, 다수의 앱을 포함할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;작동-순서&#34;&gt;작동 순서&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;view 내용 입력&lt;/li&gt;
+&lt;li&gt;뷰를 호출하기 위한 연결 url 생성을 위해 &lt;code&gt;urls.py&lt;/code&gt; 파일 생성&lt;/li&gt;
+&lt;li&gt;최상위 URLconf에서 생성한 &lt;code&gt;urls.py&lt;/code&gt;모듈을 바라보게 설정
+&lt;ul&gt;
+&lt;li&gt;이때 &lt;code&gt;include()&lt;/code&gt;함수는 다른 URLconf드을 참조할 수 있도록 도움&lt;/li&gt;
+&lt;li&gt;만약 &lt;code&gt;127.0.0.1/polls/&lt;/code&gt;이라는 url을 받으면 파싱을 하여 분기, 해당 path인 &lt;code&gt;polls&lt;/code&gt;을 잡아내고 연결을 시켜줌&lt;/li&gt;
+&lt;li&gt;연결된 &lt;code&gt;urls.py&lt;/code&gt;에서 path를 통해 &lt;code&gt;view&lt;/code&gt;로 연결&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;view&lt;/code&gt;내부의 함수를 통해 &lt;code&gt;response&lt;/code&gt;를 클라이언트에게 전달&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;데이터베이스&#34;&gt;데이터베이스&lt;/h2&gt;
+&lt;p&gt;django는 기본적으로 SQLite를 사용하도록 구성되어 있으며, 다른 데이터베이스를 사용하고 싶다면 &lt;code&gt;setting.py&lt;/code&gt;파일을 수정해서 사용할 수 있다.&lt;/p&gt;
+&lt;h2 id=&#34;installed_apps&#34;&gt;INSTALLED_APPS&lt;/h2&gt;
+&lt;p&gt;django를 사용할 때 기본적으로 딸려 오는 앱으로 추가적으로 모델을 사용하기 위해 추가하면 된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;admin: 관리용 사이트&lt;/li&gt;
+&lt;li&gt;auth: 인증시스템&lt;/li&gt;
+&lt;li&gt;contenttypes: 컨텐츠 타입을 위한 프레임워크&lt;/li&gt;
+&lt;li&gt;sessions: 세션 프레임워크&lt;/li&gt;
+&lt;li&gt;messages: 메세징 프레임워크&lt;/li&gt;
+&lt;li&gt;staticfiles: 정적 파일을 관리하는 프레임워크&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;모델&#34;&gt;모델&lt;/h2&gt;
+&lt;p&gt;부가적인 메타데이터를 가진 데이터베이스의 구조(layout)를 지칭&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;모델은 데이터에 관한 단 하나의, 가장 확실한 진리의 원천&lt;/p&gt;
+&lt;p&gt;이 원칙에 따라 데이터 모델을 한곳에서 정의하고, 이것으로부터 자동으로 뭔가를 유도하는 것이 목표&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;api&#34;&gt;API&lt;/h2&gt;
+&lt;p&gt;개발자가 필요로하는 데이터를 뽑아낼 수 있도록 하는 함수, 또는 서버에게 데이터베이스에게 데이터를 입력할 수 있도록 하는 함수&lt;/p&gt;
+&lt;h2 id=&#34;admin-페이지&#34;&gt;Admin 페이지&lt;/h2&gt;
+&lt;p&gt;사이트 관리를 위한 관리자 전용 페이지로 django는 자동으로 제공&lt;/p&gt;
+&lt;h2 id=&#34;ssafy-class&#34;&gt;ssafy class&lt;/h2&gt;
+&lt;h3 id=&#34;중요&#34;&gt;중요&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;urls.py&lt;/code&gt;: 주소 관리&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;views.py&lt;/code&gt;: 페이지 관리&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;models.py&lt;/code&gt;: 데이터베이스 관리&lt;/p&gt;
+&lt;h3 id=&#34;실행순서&#34;&gt;실행순서&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;installed_apps: 앱 등록&lt;/li&gt;
+&lt;li&gt;project/urls.py: path 등록&lt;/li&gt;
+&lt;li&gt;app/views.py: 요청 수신/반환 함수 작성&lt;/li&gt;
+&lt;li&gt;templates/index.html: templates 작성&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>HTML기초</title>
+        <link>https://ssabum.github.io/p/html%EA%B8%B0%EC%B4%88/</link>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/html%EA%B8%B0%EC%B4%88/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/html%EA%B8%B0%EC%B4%88/html.png" alt="Featured image of post HTML기초" /&gt;&lt;h1 id=&#34;html&#34;&gt;HTML&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;웹 컨텐츠의 의미와 구조를 정의할 때 사용하는 언어&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;html-기초&#34;&gt;HTML 기초&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Hyper&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;텍스트 등의 정보가 동일 선상에 있는 것이 아니라 다중으로 연결되어 있는 상태&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Hyper Text&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;참조(하이퍼링크)를 통해 사용자가 한 문서에서 다른 문서로 즉시 접근 할 수 잇는 텍스트&lt;/li&gt;
+&lt;li&gt;하이퍼 텍스트가 쓰인 기술등 중 가장 중요한 2가지 (http, html)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Markup Language&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;특정 텍스트에 역할을 부여하는, 따라서 &amp;ldquo;마크업을 한다&amp;rdquo; 라고 하는 건 제목이 제목이라하고 본문이 본문이라고 마킹을 하는 것&lt;/li&gt;
+&lt;li&gt;ex) h1 tag는 단순히 글자가 커지는 것이 아니라 의미론적으로 그 페이지에서 가장 핵심 주제를 의미하는 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;html-기본-구조&#34;&gt;HTML 기본 구조&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;DOM&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DOM은 문서의 구조화된 표현(structured representation)을 제공하며 프로그래밍 언어가 DOM 구조에 접근할 수 있는 방법을 제공하여 그들이 문서 구조, 스타일, 내용 등을 변경할 수 있게 도움&lt;/li&gt;
+&lt;li&gt;DOM은 동일한 문서를 표현하고, 저장하고, 조작하는 방법을 제공&lt;/li&gt;
+&lt;li&gt;웹 페이지의 객체 지향 표현&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;요소 (Element)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML 요소는 시작 태그와 종료 태그 그리고 태그 사이에 위치한 내용으로 구성
+&lt;ul&gt;
+&lt;li&gt;태그(Element, 요소)는 컨텐츠(내용)를 감싸서 그 정보의 성격과 의미를 정의 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;내용이 없는 태그들
+&lt;ul&gt;
+&lt;li&gt;br, hr, img, input, link, meta&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;요소는 중첩(nested)될 수 있다.
+&lt;ul&gt;
+&lt;li&gt;이러한 중첩들로 하나의 문서를 완성해 나간다.&lt;/li&gt;
+&lt;li&gt;그리고 항상 열고 닫는 태그 쌍이 잘 맞는지 잘 봐야한다.&lt;/li&gt;
+&lt;li&gt;HTML은 오류를 뿜지 않고 그냥 레이아웃이 깨져버리기 때문에 어떤 면에서는 친절하게 오류 띄워주고 어디 틀렸는지 알려주는 프로그래밍 보다 디버깅이 힘들다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;속성 (Attribute)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;속성(Attribute)은 태그의 부가적인 정보가 들어온다.&lt;/li&gt;
+&lt;li&gt;요소는 속성을 가질 수 있으며 요소에 추가적 정보(이미지 파일의 경로, 크기 등)를 제공한다.&lt;/li&gt;
+&lt;li&gt;요소의 시작 태그에 위치해야 하며 &lt;strong&gt;이름&lt;/strong&gt;과 &lt;strong&gt;값&lt;/strong&gt;의 쌍을 이룬다.&lt;/li&gt;
+&lt;li&gt;태그와 상관없이 사용 가능한 속성들(html global attribute)도 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;시맨틱-태그&#34;&gt;시맨틱 태그&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;브라우저, 검색엔진, 개발자 모두에게 콘텐츠의 의미를 명확히 설명하는 태그&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;장점&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;읽기 쉬워진다. (개발자)
+&lt;ul&gt;
+&lt;li&gt;개발자가 의도한 요소의 의미가 명확히 드러나고 있다.이것은 코드의 가독성을 높이고 유지보수를 쉽게 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;접근성이 좋아진다. (검색엔진 및 보조기술 → 시력장애용 스크린리더 → 더 나은 경험 제공)
+&lt;ul&gt;
+&lt;li&gt;HTML 문서는 html 언어 + 사람이 읽을 수 있는 content의 조합인데, 검색 엔진은 HTML 코드만 잘 읽는다.&lt;/li&gt;
+&lt;li&gt;그래서 이 검색 엔진이 HTML을 잘 이해하도록 시맨틱 태그 사용이 권장되고, 그러면 검색 엔진도 무슨 내용인지 이해할 수 있게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;시맨틱 웹&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;웹에 존재하는 수많은 웹페이지들에 메타데이터를 부여하여, 기존의 단순한 데이터 집합이었던 웹페이지를 &amp;lsquo;의미&amp;rsquo;와 &amp;lsquo;관련성&amp;rsquo;을 가지는 거대한 데이터베이스로 구축하고자 하는 발상.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;참고-문헌&#34;&gt;참고 문헌&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started&#34;&gt;https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes&#34;&gt;https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/ko/docs/Glossary/Semantics&#34;&gt;https://developer.mozilla.org/ko/docs/Glossary/Semantics&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>OOP</title>
         <link>https://ssabum.github.io/p/oop/</link>
         <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
