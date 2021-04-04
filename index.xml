@@ -6,7 +6,310 @@
         <description>Recent content on Ssabum&#39;s Devlog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 26 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SQL문법</title>
+        <link>https://ssabum.github.io/p/sql%EB%AC%B8%EB%B2%95/</link>
+        <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/sql%EB%AC%B8%EB%B2%95/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/sql%EB%AC%B8%EB%B2%95/sql.png" alt="Featured image of post SQL문법" /&gt;&lt;h2 id=&#34;sql-개념&#34;&gt;SQL 개념&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.sqlitetutorial.net/&#34;&gt;https://www.sqlitetutorial.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDBMS)의데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;SQL 문법의 세가지 종류&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DDL - 데이터 정의 언어
+&lt;ul&gt;
+&lt;li&gt;CREATE&lt;/li&gt;
+&lt;li&gt;DROP&lt;/li&gt;
+&lt;li&gt;ALTER&lt;/li&gt;
+&lt;li&gt;RENAME&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DML - 데이터 조작 언어
+&lt;ul&gt;
+&lt;li&gt;INSERT&lt;/li&gt;
+&lt;li&gt;UPDATE&lt;/li&gt;
+&lt;li&gt;DELETE&lt;/li&gt;
+&lt;li&gt;SELECT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DCL - 데이터 제어 언어
+&lt;ul&gt;
+&lt;li&gt;GRANT&lt;/li&gt;
+&lt;li&gt;REVOKE&lt;/li&gt;
+&lt;li&gt;COMMIT&lt;/li&gt;
+&lt;li&gt;ROLLBACK&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;database-생성&#34;&gt;Database 생성&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;해당하는 데이터베이스 파일이 있으면 해당DB를 콘솔로 연다.&lt;/p&gt;
+&lt;p&gt;만약 해당하는 파일이 없으면 새로 생성하고, 해당 DB를 콘솔로 연다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sqlite3&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;database&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;ex&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sqlite3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tutorial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqlite3&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;-- 1. 콘솔로 DB를 열고,
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;databases&lt;/span&gt;            &lt;span class=&#34;c1&#34;&gt;-- 2.데이터베이스 목록을 확인한다.
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;CSV 파일 불러오는 명령어&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;주의사항)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.&lt;/code&gt;으로 시작하는 모든 명령어는 sqlite3 프로그램의 기능을 실행하는 명령어이며, SQL 문법에 속하지 않습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;mode&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;csv&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;파일명&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;csv&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;테이블명&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;ex&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;csv&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users_user&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;테이블-생성-및-삭제&#34;&gt;테이블 생성 및 삭제&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;데이터 타입의 종류는 INTEGER, TEXT, REAL, NUMERIC, BLOB 등이 존재한다.&lt;/p&gt;
+&lt;p&gt;자세한 내용은 &lt;a class=&#34;link&#34; href=&#34;https://sqlite.org/datatype3.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SQLite3 공식문서&lt;/a&gt;를 참조한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;테이블 생성 (CREATE)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;datatype&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;datatype&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;INTEGER PRIMARY KEY&lt;/code&gt; 타입으로 컬럼 생성시 기본 &lt;code&gt;rowid&lt;/code&gt; 를 대체함&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;단, PRIMARY KEY는 INTEGER 타입에서만 사용가능&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;데이터 타입&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NULL / INTEGER / REAL / TEXT / BLOB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;INT&lt;/code&gt;와 &lt;code&gt;INTEGER&lt;/code&gt;의 차이&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;INT&lt;/code&gt;형은 산술연산이 가능하며 &lt;code&gt;NULL&lt;/code&gt;로 초기화가 불가능하다&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;INTEGER&lt;/code&gt;형은 산술연산이 불가능하며 &lt;code&gt;NULL&lt;/code&gt;로 초기화가 가능하다&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;테이블 생성 with NOT NULL 조건 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;id&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;INTEGER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AUTOINCREMENT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;TEXT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;INT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;AUTOINCREMENT&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;이전의 삭제된 데이터의 pk는 재사용하지 않음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;테이블 및 스키마 조회&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tables&lt;/span&gt;          &lt;span class=&#34;c1&#34;&gt;-- 테이블 목록 조회
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;schema&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;-- 특정 테이블 스키마 조회
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;테이블 제거 (DROP)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DROP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;classmates&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tables&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- 테이블 제거 확인
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;데이터-추가-읽기-수정-및-삭제&#34;&gt;데이터 추가, 읽기, 수정 및 삭제&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;추가 (INSERT)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;id 스키마를 직접 작성 했을 때 데이터 추가 방법&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;모든 컬럼 작성 시&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;컬럼 미작성 시에는 직접 id 값 입력&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;조회 (SELECT)&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SQL은 세미콜론(;)을 만나기 전까지 절대 실행되지 않습니다.&lt;/p&gt;
+&lt;p&gt;따라서 아래 LIMIT 예시와 같이 들여쓰기를 비교적 자유롭게 할 수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 모든 컬럼 가져오기 --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;-- 특정 컬럼 가져오기 --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;-- LIMIT: 원하는 개수(num)만큼 가져오기 -- 
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;LIMIT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;-- OFFSET: 특정 위치에서부터 가져올 때 --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;-- (맨 위부터 num만큼 떨어진 값부터 가져온다는 의미)
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;LIMIT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;OFFSET&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;-- WHERE: 조건을 통해 값 가져오기 --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;column&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;-- DISTINCT: 중복없이 가져오기 -- 
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DISTINCT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;column&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;삭제 (DELETE)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;DELETE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;condition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;-- ex)
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DELETE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;classmates&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;지연&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;수정 (UPDATE)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;UPDATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SET&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;condition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;-- ex)
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;-- 지연의 이름을 지수로 바꾼다고 하면 --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;UPDATE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;classmates&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SET&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;지수&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;address&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;대한민국&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;지연&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;예시와 함께하는 WHERE문 심화 (READ)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- Q.users에서 age가 30이상인 사람만 가져온다면? --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- Q.users에서 age가 30이상인 사람의 이름만 가져온다면? --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;first_name&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- Q.users에서 age가 30이상이고 성이 김인 사람의 성과 나이만 가져온다면? --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;김&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;심화-sql문&#34;&gt;심화 SQL문&lt;/h2&gt;
+&lt;h3 id=&#34;expressions&#34;&gt;Expressions&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;django ORM에서 &lt;code&gt;aggregate&lt;/code&gt;와 대응&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;COUNT (레코드 값들의 개수 반환)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;COUNT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AVG (레코드 값들의 평균값 반환)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;AVG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MAX (레코드 값들의 최대값 반환)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MIN (레코드 값들의 최소값 반환)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SUM (레코드 값들의 합 반환)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;like&#34;&gt;LIKE&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;LIKE는 두 가지 와일드 카드(언더스코어 그리고 퍼센트 기호)와 함께 동작한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;_&lt;/code&gt; (반드시 이 자리에 한 개의 문자가 존재해야 한다는 뜻)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 20대인 사람들만 가져올 때 --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;LIKE&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;2_&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;%&lt;/code&gt; (이 자리에 문자열이 있을 수도, 없을 수도 있다. 0개 이상이라는 뜻)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 지역번호가 02인 사람만 가져올 때 --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;phone&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;LIKE&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;02-%&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;두 개를 조합해서 사용할 수도 있다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 핸드폰 중간 번호가 반드시 4자리면서 511로 시작되는 사람들 --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;phone&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;LIKE&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;%-511_-%&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;정렬 (ORDER BY)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;columns&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;ORDER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;ASC&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DESC&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;-- ASC: 오름차순 / DESC: 내림차순 --
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 나이, 성 순서로 오름차순 정렬하여 상위 10개만 뽑아보면? --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; 
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;ORDER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;LIMIT&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;GROUP BY&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;지정된 기준에 따라 행 세트를 그룹으로 결합한다.&lt;/p&gt;
+&lt;p&gt;데이터를 요약하는 상황에서 주로 사용한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;django ORM에서 &lt;code&gt;annotate&lt;/code&gt;와 대응&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;aggregate_function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;column_2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;GROUP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 성(last_name)씨가 몇 명인지 조회할 때 --
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;COUNT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;GROUP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ALTER&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;테이블명 변경&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;ALTER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;기존테이블명&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;RENAME&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TO&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;새로운테이블명&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;새로운 컬럼 추가&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;ALTER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;테이블명&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;ADD&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;COLUMN&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;컬럼명&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;datatype&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>외장SSD</title>
+        <link>https://ssabum.github.io/p/%EC%99%B8%EC%9E%A5ssd/</link>
+        <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/%EC%99%B8%EC%9E%A5ssd/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/%EC%99%B8%EC%9E%A5ssd/ssd.jpg" alt="Featured image of post 외장SSD" /&gt;&lt;h1 id=&#34;외장ssd&#34;&gt;외장SSD?&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;외장하드, 즉 &lt;code&gt;외장HDD&lt;/code&gt;는 많이들 들어보았을 것이다. &lt;code&gt;외장SSD&lt;/code&gt;는 &lt;code&gt;HDD&lt;/code&gt; 대신 &lt;code&gt;SSD&lt;/code&gt;를 사용하여 만들어낸 외장 메모리 저장장치이다.  &lt;code&gt;SSD&lt;/code&gt;는 &lt;code&gt;HDD&lt;/code&gt;와 비교해 데이터 전송 속도가 빠르고, 전력 소모가 적으며, 플래터, 모터, 헤드 같은 부품이 없기 때문에 더 작고 얇게 제작할 수 있다.&lt;/p&gt;
+&lt;p&gt;따라서 &lt;code&gt;외장SSD&lt;/code&gt; 역시 단일 저장장치에서도 &lt;code&gt;HDD&lt;/code&gt; 수준의 저장 용량을 확보할 수 있게 됐고, 입출력 인터페이스 역시 &lt;code&gt;SSD&lt;/code&gt;의 빠른 속도를 선보이면서 휴대용 저장장치에 어울리는 방식으로 자리잡았다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;외장SSD&lt;/code&gt;의 가장 큰 장점은 전송 속도다. &lt;code&gt;HDD&lt;/code&gt;는 바늘 처럼 생긴 헤드를 플래터 위에서 직접 움직이며 데이터를 찾거나 데이터를 기록하는 반면, 반도체로 제작한 &lt;code&gt;SSD&lt;/code&gt;는 이러한 과정이 없는 만큼 더 빠르게 데이터를 읽고 쓸 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;그래서-나도&#34;&gt;그래서 나도!&lt;/h2&gt;
+&lt;p&gt;내 노트북의 용량은 &lt;code&gt;SSD256GB&lt;/code&gt;이다. 그러나 필수 소프트웨어가 깔리고 프로그램과 파일들 몇 개 깔다보니 금방 금방 줄어들었다&amp;hellip;&lt;/p&gt;
+&lt;p&gt;그래서 고민끝에 구매하게된 삼성 포터블 &lt;code&gt;외장SSD T5&lt;/code&gt; ㅎㅎ 통장 잔고가 좋지 못해 500GB짜리를 샀지만 나름 &lt;code&gt;FLEX&lt;/code&gt;했다.&lt;/p&gt;
+&lt;p&gt;그렇게 구매하고 배송받은 &lt;code&gt;외장SSD&lt;/code&gt;를 연결하는 순간&amp;hellip;&lt;code&gt;C tpye&lt;/code&gt; 연결시에 접촉 불량이 발생했다&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 133; flex-basis: 320px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%EC%99%B8%EC%9E%A5ssd/broken.jpg&#34; data-size=&#34;500x375&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%EC%99%B8%EC%9E%A5ssd/broken.jpg&#34;
+				srcset=&#34;https://ssabum.github.io/p/%EC%99%B8%EC%9E%A5ssd/broken_hufc6be62723d340c8edb0fb8f5b75736e_38473_480x0_resize_q75_box.jpg 480w, https://ssabum.github.io/p/%EC%99%B8%EC%9E%A5ssd/broken_hufc6be62723d340c8edb0fb8f5b75736e_38473_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;500&#34;
+				height=&#34;375&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;바로 삼성서비스센터에 무상교체를 보낸 상태이다&amp;hellip;&lt;/p&gt;
+&lt;p&gt;빨리 정상작동되는 새걸로 받아서 가득 채워버려야지&amp;hellip;🤪&lt;/p&gt;
+&lt;p&gt;그때부터 &lt;code&gt;Data-analysis&lt;/code&gt; 포스팅 시작이다!&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>CSS기초</title>
         <link>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
@@ -1231,332 +1534,6 @@ self - 개별 요소
 &lt;p&gt;큐가 비었습니다. 모든 노드를 탐색했다는 뜻이죠!&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;</description>
-        </item>
-        <item>
-        <title></title>
-        <link>https://ssabum.github.io/p/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://ssabum.github.io/p/</guid>
-        <description>&lt;p&gt;author = &amp;ldquo;Hugo Authors&amp;rdquo;
-title = &amp;ldquo;외장ssd&amp;rdquo;
-date = &amp;ldquo;2021-04-04&amp;rdquo;
-description = &amp;ldquo;외장하드는 들어봤는데 외장SSD는 무엇이지?&amp;rdquo;
-categories = [
-&amp;ldquo;Diary&amp;rdquo;
-]
-tags = [
-&amp;ldquo;삼성&amp;rdquo;, &amp;ldquo;외장ssd&amp;rdquo;, &amp;ldquo;t5&amp;rdquo;,&lt;/p&gt;
-&lt;p&gt;]&lt;/p&gt;
-&lt;p&gt;image = &amp;ldquo;ssd.jpg&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;+++&lt;/p&gt;
-&lt;h1 id=&#34;외장ssd&#34;&gt;외장SSD?&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;외장하드, 즉 &lt;code&gt;외장 HDD&lt;/code&gt;는 많이들 들어보았을 것이다. &lt;code&gt;외장 SSD&lt;/code&gt;는 &lt;code&gt;HDD&lt;/code&gt; 대신 &lt;code&gt;SSD&lt;/code&gt;를 사용하여 만들어낸 외장 메모리 저장장치이다.  &lt;code&gt;SSD&lt;/code&gt;는 &lt;code&gt;HDD&lt;/code&gt;와 비교해 데이터 전송 속도가 빠르고, 전력 소모가 적으며, 플래터, 모터, 헤드 같은 부품이 없기 때문에 더 작고 얇게 제작할 수 있다.&lt;/p&gt;
-&lt;p&gt;따라서 &lt;code&gt;외장 SSD&lt;/code&gt; 역시 단일 저장장치에서도 &lt;code&gt;HDD&lt;/code&gt; 수준의 저장 용량을 확보할 수 있게 됐고, 입출력 인터페이스 역시 &lt;code&gt;SSD&lt;/code&gt;의 빠른 속도를 선보이면서 휴대용 저장장치에 어울리는 방식으로 자리잡았다.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;외장 SSD&lt;/code&gt;의 가장 큰 장점은 전송 속도다. &lt;code&gt;HDD&lt;/code&gt;는 바늘 처럼 생긴 헤드를 플래터 위에서 직접 움직이며 데이터를 찾거나 데이터를 기록하는 반면, 반도체로 제작한 &lt;code&gt;SSD&lt;/code&gt;는 이러한 과정이 없는 만큼 더 빠르게 데이터를 읽고 쓸 수 있다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;그래서-나도&#34;&gt;그래서 나도!&lt;/h2&gt;
-&lt;p&gt;내 노트북의 용량은 &lt;code&gt;SSD 256GB&lt;/code&gt;이다. 그러나 필수 소프트웨어가 깔리고 프로그램과 파일들 몇 개 깔다보니 금방 금방 줄어들었다&amp;hellip;😥&lt;/p&gt;
-&lt;p&gt;그래서 고민끝에 구매하게된 &lt;code&gt;삼성 포터블 외장 SSD T5 500GB&lt;/code&gt; ㅎㅎ 통장 잔고가 좋지 못해 &lt;code&gt;1TB&lt;/code&gt;짜리는 사지 못했지만 나름 &lt;code&gt;FLEX&lt;/code&gt;했다😎&lt;/p&gt;
-&lt;p&gt;그렇게 구매하고 배송받은 &lt;code&gt;외장 SSD&lt;/code&gt;를 연결하는 순간&amp;hellip;&lt;code&gt;C TO C TYPE&lt;/code&gt; 연결시에 접촉 불량이 발생했다&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;figure style=&#34;flex-grow: 133; flex-basis: 320px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/top.gif&#34; data-size=&#34;500x375&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/top.gif&#34;
-				srcset=&#34;https://ssabum.github.io/p/top_hufd1cd3b3a29f7c9a236f146701fd9e67_713389_480x0_resize_box.gif 480w, https://ssabum.github.io/p/top_hufd1cd3b3a29f7c9a236f146701fd9e67_713389_1024x0_resize_box.gif 1024w&#34;
-				width=&#34;500&#34;
-				height=&#34;375&#34;
-				loading=&#34;lazy&#34;
-				&gt;
-		&lt;/a&gt;
-		
-	&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;바로 삼성서비스센터에 무상교체를 보낸 상태이다&amp;hellip;&lt;/p&gt;
-&lt;p&gt;빨리 정상작동 되는 새걸로 받아서 가득 채워버려야지&amp;hellip;ㅎㅎ&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title></title>
-        <link>https://ssabum.github.io/p/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://ssabum.github.io/p/</guid>
-        <description>&lt;p&gt;author = &amp;ldquo;Hugo Authors&amp;rdquo;
-title = &amp;ldquo;SQL문법&amp;rdquo;
-date = &amp;ldquo;2021-04-04&amp;rdquo;
-description = &amp;ldquo;SQLite3 기초 문법&amp;rdquo;
-categories = [
-&amp;ldquo;TIL&amp;rdquo;
-]
-tags = [
-&amp;ldquo;sql&amp;rdquo;, &amp;ldquo;sqlite3&amp;rdquo;, &amp;ldquo;django&amp;rdquo;,&lt;/p&gt;
-&lt;p&gt;]&lt;/p&gt;
-&lt;p&gt;image = &amp;ldquo;sql.png&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;+++&lt;/p&gt;
-&lt;h2 id=&#34;sql-개념&#34;&gt;SQL 개념&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.sqlitetutorial.net/&#34;&gt;https://www.sqlitetutorial.net/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDBMS)의데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어이다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;SQL 문법의 세가지 종류&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DDL - 데이터 정의 언어
-&lt;ul&gt;
-&lt;li&gt;CREATE&lt;/li&gt;
-&lt;li&gt;DROP&lt;/li&gt;
-&lt;li&gt;ALTER&lt;/li&gt;
-&lt;li&gt;RENAME&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DML - 데이터 조작 언어
-&lt;ul&gt;
-&lt;li&gt;INSERT&lt;/li&gt;
-&lt;li&gt;UPDATE&lt;/li&gt;
-&lt;li&gt;DELETE&lt;/li&gt;
-&lt;li&gt;SELECT&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DCL - 데이터 제어 언어
-&lt;ul&gt;
-&lt;li&gt;GRANT&lt;/li&gt;
-&lt;li&gt;REVOKE&lt;/li&gt;
-&lt;li&gt;COMMIT&lt;/li&gt;
-&lt;li&gt;ROLLBACK&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;database-생성&#34;&gt;Database 생성&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;해당하는 데이터베이스 파일이 있으면 해당DB를 콘솔로 연다.&lt;/p&gt;
-&lt;p&gt;만약 해당하는 파일이 없으면 새로 생성하고, 해당 DB를 콘솔로 연다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sqlite3&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;database&lt;/span&gt;
-
-&lt;span class=&#34;n&#34;&gt;ex&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sqlite3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tutorial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqlite3&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;-- 1. 콘솔로 DB를 열고,
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;databases&lt;/span&gt;            &lt;span class=&#34;c1&#34;&gt;-- 2.데이터베이스 목록을 확인한다.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;CSV 파일 불러오는 명령어&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;주의사항)&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;.&lt;/code&gt;으로 시작하는 모든 명령어는 sqlite3 프로그램의 기능을 실행하는 명령어이며, SQL 문법에 속하지 않습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;mode&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;csv&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;파일명&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;csv&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;테이블명&lt;/span&gt;
-
-&lt;span class=&#34;n&#34;&gt;ex&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;csv&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users_user&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;테이블-생성-및-삭제&#34;&gt;테이블 생성 및 삭제&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;데이터 타입의 종류는 INTEGER, TEXT, REAL, NUMERIC, BLOB 등이 존재한다.&lt;/p&gt;
-&lt;p&gt;자세한 내용은 &lt;a class=&#34;link&#34; href=&#34;https://sqlite.org/datatype3.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SQLite3 공식문서&lt;/a&gt;를 참조한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;테이블 생성 (CREATE)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;datatype&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;datatype&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;INTEGER PRIMARY KEY&lt;/code&gt; 타입으로 컬럼 생성시 기본 &lt;code&gt;rowid&lt;/code&gt; 를 대체함&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;단, PRIMARY KEY는 INTEGER 타입에서만 사용가능&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;데이터 타입&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;NULL / INTEGER / REAL / TEXT / BLOB&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;INT&lt;/code&gt;와 &lt;code&gt;INTEGER&lt;/code&gt;의 차이&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;INT&lt;/code&gt;형은 산술연산이 가능하며 &lt;code&gt;NULL&lt;/code&gt;로 초기화가 불가능하다&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;INTEGER&lt;/code&gt;형은 산술연산이 불가능하며 &lt;code&gt;NULL&lt;/code&gt;로 초기화가 가능하다&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;테이블 생성 with NOT NULL 조건 예시&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;id&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;INTEGER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AUTOINCREMENT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;TEXT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;INT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;AUTOINCREMENT&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;이전의 삭제된 데이터의 pk는 재사용하지 않음&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;테이블 및 스키마 조회&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tables&lt;/span&gt;          &lt;span class=&#34;c1&#34;&gt;-- 테이블 목록 조회
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;schema&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;-- 특정 테이블 스키마 조회
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;테이블 제거 (DROP)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DROP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;classmates&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;sqlite&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tables&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- 테이블 제거 확인
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;데이터-추가-읽기-수정-및-삭제&#34;&gt;데이터 추가, 읽기, 수정 및 삭제&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;추가 (INSERT)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;id 스키마를 직접 작성 했을 때 데이터 추가 방법&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;모든 컬럼 작성 시&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;컬럼 미작성 시에는 직접 id 값 입력&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;조회 (SELECT)&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;SQL은 세미콜론(;)을 만나기 전까지 절대 실행되지 않습니다.&lt;/p&gt;
-&lt;p&gt;따라서 아래 LIMIT 예시와 같이 들여쓰기를 비교적 자유롭게 할 수 있습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 모든 컬럼 가져오기 --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;-- 특정 컬럼 가져오기 --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;-- LIMIT: 원하는 개수(num)만큼 가져오기 -- 
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;LIMIT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;-- OFFSET: 특정 위치에서부터 가져올 때 --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;-- (맨 위부터 num만큼 떨어진 값부터 가져온다는 의미)
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;LIMIT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;OFFSET&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;-- WHERE: 조건을 통해 값 가져오기 --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;column&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;-- DISTINCT: 중복없이 가져오기 -- 
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DISTINCT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;column&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;삭제 (DELETE)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;DELETE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;condition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;-- ex)
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DELETE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;classmates&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;지연&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;수정 (UPDATE)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;UPDATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;SET&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;condition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;-- ex)
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;-- 지연의 이름을 지수로 바꾼다고 하면 --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;UPDATE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;classmates&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;SET&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;지수&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;address&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;대한민국&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;지연&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;예시와 함께하는 WHERE문 심화 (READ)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- Q.users에서 age가 30이상인 사람만 가져온다면? --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- Q.users에서 age가 30이상인 사람의 이름만 가져온다면? --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;first_name&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- Q.users에서 age가 30이상이고 성이 김인 사람의 성과 나이만 가져온다면? --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;김&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;심화-sql문&#34;&gt;심화 SQL문&lt;/h2&gt;
-&lt;h3 id=&#34;expressions&#34;&gt;Expressions&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;django ORM에서 &lt;code&gt;aggregate&lt;/code&gt;와 대응&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;COUNT (레코드 값들의 개수 반환)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;COUNT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AVG (레코드 값들의 평균값 반환)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;AVG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;MAX (레코드 값들의 최대값 반환)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;MIN (레코드 값들의 최소값 반환)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;SUM (레코드 값들의 합 반환)&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;like&#34;&gt;LIKE&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;LIKE는 두 가지 와일드 카드(언더스코어 그리고 퍼센트 기호)와 함께 동작한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;_&lt;/code&gt; (반드시 이 자리에 한 개의 문자가 존재해야 한다는 뜻)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 20대인 사람들만 가져올 때 --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  
-&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;LIKE&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;2_&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;%&lt;/code&gt; (이 자리에 문자열이 있을 수도, 없을 수도 있다. 0개 이상이라는 뜻)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 지역번호가 02인 사람만 가져올 때 --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  
-&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;phone&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;LIKE&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;02-%&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;두 개를 조합해서 사용할 수도 있다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 핸드폰 중간 번호가 반드시 4자리면서 511로 시작되는 사람들 --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  
-&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;phone&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;LIKE&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;%-511_-%&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;정렬 (ORDER BY)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;columns&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;ORDER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;ASC&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DESC&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;-- ASC: 오름차순 / DESC: 내림차순 --
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 나이, 성 순서로 오름차순 정렬하여 상위 10개만 뽑아보면? --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; 
-&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;ORDER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;LIMIT&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;GROUP BY&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;지정된 기준에 따라 행 세트를 그룹으로 결합한다.&lt;/p&gt;
-&lt;p&gt;데이터를 요약하는 상황에서 주로 사용한다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;django ORM에서 &lt;code&gt;annotate&lt;/code&gt;와 대응&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;aggregate_function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;column_2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;GROUP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;column2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 성(last_name)씨가 몇 명인지 조회할 때 --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;COUNT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;users&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;GROUP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ALTER&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;테이블명 변경&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;ALTER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;기존테이블명&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;RENAME&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TO&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;새로운테이블명&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;새로운 컬럼 추가&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;ALTER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;테이블명&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;ADD&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;COLUMN&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;컬럼명&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;datatype&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         
     </channel>

@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>django</title>
+      <link>https://ssabum.github.io/tags/django/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql</title>
+      <link>https://ssabum.github.io/tags/sql/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sqlite3</title>
+      <link>https://ssabum.github.io/tags/sqlite3/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/tags/sqlite3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>t5</title>
+      <link>https://ssabum.github.io/tags/t5/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/tags/t5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>삼성</title>
+      <link>https://ssabum.github.io/tags/%EC%82%BC%EC%84%B1/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/tags/%EC%82%BC%EC%84%B1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>외장ssd</title>
+      <link>https://ssabum.github.io/tags/%EC%99%B8%EC%9E%A5ssd/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/tags/%EC%99%B8%EC%9E%A5ssd/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>algorithm</title>
       <link>https://ssabum.github.io/tags/algorithm/</link>
@@ -44,15 +98,6 @@
     </item>
     
     <item>
-      <title>django</title>
-      <link>https://ssabum.github.io/tags/django/</link>
-      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ssabum.github.io/tags/django/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>html</title>
       <link>https://ssabum.github.io/tags/html/</link>
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
@@ -85,15 +130,6 @@
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ssabum.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sql</title>
-      <link>https://ssabum.github.io/tags/sql/</link>
-      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ssabum.github.io/tags/sql/</guid>
       <description></description>
     </item>
     

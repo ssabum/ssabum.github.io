@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>t5 on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/t5/</link>
+    <description>Recent content in t5 on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/t5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>외장SSD</title>
+      <link>https://ssabum.github.io/p/%EC%99%B8%EC%9E%A5ssd/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EC%99%B8%EC%9E%A5ssd/</guid>
+      <description>외장SSD?  외장하드, 즉 외장HDD는 많이들 들어보았을 것이다. 외장SSD는 HDD 대신 SSD를 사용하여 만들어낸 외장 메모리 저장장치이다. SSD는 HDD와 비교해 데이터 전송 속도가 빠르고, 전력 소모가 적으며, 플래터, 모터, 헤드 같은 부품이 없기 때문에 더 작고 얇게 제작할 수 있다.
+따라서 외장SSD 역시 단일 저장장치에서도 HDD 수준의 저장 용량을 확보할 수 있게 됐고, 입출력 인터페이스 역시 SSD의 빠른 속도를 선보이면서 휴대용 저장장치에 어울리는 방식으로 자리잡았다.
+외장SSD의 가장 큰 장점은 전송 속도다.</description>
+    </item>
+    
+  </channel>
+</rss>

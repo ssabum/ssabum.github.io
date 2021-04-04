@@ -6,7 +6,20 @@
     <description>Recent content in sql on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL문법</title>
+      <link>https://ssabum.github.io/p/sql%EB%AC%B8%EB%B2%95/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/sql%EB%AC%B8%EB%B2%95/</guid>
+      <description>SQL 개념  https://www.sqlitetutorial.net/
+SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDBMS)의데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어이다.
+ SQL 문법의 세가지 종류
+ DDL - 데이터 정의 언어  CREATE DROP ALTER RENAME   DML - 데이터 조작 언어  INSERT UPDATE DELETE SELECT   DCL - 데이터 제어 언어  GRANT REVOKE COMMIT ROLLBACK    Database 생성  해당하는 데이터베이스 파일이 있으면 해당DB를 콘솔로 연다.
+만약 해당하는 파일이 없으면 새로 생성하고, 해당 DB를 콘솔로 연다.</description>
+    </item>
+    
     <item>
       <title>SQLD</title>
       <link>https://ssabum.github.io/p/sqld/</link>

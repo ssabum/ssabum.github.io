@@ -6,7 +6,31 @@
     <description>Recent content in Posts on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL문법</title>
+      <link>https://ssabum.github.io/p/sql%EB%AC%B8%EB%B2%95/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/sql%EB%AC%B8%EB%B2%95/</guid>
+      <description>SQL 개념  https://www.sqlitetutorial.net/
+SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDBMS)의데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어이다.
+ SQL 문법의 세가지 종류
+ DDL - 데이터 정의 언어  CREATE DROP ALTER RENAME   DML - 데이터 조작 언어  INSERT UPDATE DELETE SELECT   DCL - 데이터 제어 언어  GRANT REVOKE COMMIT ROLLBACK    Database 생성  해당하는 데이터베이스 파일이 있으면 해당DB를 콘솔로 연다.
+만약 해당하는 파일이 없으면 새로 생성하고, 해당 DB를 콘솔로 연다.</description>
+    </item>
+    
+    <item>
+      <title>외장SSD</title>
+      <link>https://ssabum.github.io/p/%EC%99%B8%EC%9E%A5ssd/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EC%99%B8%EC%9E%A5ssd/</guid>
+      <description>외장SSD?  외장하드, 즉 외장HDD는 많이들 들어보았을 것이다. 외장SSD는 HDD 대신 SSD를 사용하여 만들어낸 외장 메모리 저장장치이다. SSD는 HDD와 비교해 데이터 전송 속도가 빠르고, 전력 소모가 적으며, 플래터, 모터, 헤드 같은 부품이 없기 때문에 더 작고 얇게 제작할 수 있다.
+따라서 외장SSD 역시 단일 저장장치에서도 HDD 수준의 저장 용량을 확보할 수 있게 됐고, 입출력 인터페이스 역시 SSD의 빠른 속도를 선보이면서 휴대용 저장장치에 어울리는 방식으로 자리잡았다.
+외장SSD의 가장 큰 장점은 전송 속도다.</description>
+    </item>
+    
     <item>
       <title>CSS기초</title>
       <link>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88/</link>
@@ -97,35 +121,6 @@
       
       <guid>https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/</guid>
       <description>&lt;p&gt;Algorithm기본 이론에 대해 알아보자&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ssabum.github.io/p/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ssabum.github.io/p/</guid>
-      <description>author = &amp;ldquo;Hugo Authors&amp;rdquo; title = &amp;ldquo;외장ssd&amp;rdquo; date = &amp;ldquo;2021-04-04&amp;rdquo; description = &amp;ldquo;외장하드는 들어봤는데 외장SSD는 무엇이지?&amp;rdquo; categories = [ &amp;ldquo;Diary&amp;rdquo; ] tags = [ &amp;ldquo;삼성&amp;rdquo;, &amp;ldquo;외장ssd&amp;rdquo;, &amp;ldquo;t5&amp;rdquo;,
-]
-image = &amp;ldquo;ssd.jpg&amp;rdquo;
-+++
-외장SSD?  외장하드, 즉 외장 HDD는 많이들 들어보았을 것이다. 외장 SSD는 HDD 대신 SSD를 사용하여 만들어낸 외장 메모리 저장장치이다. SSD는 HDD와 비교해 데이터 전송 속도가 빠르고, 전력 소모가 적으며, 플래터, 모터, 헤드 같은 부품이 없기 때문에 더 작고 얇게 제작할 수 있다.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ssabum.github.io/p/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ssabum.github.io/p/</guid>
-      <description>author = &amp;ldquo;Hugo Authors&amp;rdquo; title = &amp;ldquo;SQL문법&amp;rdquo; date = &amp;ldquo;2021-04-04&amp;rdquo; description = &amp;ldquo;SQLite3 기초 문법&amp;rdquo; categories = [ &amp;ldquo;TIL&amp;rdquo; ] tags = [ &amp;ldquo;sql&amp;rdquo;, &amp;ldquo;sqlite3&amp;rdquo;, &amp;ldquo;django&amp;rdquo;,
-]
-image = &amp;ldquo;sql.png&amp;rdquo;
-+++
-SQL 개념  https://www.sqlitetutorial.net/
-SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDBMS)의데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어이다.
- SQL 문법의 세가지 종류
- DDL - 데이터 정의 언어  CREATE DROP ALTER RENAME   DML - 데이터 조작 언어  INSERT UPDATE DELETE SELECT   DCL - 데이터 제어 언어  GRANT REVOKE COMMIT ROLLBACK    Database 생성  해당하는 데이터베이스 파일이 있으면 해당DB를 콘솔로 연다.</description>
     </item>
     
   </channel>
