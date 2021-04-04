@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='나의 SQLD 도전기'><title>SQLD</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='author = &amp;ldquo;Hugo Authors&amp;rdquo; title = &amp;ldquo;SQL문법&amp;rdquo; date = &amp;ldquo;2021-04-04&amp;rdquo; description = &amp;ldquo;SQLite3 기초 문법&amp;rdquo; categories = [ &amp;ldquo;TIL&amp;rdquo; ] tags = [ &amp;ldquo;sql&amp;rdquo;, &amp;ldquo;sqlite3&amp;rdquo;, &amp;ldquo;django&amp;rdquo;,
+]
+image = &amp;ldquo;sql.png&amp;rdquo;
+&#43;&#43;&#43;
+SQL 개념  https://www.sqlitetutorial.net/
+SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDBMS)의데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어이다.
+ SQL 문법의 세가지 종류
+ DDL - 데이터 정의 언어  CREATE DROP ALTER RENAME   DML - 데이터 조작 언어  INSERT UPDATE DELETE SELECT   DCL - 데이터 제어 언어  GRANT REVOKE COMMIT ROLLBACK    Database 생성  해당하는 데이터베이스 파일이 있으면 해당DB를 콘솔로 연다.'><title></title>
 
-<link rel='canonical' href='https://ssabum.github.io/p/sqld/'>
+<link rel='canonical' href='https://ssabum.github.io/p/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='SQLD'>
-<meta property='og:description' content='나의 SQLD 도전기'>
-<meta property='og:url' content='https://ssabum.github.io/p/sqld/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content=''>
+<meta property='og:description' content='author = &amp;ldquo;Hugo Authors&amp;rdquo; title = &amp;ldquo;SQL문법&amp;rdquo; date = &amp;ldquo;2021-04-04&amp;rdquo; description = &amp;ldquo;SQLite3 기초 문법&amp;rdquo; categories = [ &amp;ldquo;TIL&amp;rdquo; ] tags = [ &amp;ldquo;sql&amp;rdquo;, &amp;ldquo;sqlite3&amp;rdquo;, &amp;ldquo;django&amp;rdquo;,
+]
+image = &amp;ldquo;sql.png&amp;rdquo;
+&#43;&#43;&#43;
+SQL 개념  https://www.sqlitetutorial.net/
+SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDBMS)의데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어이다.
+ SQL 문법의 세가지 종류
+ DDL - 데이터 정의 언어  CREATE DROP ALTER RENAME   DML - 데이터 조작 언어  INSERT UPDATE DELETE SELECT   DCL - 데이터 제어 언어  GRANT REVOKE COMMIT ROLLBACK    Database 생성  해당하는 데이터베이스 파일이 있으면 해당DB를 콘솔로 연다.'>
+<meta property='og:url' content='https://ssabum.github.io/p/'>
 <meta property='og:site_name' content='Ssabum&#39;s Devlog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='license' /><meta property='article:tag' content='sqld' /><meta property='article:tag' content='sql' /><meta property='article:published_time' content='2021-03-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-03-26T00:00:00&#43;00:00'/><meta property='og:image' content='https://ssabum.github.io/p/sqld/sql.png' />
-<meta name="twitter:title" content="SQLD">
-<meta name="twitter:description" content="나의 SQLD 도전기"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://ssabum.github.io/p/sqld/sql.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="author = &amp;ldquo;Hugo Authors&amp;rdquo; title = &amp;ldquo;SQL문법&amp;rdquo; date = &amp;ldquo;2021-04-04&amp;rdquo; description = &amp;ldquo;SQLite3 기초 문법&amp;rdquo; categories = [ &amp;ldquo;TIL&amp;rdquo; ] tags = [ &amp;ldquo;sql&amp;rdquo;, &amp;ldquo;sqlite3&amp;rdquo;, &amp;ldquo;django&amp;rdquo;,
+]
+image = &amp;ldquo;sql.png&amp;rdquo;
+&#43;&#43;&#43;
+SQL 개념  https://www.sqlitetutorial.net/
+SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDBMS)의데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어이다.
+ SQL 문법의 세가지 종류
+ DDL - 데이터 정의 언어  CREATE DROP ALTER RENAME   DML - 데이터 조작 언어  INSERT UPDATE DELETE SELECT   DCL - 데이터 제어 언어  GRANT REVOKE COMMIT ROLLBACK    Database 생성  해당하는 데이터베이스 파일이 있으면 해당DB를 콘솔로 연다.">
     <link rel="shortcut icon" href="fav.ico" />
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -211,72 +231,60 @@
         </a>
     </div>
 
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/sqld/">
-                <img src="/p/sqld/sql_hubbf8a9fc18cf0c0587203e8c4fcd3fa5_78275_800x0_resize_box_2.png"
-                        srcset="/p/sqld/sql_hubbf8a9fc18cf0c0587203e8c4fcd3fa5_78275_800x0_resize_box_2.png 800w, /p/sqld/sql_hubbf8a9fc18cf0c0587203e8c4fcd3fa5_78275_1600x0_resize_box_2.png 1600w"
-                        width="800" 
-                        height="418" 
-                        loading="lazy"
-                        alt="Featured image of post SQLD" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
-    <header class="article-category">
-        
-            <a href="/categories/diary/" style="background-color: #2a9d8f; color: #fff;">
-                Diary
-            </a>
-        
-    </header>
-    
 
     <h2 class="article-title">
-        <a href="/p/sqld/">SQLD</a>
+        <a href="/p/"></a>
     </h2>
 
-    
-    <h3 class="article-subtitle">
-        나의 SQLD 도전기
-    </h3>
-    <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-        <time class="article-time--published">Mar 26, 2021</time>
-    </footer></div>
+    </div>
 </header>
 
     <section class="article-content">
-    <h1 id="sqld란-무엇일까">SQLD란 무엇일까?</h1>
-<p>한국데이터산업진흥원에서 주관하는 시험으로, Structured  Query Language Developer의 줄임말로 데이터베이스 SQL국가공인 자격증이다😎</p>
-<p>저번주 올해 첫 시험인 03.20(토) 시험을 접수했고 앞으로 3주 가량 남은 상황, 오늘부터 SQLD 공부를 시작한다!!</p>
+    <p>author = &ldquo;Hugo Authors&rdquo;
+title = &ldquo;외장ssd&rdquo;
+date = &ldquo;2021-04-04&rdquo;
+description = &ldquo;외장하드는 들어봤는데 외장SSD는 무엇이지?&rdquo;
+categories = [
+&ldquo;Diary&rdquo;
+]
+tags = [
+&ldquo;삼성&rdquo;, &ldquo;외장ssd&rdquo;, &ldquo;t5&rdquo;,</p>
+<p>]</p>
+<p>image = &ldquo;ssd.jpg&rdquo;</p>
+<p>+++</p>
+<h1 id="외장ssd">외장SSD?</h1>
+<blockquote>
+<p>외장하드, 즉 <code>외장 HDD</code>는 많이들 들어보았을 것이다. <code>외장 SSD</code>는 <code>HDD</code> 대신 <code>SSD</code>를 사용하여 만들어낸 외장 메모리 저장장치이다.  <code>SSD</code>는 <code>HDD</code>와 비교해 데이터 전송 속도가 빠르고, 전력 소모가 적으며, 플래터, 모터, 헤드 같은 부품이 없기 때문에 더 작고 얇게 제작할 수 있다.</p>
+<p>따라서 <code>외장 SSD</code> 역시 단일 저장장치에서도 <code>HDD</code> 수준의 저장 용량을 확보할 수 있게 됐고, 입출력 인터페이스 역시 <code>SSD</code>의 빠른 속도를 선보이면서 휴대용 저장장치에 어울리는 방식으로 자리잡았다.</p>
+<p><code>외장 SSD</code>의 가장 큰 장점은 전송 속도다. <code>HDD</code>는 바늘 처럼 생긴 헤드를 플래터 위에서 직접 움직이며 데이터를 찾거나 데이터를 기록하는 반면, 반도체로 제작한 <code>SSD</code>는 이러한 과정이 없는 만큼 더 빠르게 데이터를 읽고 쓸 수 있다.</p>
+</blockquote>
+<h2 id="그래서-나도">그래서 나도!</h2>
+<p>내 노트북의 용량은 <code>SSD 256GB</code>이다. 그러나 필수 소프트웨어가 깔리고 프로그램과 파일들 몇 개 깔다보니 금방 금방 줄어들었다&hellip;😥</p>
+<p>그래서 고민끝에 구매하게된 <code>삼성 포터블 외장 SSD T5 500GB</code> ㅎㅎ 통장 잔고가 좋지 못해 <code>1TB</code>짜리는 사지 못했지만 나름 <code>FLEX</code>했다😎</p>
+<p>그렇게 구매하고 배송받은 <code>외장 SSD</code>를 연결하는 순간&hellip;<code>C TO C TYPE</code> 연결시에 접촉 불량이 발생했다&hellip;</p>
+<p><figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/p/top.gif" data-size="500x375"><img src="/p/top.gif"
+				srcset="/p/top_hufd1cd3b3a29f7c9a236f146701fd9e67_713389_480x0_resize_box.gif 480w, /p/top_hufd1cd3b3a29f7c9a236f146701fd9e67_713389_1024x0_resize_box.gif 1024w"
+				width="500"
+				height="375"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<p>바로 삼성서비스센터에 무상교체를 보낸 상태이다&hellip;</p>
+<p>빨리 정상작동 되는 새걸로 받아서 가득 채워버려야지&hellip;ㅎㅎ</p>
+
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/license/">license</a>
-        
-            <a href="/tags/sqld/">sqld</a>
-        
-            <a href="/tags/sql/">sql</a>
-        
-    </section>
-
 
     </footer>
 
@@ -285,35 +293,6 @@
 
     <aside class="related-contents--wrapper">
     
-    
-        <h2 class="section-title">관련 글</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
-                
-                    
-<article class="has-image">
-    <a href="/p/%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%86%8C%EA%B0%9C/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%86%8C%EA%B0%9C/tech.cd0a158ae2bc7f00125ad46ee307849d_hu9335188f5464ae1366b02b4610e0ffc3_286791_250x150_fill_q75_box_smart1.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy" 
-                        data-key="" 
-                        data-hash="md5-zQoViuK8fwASWtRu4weEnQ==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">기술블로그 소개</h2>
-        </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
     
 </aside>
 
