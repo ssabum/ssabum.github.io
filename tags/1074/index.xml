@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1074 on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/1074/</link>
+    <description>Recent content in 1074 on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/1074/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>백준 1074번 Z</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1074%EB%B2%88-z/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1074%EB%B2%88-z/</guid>
+      <description>1074번_Z 문제 보러가기
+🅰 설계 import sys result = 0 def z(n, x, y): global result # 기본이 되는 탈출 조건 생성 if x == r and y == c: print(int(result)) exit(0) if n == 1: result += 1 return # 처음에 시간초과 떠서 경우의 수도 합쳐 주었다. # 하지만 나중에 알고보니 할 필요 없었다... if not (x &amp;lt;= r &amp;lt; x + n and y &amp;lt;= c &amp;lt; y + n): result += n * n return # 재귀함수 z(n / 2, x, y) z(n / 2, x, y + n / 2) z(n / 2, x + n / 2, y) z(n / 2, x + n / 2, y + n / 2) # 시간초과 안나기 위해 sys.</description>
+    </item>
+    
+  </channel>
+</rss>

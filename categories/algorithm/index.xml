@@ -5,6 +5,68 @@
     <link>https://ssabum.github.io/categories/algorithm/</link>
     <description>Recent content in Algorithm on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ssabum.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>백준 1003번 피보나치 함수</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1003%EB%B2%88-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%ED%95%A8%EC%88%98/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1003%EB%B2%88-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%ED%95%A8%EC%88%98/</guid>
+      <description>1003번_피보나치 함수 문제 보러가기
+🅰 설계 t = int(input()) for i in range(t): n = int(input()) # fib(0), fib(1), tmp 설정 zero, one, tmp = 1, 0, 0 # 피보나치 수행 for _ in range(n): tmp = one one = one + zero zero = tmp # 출력 print(zero, one) ✅ 후기 // 풀이과정
+ 처음 문제를 읽고 어떻게 해야할지 풀이가 떠오르지 않아 꽤나 고생했다.😥 하지만 5까지의 경우의 수를 직접 표로 그려보니 간단한 문제임을 알 수 있었다.</description>
+    </item>
+    
+    <item>
+      <title>백준 1012번 유기농 배추</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1012%EB%B2%88-%EC%9C%A0%EA%B8%B0%EB%86%8D-%EB%B0%B0%EC%B6%94/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1012%EB%B2%88-%EC%9C%A0%EA%B8%B0%EB%86%8D-%EB%B0%B0%EC%B6%94/</guid>
+      <description>1012번_유기농 배추 문제 보러가기
+🅰 설계 import sys sys.stdin = open(&amp;#34;input.txt&amp;#34;) T = int(input()) for tc in range(1, T+1): # m: 가로길이, n: 세로길이, k: 배추개수 m, n, k = map(int, input().split()) # 입력된 데이터에 맞춰 밭 만들어 주기 field = list(list(0 for i in range(m)) for _ in range(n)) # 밭에 배추 심기 for i in range(k): x, y = map(int, input().split()) field[y][x] = 1 # 지렁이 검사 cnt = 0 # 이후 접근을 어떻게 해야할지.</description>
+    </item>
+    
+    <item>
+      <title>백준 1074번 Z</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1074%EB%B2%88-z/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1074%EB%B2%88-z/</guid>
+      <description>1074번_Z 문제 보러가기
+🅰 설계 import sys result = 0 def z(n, x, y): global result # 기본이 되는 탈출 조건 생성 if x == r and y == c: print(int(result)) exit(0) if n == 1: result += 1 return # 처음에 시간초과 떠서 경우의 수도 합쳐 주었다. # 하지만 나중에 알고보니 할 필요 없었다... if not (x &amp;lt;= r &amp;lt; x + n and y &amp;lt;= c &amp;lt; y + n): result += n * n return # 재귀함수 z(n / 2, x, y) z(n / 2, x, y + n / 2) z(n / 2, x + n / 2, y) z(n / 2, x + n / 2, y + n / 2) # 시간초과 안나기 위해 sys.</description>
+    </item>
+    
+    <item>
+      <title>백준 1107번 리모컨</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1107%EB%B2%88-%EB%A6%AC%EB%AA%A8%EC%BB%A8/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1107%EB%B2%88-%EB%A6%AC%EB%AA%A8%EC%BB%A8/</guid>
+      <description>1107번_리모컨 문제 보러가기
+🅰 코드 # N: 목표로 하는 채널번호(0~500000), M: 고장난 버튼의 개수(0~10) N = int(input()) M = int(input()) # button: 숫자 버튼 / 고장난 버튼이 있으면 빼준다 button = {i for i in range(10)} if M != 0: button -= set(map(int, input().split())) # 100번에서 N번으로 +, - 버튼만 쓴 경우 cnt = abs(100 - N) # 50만 채널인데 최악의 경우를 고려할 때 # 작은수에서 +만 사용(50만)에 큰수에서 -만 사용(50만)을 더하면 100만 가지의 경우의 수가 발생 for i in range(1000000): flag = True for j in str(i): if int(j) not in button: flag = False break if flag: # button으로 접근 할 수 있는 수에다가 목표 채널의 차이(+, - 으로 이동)를 더한 값 cnt = min(cnt, len(str(i)) + abs(N-i)) print(cnt) 🅰 &amp;amp;연산자 사용 !</description>
+    </item>
+    
+    <item>
+      <title>백준 1260번 DFS와 BFS</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1260%EB%B2%88-dfs%EC%99%80-bfs/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1260%EB%B2%88-dfs%EC%99%80-bfs/</guid>
+      <description>1260번_DFS와 BFS 문제 보러가기
+🅰 코드 N,M,V=map(int,input().split()) matrix=[[0]*(N+1) for i in range(N+1)] for i in range(M): a,b = map(int,input().split()) matrix[a][b]=matrix[b][a]=1 visit_list=[0]*(N+1) def dfs(V): visit_list[V]=1 print(V, end=&amp;#39; &amp;#39;) for i in range(1,N+1): if(visit_list[i]==0 and matrix[V][i]==1): dfs(i) def bfs(V): queue=[V] visit_list[V]=0 while queue: V=queue.pop(0) print(V, end=&amp;#39; &amp;#39;) for i in range(1, N+1): if(visit_list[i]==1 and matrix[V][i]==1): queue.append(i) visit_list[i]=0 dfs(V) print() bfs(V) ✅ 후기  문제 자체는 SSAFY교육에도 진행되었던 DFS, BFS의 가장 기본인 코드를 구현하는 것이었다.</description>
+    </item>
+    
+    <item>
+      <title>백준 1389번 케빈 베이컨의 6단계 법칙</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1389%EB%B2%88-%EC%BC%80%EB%B9%88-%EB%B2%A0%EC%9D%B4%EC%BB%A8%EC%9D%98-6%EB%8B%A8%EA%B3%84-%EB%B2%95%EC%B9%99/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1389%EB%B2%88-%EC%BC%80%EB%B9%88-%EB%B2%A0%EC%9D%B4%EC%BB%A8%EC%9D%98-6%EB%8B%A8%EA%B3%84-%EB%B2%95%EC%B9%99/</guid>
+      <description>1389번_케빈 베이컨의 6단계 법칙 문제 보러가기
+🅰 코드 from collections import deque def bfs(num, n): # 기본 base setting bacon = [0] * (n + 1) visited = [num] queue = deque() queue.append(num) while queue: # queue에서 popleft사용 k = queue.popleft() for i in relation[k]: if i not in visited: bacon[i] = bacon[k] + 1 visited.append(i) queue.append(i) return sum(bacon) # n: 유저수(2~100), m: 관계수(1~5000) n, m = map(int, input().split()) # 관계 dict생성 후 입력 relation = {i: [] for i in range(1, n + 1)} for i in range(m): a, b = map(int, input().</description>
+    </item>
+    
   </channel>
 </rss>

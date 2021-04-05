@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>brute force on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/brute-force/</link>
+    <description>Recent content in brute force on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/brute-force/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>백준 1107번 리모컨</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1107%EB%B2%88-%EB%A6%AC%EB%AA%A8%EC%BB%A8/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1107%EB%B2%88-%EB%A6%AC%EB%AA%A8%EC%BB%A8/</guid>
+      <description>1107번_리모컨 문제 보러가기
+🅰 코드 # N: 목표로 하는 채널번호(0~500000), M: 고장난 버튼의 개수(0~10) N = int(input()) M = int(input()) # button: 숫자 버튼 / 고장난 버튼이 있으면 빼준다 button = {i for i in range(10)} if M != 0: button -= set(map(int, input().split())) # 100번에서 N번으로 +, - 버튼만 쓴 경우 cnt = abs(100 - N) # 50만 채널인데 최악의 경우를 고려할 때 # 작은수에서 +만 사용(50만)에 큰수에서 -만 사용(50만)을 더하면 100만 가지의 경우의 수가 발생 for i in range(1000000): flag = True for j in str(i): if int(j) not in button: flag = False break if flag: # button으로 접근 할 수 있는 수에다가 목표 채널의 차이(+, - 으로 이동)를 더한 값 cnt = min(cnt, len(str(i)) + abs(N-i)) print(cnt) 🅰 &amp;amp;연산자 사용 !</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>graph traversal on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/graph-traversal/</link>
+    <description>Recent content in graph traversal on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/graph-traversal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>백준 1012번 유기농 배추</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1012%EB%B2%88-%EC%9C%A0%EA%B8%B0%EB%86%8D-%EB%B0%B0%EC%B6%94/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1012%EB%B2%88-%EC%9C%A0%EA%B8%B0%EB%86%8D-%EB%B0%B0%EC%B6%94/</guid>
+      <description>1012번_유기농 배추 문제 보러가기
+🅰 설계 import sys sys.stdin = open(&amp;#34;input.txt&amp;#34;) T = int(input()) for tc in range(1, T+1): # m: 가로길이, n: 세로길이, k: 배추개수 m, n, k = map(int, input().split()) # 입력된 데이터에 맞춰 밭 만들어 주기 field = list(list(0 for i in range(m)) for _ in range(n)) # 밭에 배추 심기 for i in range(k): x, y = map(int, input().split()) field[y][x] = 1 # 지렁이 검사 cnt = 0 # 이후 접근을 어떻게 해야할지.</description>
+    </item>
+    
+    <item>
+      <title>백준 1260번 DFS와 BFS</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1260%EB%B2%88-dfs%EC%99%80-bfs/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1260%EB%B2%88-dfs%EC%99%80-bfs/</guid>
+      <description>1260번_DFS와 BFS 문제 보러가기
+🅰 코드 N,M,V=map(int,input().split()) matrix=[[0]*(N+1) for i in range(N+1)] for i in range(M): a,b = map(int,input().split()) matrix[a][b]=matrix[b][a]=1 visit_list=[0]*(N+1) def dfs(V): visit_list[V]=1 print(V, end=&amp;#39; &amp;#39;) for i in range(1,N+1): if(visit_list[i]==0 and matrix[V][i]==1): dfs(i) def bfs(V): queue=[V] visit_list[V]=0 while queue: V=queue.pop(0) print(V, end=&amp;#39; &amp;#39;) for i in range(1, N+1): if(visit_list[i]==1 and matrix[V][i]==1): queue.append(i) visit_list[i]=0 dfs(V) print() bfs(V) ✅ 후기  문제 자체는 SSAFY교육에도 진행되었던 DFS, BFS의 가장 기본인 코드를 구현하는 것이었다.</description>
+    </item>
+    
+    <item>
+      <title>백준 1389번 케빈 베이컨의 6단계 법칙</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1389%EB%B2%88-%EC%BC%80%EB%B9%88-%EB%B2%A0%EC%9D%B4%EC%BB%A8%EC%9D%98-6%EB%8B%A8%EA%B3%84-%EB%B2%95%EC%B9%99/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1389%EB%B2%88-%EC%BC%80%EB%B9%88-%EB%B2%A0%EC%9D%B4%EC%BB%A8%EC%9D%98-6%EB%8B%A8%EA%B3%84-%EB%B2%95%EC%B9%99/</guid>
+      <description>1389번_케빈 베이컨의 6단계 법칙 문제 보러가기
+🅰 코드 from collections import deque def bfs(num, n): # 기본 base setting bacon = [0] * (n + 1) visited = [num] queue = deque() queue.append(num) while queue: # queue에서 popleft사용 k = queue.popleft() for i in relation[k]: if i not in visited: bacon[i] = bacon[k] + 1 visited.append(i) queue.append(i) return sum(bacon) # n: 유저수(2~100), m: 관계수(1~5000) n, m = map(int, input().split()) # 관계 dict생성 후 입력 relation = {i: [] for i in range(1, n + 1)} for i in range(m): a, b = map(int, input().</description>
+    </item>
+    
+  </channel>
+</rss>
