@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>greedy on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/greedy/</link>
+    <description>Recent content in greedy on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/greedy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>백준 1541번 잃어버린 괄호</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1541%EB%B2%88-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/</link>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1541%EB%B2%88-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/</guid>
+      <description>1541번 잃어버린 괄호 문제 보러가기
+🅰 코드 # &amp;#39;-&amp;#39;부호로 나눠진 문자열 저장 arr = input().split(&amp;#39;-&amp;#39;) # 결과 변수 생성 result = 0 # 처음 &amp;#39;-&amp;#39;부호가 나오는 부분까지 더하기 for i in arr[0].split(&amp;#39;+&amp;#39;): result += int(i) # 그 뒤엔 다 빼주는데 &amp;#39;+&amp;#39;부호로 묶인 것도 나눠서 빼기 → -(a+b) = -a-b for i in arr[1:]: for j in i.split(&amp;#39;+&amp;#39;): result -= int(j) print(result) ✅ 후기  문제에 주어진 문자열에서 차례로 연산을 하기만 하면 되는 비교적 쉬운 문제였다고 생각했지만 중간에 한번 함정이 있어서 고민이 필요했다&amp;hellip; 문제에서 요구하는 가장 최소의 값이 나오긴 위해서는 -부호 뒤에 오는 숫자들의 값이 커야 했으며 이를 표현하기 위해 -부호 뒤의 문자열에서 +부호로 나누어 각각을 빼주는 작업을 진행하였다.</description>
+    </item>
+    
+  </channel>
+</rss>

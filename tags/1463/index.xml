@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1463 on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/1463/</link>
+    <description>Recent content in 1463 on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/1463/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>백준 1463번 1로 만들기</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1463%EB%B2%88-1%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1463%EB%B2%88-1%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <description>1463번 1로 만들기 문제 보러가기
+🅰 설계   문제에서 주어진 아래의 조건에 맞추어 코드를 구현하고 카운트의 최솟값을 구하는 알고리즘을 실행시켰지만 답이 나오지 않았다&amp;hellip;
+  x가 3으로 나누어 떨어지면, 3으로 나눈다.
+  x가 2로 나누어 떨어지면, 2로 나눈다.
+  1을 뺀다.
+    다음으로 연필로 써내려가면서 규칙이 있나 찾아보았다. 개인적으로 싫어하는 방법이지만 풀 방법이 생각나지 않아 도전해 보았다&amp;hellip;
+역시, 규칙은 보이지 않았다&amp;hellip;
+  ✔ 정답 코드 구글링 N = int(input()) dp_list = [0,0,1,1] # 0 ,1, 2, 3 의 최소 수 미리 저장 for i in range(4, N + 1) : # 먼저 1을 뺏을 경우 나오는 경우의 수 저장 dp_list.</description>
+    </item>
+    
+  </channel>
+</rss>
