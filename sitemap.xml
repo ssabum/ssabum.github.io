@@ -3,6 +3,81 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ssabum.github.io/categories/big-data/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/big-data/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/p/big-data-pilot-project/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/categories/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/centos/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/post/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/categories/til/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/virtual/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/virtualbox/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ssabum.github.io/tags/1463/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
@@ -28,11 +103,6 @@
   </url>
   
   <url>
-    <loc>https://ssabum.github.io/categories/</loc>
-    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ssabum.github.io/categories/diary/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
@@ -53,27 +123,12 @@
   </url>
   
   <url>
-    <loc>https://ssabum.github.io/post/</loc>
-    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ssabum.github.io/tags/python/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ssabum.github.io/</loc>
-    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ssabum.github.io/tags/string/</loc>
-    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/tags/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -209,11 +264,6 @@
   
   <url>
     <loc>https://ssabum.github.io/tags/t5/</loc>
-    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/categories/til/</loc>
     <lastmod>2021-04-04T00:00:00+00:00</lastmod>
   </url>
   

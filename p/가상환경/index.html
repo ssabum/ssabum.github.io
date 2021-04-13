@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='가상환경이 무엇이고 하는 역할이 뭘까?'><title>가상환경</title>
+
+<link rel='canonical' href='https://ssabum.github.io/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='가상환경'>
+<meta property='og:description' content='가상환경이 무엇이고 하는 역할이 뭘까?'>
+<meta property='og:url' content='https://ssabum.github.io/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/'>
+<meta property='og:site_name' content='Ssabum&#39;s Devlog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='가상환경' /><meta property='article:tag' content='가상머신' /><meta property='article:tag' content='virtual' /><meta property='article:published_time' content='2021-04-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-04-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://ssabum.github.io/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/code.png' />
+<meta name="twitter:title" content="가상환경">
+<meta name="twitter:description" content="가상환경이 무엇이고 하는 역할이 뭘까?"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://ssabum.github.io/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/code.png' />
+    <link rel="shortcut icon" href="toy.ico" />
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/image_hu5b1ed73fe36e0369d78710b778381c4e_70796_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">💻</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://ssabum.github.io/">Ssabum&#39;s Devlog</a></h1>
+        <h2 class="site-description">Lazy beginner developer</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://github.com/ssabum'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+                
+                <span>Github</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://github.com/ssabum/algorithm_study'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+</svg>
+                
+                <span>AlgoStudy</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://ssabum.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/">
+                <img src="/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/code_hu696a336fe623223aab73a912217f27f7_1787389_800x0_resize_box_2.png"
+                        srcset="/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/code_hu696a336fe623223aab73a912217f27f7_1787389_800x0_resize_box_2.png 800w, /p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/code_hu696a336fe623223aab73a912217f27f7_1787389_1600x0_resize_box_2.png 1600w"
+                        width="800" 
+                        height="534" 
+                        loading="lazy"
+                        alt="Featured image of post 가상환경" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/til/" style="background-color: #2a9d8f; color: #fff;">
+                TIL
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/">가상환경</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        가상환경이 무엇이고 하는 역할이 뭘까?
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Apr 13, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h1 id="가상머신-정의">가상머신 정의💻</h1>
+<p>가상 머신(Virtual Machine, VM)은 컴퓨팅 환경을 소프트웨어로 구현한 것, 즉 컴퓨터를 에뮬레이션하는 소프트웨어다. 가상머신상에서 운영체제나 응용프로그램을 설치 및 실행할 수 있다.</p>
+<h2 id="시스템-가상-머신">시스템 가상 머신</h2>
+<p>시스템 가상 머신은 때로 <strong>하드웨어 가상 머신</strong>이라고 하며 각 운영 체제를 실행하는 가상 머신 사이의 기초가 되는 물리 컴퓨터를 다중화(multiplex)한다. 가상화를 제공하는 소프트웨어 계층은 <strong>가상 머신 모니터</strong> 또는 하이퍼바이저라고 한다. 하이퍼바이저는 순 그대로의 하드웨어 또는 호스트 운영 체제 위에서 실행할 수 있다.</p>
+<p>시스템 가상 머신의 주요 이점</p>
+<ul>
+<li>여러 운영 체제를 쓰는 환경은 운영 체제가 완벽히 고립된 채로 같은 컴퓨터에서 존재할 수 있다.</li>
+<li>가상 머신은 실제의 컴퓨터가 제공하는 것과 다른 형태의 명령어 집합 구조 (ISA)를 제공한다.</li>
+</ul>
+<p>즉, 다양한 OS를 제공하기 위해 멀티부팅의 어려움을 겪지 않아도 되고 각각은 서로 독립되어 있어 서로에게 영향을 미치지 않는다. 이는 관리에 용이성을 부여하고, 외부의 위험으로부터 분리된 환경이라 다양한 테스트 환경에 적합하다. 최근에는 서버를 가상화하여 사용자들에게 대여해주는 클라우드 호스팅이 유행하고 있는데, 이도 가상화 기술의 발전의 한 갈래이다.</p>
+<h2 id="프로세스-가상-머신">프로세스 가상 머신</h2>
+<p>VM은 응용 프로그램 가상 머신이라고도 하며, 운영 체제 안에서 일반 응용 프로그램을 돌리고 단일 프로세스를 지원한다. 프로세스가 시작하고, &lsquo;끝내기&rsquo;되어 파괴될 때 만들어진다. 목적은 플랫폼 - 아무 플랫폼에서나 같은 방식으로 실행하는 프로그램을 허용하고 기초가 되는 하드웨어나 운영 체제의 상세한 부분을 가져오는 독립 프로그래밍 환경을 제공하기 위함이다.</p>
+<p>가상 머신이라고 하는 프로세스는 고급 프로그래밍 언어에서 높은 수준의 추출을 제공며 해석기를 사용하여 추가된다.</p>
+<p>이러한 종류의 가상 머신은 자바 가상 머신을 사용하여 추가되는 자바와 더불어 인기를 끌었다. 또다른 예로는, 닷넷 프레임워크가 있는데 공통 언어 런타임라고 불리는 가상 머신을 실행한다.</p>
+<hr>
+<p><figure style="flex-grow: 357; flex-basis: 857px">
+		<a href="/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/virtual.PNG" data-size="1101x308"><img src="/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/virtual.PNG"
+				srcset="/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/virtual_hu273b09ceea42ac7523a7810cc47c5427_28141_480x0_resize_box_2.PNG 480w, /p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/virtual_hu273b09ceea42ac7523a7810cc47c5427_28141_1024x0_resize_box_2.PNG 1024w"
+				width="1101"
+				height="308"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/">가상환경</a>
+        
+            <a href="/tags/%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0/">가상머신</a>
+        
+            <a href="/tags/virtual/">virtual</a>
+        
+    </section>
+
+
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">관련 글</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/sql%EB%AC%B8%EB%B2%95/">
+        
+        
+            <div class="article-image">
+                <img src="/p/sql%EB%AC%B8%EB%B2%95/sql.e647ca68781e30d398b3348156d53e7c_hubbf8a9fc18cf0c0587203e8c4fcd3fa5_78275_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-5kfKaHgeMNOYszSBVtU&#43;fA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SQL문법</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/css%EA%B8%B0%EC%B4%88/">
+        
+        
+            <div class="article-image">
+                <img src="/p/css%EA%B8%B0%EC%B4%88/css.a6664c4e9cafde9a54bc372360b436e3_hu42497fb400a464be61c8fe27b05f0811_45708_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-pmZMTpyv3ppUvDcjYLQ24w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CSS기초</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/">
+        
+        
+            <div class="article-image">
+                <img src="/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/css.a6664c4e9cafde9a54bc372360b436e3_hu42497fb400a464be61c8fe27b05f0811_45708_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-pmZMTpyv3ppUvDcjYLQ24w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CSS기초 레이아웃</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/django-%EA%B8%B0%EB%B3%B8/">
+        
+        
+            <div class="article-image">
+                <img src="/p/django-%EA%B8%B0%EB%B3%B8/icon.1d528e2cb5fbc29ad16c74e5d883c371_hu080e9ab032fb83faecb2fd0168b96dc6_15390_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-HVKOLLX7wprRbHTl2IPDcQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Django 기본</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/html%EA%B8%B0%EC%B4%88/">
+        
+        
+            <div class="article-image">
+                <img src="/p/html%EA%B8%B0%EC%B4%88/html.f7f7a110726b9719a545201b3ce84214_hu5ae5770cb34043b5079993437294d24c_21751_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-9/ehEHJrlxmlRSAbPOhCFA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">HTML기초</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="ssabum/comments"
+        issue-term="pathname"
+        
+        theme="github-light"
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.body.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Ssabum&#39;s Devlog
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

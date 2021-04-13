@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>가상환경 on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</link>
+    <description>Recent content in 가상환경 on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>가상환경</title>
+      <link>https://ssabum.github.io/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</guid>
+      <description>가상머신 정의💻 가상 머신(Virtual Machine, VM)은 컴퓨팅 환경을 소프트웨어로 구현한 것, 즉 컴퓨터를 에뮬레이션하는 소프트웨어다. 가상머신상에서 운영체제나 응용프로그램을 설치 및 실행할 수 있다.
+시스템 가상 머신 시스템 가상 머신은 때로 하드웨어 가상 머신이라고 하며 각 운영 체제를 실행하는 가상 머신 사이의 기초가 되는 물리 컴퓨터를 다중화(multiplex)한다. 가상화를 제공하는 소프트웨어 계층은 가상 머신 모니터 또는 하이퍼바이저라고 한다. 하이퍼바이저는 순 그대로의 하드웨어 또는 호스트 운영 체제 위에서 실행할 수 있다.
+시스템 가상 머신의 주요 이점</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,30 @@
     <description>Recent content in Posts on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Big data pilot project</title>
+      <link>https://ssabum.github.io/p/big-data-pilot-project/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/big-data-pilot-project/</guid>
+      <description>빅데이터란  지구상에선 지금 이순간에도 방대한 크기volumn의 다양한varity 데이터들이 빠른 속도velocity로 발생하고 있다. 빅데이터는 이를 수용하며, 데이터의 진실성veracity을 확보하고, 분석 데이터를 시각화visualization함으로써 새로운 효이기을 가져다 줄 가치value를 창출하는 것이다.
+빅데이터는 수집 &amp;gt; 적재 &amp;gt; 처리 &amp;gt; 탐색 &amp;gt; 분석 &amp;gt; 응용의 단계를 거친다.
+ 파일럿 프로젝트 소개 다음과 같은 데이터를 가지고 빅데이터 프로젝트를 진행한다.
+ 스마트카 상태 정보 데이터셋 스마트카 운전자 운행 데이터셋 스마트카 마스터 데이터셋 스마트카 물품구매 이력 데이터셋  </description>
+    </item>
+    
+    <item>
+      <title>가상환경</title>
+      <link>https://ssabum.github.io/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</guid>
+      <description>가상머신 정의💻 가상 머신(Virtual Machine, VM)은 컴퓨팅 환경을 소프트웨어로 구현한 것, 즉 컴퓨터를 에뮬레이션하는 소프트웨어다. 가상머신상에서 운영체제나 응용프로그램을 설치 및 실행할 수 있다.
+시스템 가상 머신 시스템 가상 머신은 때로 하드웨어 가상 머신이라고 하며 각 운영 체제를 실행하는 가상 머신 사이의 기초가 되는 물리 컴퓨터를 다중화(multiplex)한다. 가상화를 제공하는 소프트웨어 계층은 가상 머신 모니터 또는 하이퍼바이저라고 한다. 하이퍼바이저는 순 그대로의 하드웨어 또는 호스트 운영 체제 위에서 실행할 수 있다.
+시스템 가상 머신의 주요 이점</description>
+    </item>
+    
     <item>
       <title>내가 당신의 기사가 되어 줄게요</title>
       <link>https://ssabum.github.io/p/%EB%82%B4%EA%B0%80-%EB%8B%B9%EC%8B%A0%EC%9D%98-%EA%B8%B0%EC%82%AC%EA%B0%80-%EB%90%98%EC%96%B4-%EC%A4%84%EA%B2%8C%EC%9A%94/</link>
