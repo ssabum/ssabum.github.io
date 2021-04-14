@@ -5,19 +5,6 @@
     <link>https://ssabum.github.io/categories/big-data/</link>
     <description>Recent content in Big data on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/categories/big-data/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Big data pilot project</title>
-      <link>https://ssabum.github.io/p/big-data-pilot-project/</link>
-      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ssabum.github.io/p/big-data-pilot-project/</guid>
-      <description>빅데이터란  지구상에선 지금 이순간에도 방대한 크기volumn의 다양한varity 데이터들이 빠른 속도velocity로 발생하고 있다. 빅데이터는 이를 수용하며, 데이터의 진실성veracity을 확보하고, 분석 데이터를 시각화visualization함으로써 새로운 효이기을 가져다 줄 가치value를 창출하는 것이다.
-빅데이터는 수집 &amp;gt; 적재 &amp;gt; 처리 &amp;gt; 탐색 &amp;gt; 분석 &amp;gt; 응용의 단계를 거친다.
- 파일럿 프로젝트 소개 다음과 같은 데이터를 가지고 빅데이터 프로젝트를 진행한다.
- 스마트카 상태 정보 데이터셋 스마트카 운전자 운행 데이터셋 스마트카 마스터 데이터셋 스마트카 물품구매 이력 데이터셋  </description>
-    </item>
-    
+    <language>en-us</language><atom:link href="https://ssabum.github.io/categories/big-data/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
