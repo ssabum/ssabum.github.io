@@ -6,7 +6,127 @@
         <description>Recent content on Ssabum&#39;s Devlog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 14 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>백준 1676번 팩토리얼 0의 개수</title>
+        <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1676%EB%B2%88-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-0%EC%9D%98-%EA%B0%9C%EC%88%98/</link>
+        <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1676%EB%B2%88-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-0%EC%9D%98-%EA%B0%9C%EC%88%98/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1676%EB%B2%88-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-0%EC%9D%98-%EA%B0%9C%EC%88%98/boj.png" alt="Featured image of post 백준 1676번 팩토리얼 0의 개수" /&gt;&lt;h1 id=&#34;1676번-팩토리얼-0의-개수&#34;&gt;1676번 팩토리얼 0의 개수&lt;/h1&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.acmicpc.net/problem/1676&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;문제 보러가기&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-코드&#34;&gt;🅰 코드&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# n 입력 (0 ~ 500)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 팩토리얼 계산&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 뒤에서부터 처음 0이 아닌 숫자가 나올 때까지 0의 개수 → 5의 개수&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;125&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-후기&#34;&gt;✅ 후기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;알고리즘 코딩 문제라기 보다는 그냥 창의력 문제인 느낌이 물씬 풍겼다.&lt;/li&gt;
+&lt;li&gt;규칙을 찾기 위해 &lt;code&gt;30!&lt;/code&gt;까지 숫자를 나열해 보면서 코드에서도 나와 있듯이 &lt;code&gt;5&lt;/code&gt;의 개수로 &lt;code&gt;0&lt;/code&gt;의 개수가 정해지는 규칙이 있다.&lt;/li&gt;
+&lt;li&gt;여기서 주의 할 점이 &lt;code&gt;5&lt;/code&gt;, &lt;code&gt;25&lt;/code&gt;, &lt;code&gt;125&lt;/code&gt;를 따로 생각해준 것처럼 &lt;code&gt;5&lt;/code&gt;의 제곱 형태일 때는 여러개가 있기 때문에 이점을 고려해야 한다는 것이다. 💯&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>백준 1697번 숨바꼭질</title>
+        <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</link>
+        <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/boj.png" alt="Featured image of post 백준 1697번 숨바꼭질" /&gt;&lt;h1 id=&#34;1697번-숨바꼭질&#34;&gt;1697번 숨바꼭질&lt;/h1&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.acmicpc.net/problem/1697&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;문제 보러가기&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-설계&#34;&gt;🅰 설계&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;수빈이와 동생의 위치가 주어졌을때 수빈이가 동생의 위치로 이동할 수 있는 최소 거리를 찾는 것이 문제의 목표이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;현재의 위치에서 이동할 수 있는 수단이 &lt;code&gt;3가지&lt;/code&gt;이기 때문에 &lt;code&gt;BFS&lt;/code&gt;로 접근하면 되겠다 생각하고 풀이해 나갔지만 문제에서 요구하는 정확한 알고리즘 구조를 짜기가 어려웠다&amp;hellip;💦&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;또한 처음에 또 실수한 부분이 아무생각 없이 &lt;code&gt;list&lt;/code&gt;를 이용해 &lt;code&gt;queue&lt;/code&gt;를 구현하려 했다는 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python&lt;/code&gt;에서 &lt;code&gt;list&lt;/code&gt;로 &lt;code&gt;queue&lt;/code&gt;를 구현하면 시간복잡도가 &lt;code&gt;O(n)&lt;/code&gt;으로 매우 느리다. 따라서 &lt;code&gt;collections&lt;/code&gt;의 &lt;code&gt;deque&lt;/code&gt;를 이용해야 하며, 이때 시간복잡도는 &lt;code&gt;O(1)&lt;/code&gt;로 빠르다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;--정답-코드-구글링&#34;&gt;✔  정답 코드 구글링&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;collections&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deque&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;bfs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deque&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;popleft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;K&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;next_step&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;next_step&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MAX&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next_step&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next_step&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next_step&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;MAX&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100001&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;K&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MAX&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;bfs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-후기&#34;&gt;✅ 후기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;아직까지도 &lt;code&gt;BFS&lt;/code&gt;, &lt;code&gt;DFS&lt;/code&gt; 를 내 입맛대로 자유롭게 구현하는 것이 어려웠고..&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;D1&lt;/code&gt;이라는 난이도에 쫄았던 것 같다;; 많은 배움이 필요하다&amp;hellip;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>백준 1764번 듣보잡</title>
+        <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1764%EB%B2%88-%EB%93%A3%EB%B3%B4%EC%9E%A1/</link>
+        <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1764%EB%B2%88-%EB%93%A3%EB%B3%B4%EC%9E%A1/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1764%EB%B2%88-%EB%93%A3%EB%B3%B4%EC%9E%A1/boj.png" alt="Featured image of post 백준 1764번 듣보잡" /&gt;&lt;h1 id=&#34;1764번-듣보잡&#34;&gt;1764번 듣보잡&lt;/h1&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.acmicpc.net/problem/1764&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;문제 보러가기&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-코드&#34;&gt;🅰 코드&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# N: 듣도 못한 사람 (~ 500000)&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# M: 보도 못한 사람 (~ 500000)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;M&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 중복되는 이름을 없애기 위해&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;arr_N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;arr_M&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;arr_N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;arr_M&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 교집합 개수 출력&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;sorted&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arr_N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr_M&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 교집합 이름 출력&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-후기&#34;&gt;✅ 후기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;문제에서 주어진 대로 중복을 허용하지 않는 두개의 그룹&lt;code&gt;SET&lt;/code&gt;으로 나누어 차례로 추가해주고 출력해주는 문제였다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;문제 진행에 있어 교집합을 구하는 부분이 등장하는데 이때 교집합 뿐만 아니라 합집합, 차집합 등 다양한 집합을 &lt;code&gt;python&lt;/code&gt;으로 다루는 내용을 정리한 &lt;a class=&#34;link&#34; href=&#34;https://pydole.tistory.com/entry/Python-%EA%B5%90%EC%A7%91%ED%95%A9-%ED%95%A9%EC%A7%91%ED%95%A9-%EC%B0%A8%EC%A7%91%ED%95%A9&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;페이지&lt;/a&gt;를 참조했다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;참고로 &lt;code&gt;대칭차집합&lt;/code&gt;은 합집합에서 교집합을 뺀 집합을 지칭한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>SAMSUNG SW ACADEMY FOR YOUTH</title>
         <link>https://ssabum.github.io/p/samsung-sw-academy-for-youth/</link>
         <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>

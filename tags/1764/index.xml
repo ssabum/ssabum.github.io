@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1764 on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/1764/</link>
+    <description>Recent content in 1764 on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/1764/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>백준 1764번 듣보잡</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1764%EB%B2%88-%EB%93%A3%EB%B3%B4%EC%9E%A1/</link>
+      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1764%EB%B2%88-%EB%93%A3%EB%B3%B4%EC%9E%A1/</guid>
+      <description>1764번 듣보잡 문제 보러가기
+🅰 코드 # N: 듣도 못한 사람 (~ 500000) # M: 보도 못한 사람 (~ 500000) N , M = map(int,input().split()) # 중복되는 이름을 없애기 위해 arr_N = set() arr_M = set() for _ in range(N): arr_N.add(input()) for _ in range(M): arr_M.add(input()) # 교집합 개수 출력 arr = sorted(list(arr_N &amp;amp; arr_M)) print(len(arr)) # 교집합 이름 출력 for i in arr: print(i) ✅ 후기   문제에서 주어진 대로 중복을 허용하지 않는 두개의 그룹SET으로 나누어 차례로 추가해주고 출력해주는 문제였다.</description>
+    </item>
+    
+  </channel>
+</rss>

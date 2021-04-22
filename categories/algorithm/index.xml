@@ -6,7 +6,40 @@
     <description>Recent content in Algorithm on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>백준 1676번 팩토리얼 0의 개수</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1676%EB%B2%88-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-0%EC%9D%98-%EA%B0%9C%EC%88%98/</link>
+      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1676%EB%B2%88-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-0%EC%9D%98-%EA%B0%9C%EC%88%98/</guid>
+      <description>1676번 팩토리얼 0의 개수 문제 보러가기
+🅰 코드 # n 입력 (0 ~ 500) N = int(input()) # 팩토리얼 계산 # 뒤에서부터 처음 0이 아닌 숫자가 나올 때까지 0의 개수 → 5의 개수 print(N//5 + N//25 + N//125) ✅ 후기  알고리즘 코딩 문제라기 보다는 그냥 창의력 문제인 느낌이 물씬 풍겼다. 규칙을 찾기 위해 30!까지 숫자를 나열해 보면서 코드에서도 나와 있듯이 5의 개수로 0의 개수가 정해지는 규칙이 있다. 여기서 주의 할 점이 5, 25, 125를 따로 생각해준 것처럼 5의 제곱 형태일 때는 여러개가 있기 때문에 이점을 고려해야 한다는 것이다.</description>
+    </item>
+    
+    <item>
+      <title>백준 1697번 숨바꼭질</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</link>
+      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</guid>
+      <description>1697번 숨바꼭질 문제 보러가기
+🅰 설계   수빈이와 동생의 위치가 주어졌을때 수빈이가 동생의 위치로 이동할 수 있는 최소 거리를 찾는 것이 문제의 목표이다.
+  현재의 위치에서 이동할 수 있는 수단이 3가지이기 때문에 BFS로 접근하면 되겠다 생각하고 풀이해 나갔지만 문제에서 요구하는 정확한 알고리즘 구조를 짜기가 어려웠다&amp;hellip;💦
+  또한 처음에 또 실수한 부분이 아무생각 없이 list를 이용해 queue를 구현하려 했다는 것이다.
+python에서 list로 queue를 구현하면 시간복잡도가 O(n)으로 매우 느리다. 따라서 collections의 deque를 이용해야 하며, 이때 시간복잡도는 O(1)로 빠르다.</description>
+    </item>
+    
+    <item>
+      <title>백준 1764번 듣보잡</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1764%EB%B2%88-%EB%93%A3%EB%B3%B4%EC%9E%A1/</link>
+      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1764%EB%B2%88-%EB%93%A3%EB%B3%B4%EC%9E%A1/</guid>
+      <description>1764번 듣보잡 문제 보러가기
+🅰 코드 # N: 듣도 못한 사람 (~ 500000) # M: 보도 못한 사람 (~ 500000) N , M = map(int,input().split()) # 중복되는 이름을 없애기 위해 arr_N = set() arr_M = set() for _ in range(N): arr_N.add(input()) for _ in range(M): arr_M.add(input()) # 교집합 개수 출력 arr = sorted(list(arr_N &amp;amp; arr_M)) print(len(arr)) # 교집합 이름 출력 for i in arr: print(i) ✅ 후기   문제에서 주어진 대로 중복을 허용하지 않는 두개의 그룹SET으로 나누어 차례로 추가해주고 출력해주는 문제였다.</description>
+    </item>
+    
     <item>
       <title>백준 1463번 1로 만들기</title>
       <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1463%EB%B2%88-1%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
