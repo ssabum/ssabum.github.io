@@ -6,7 +6,59 @@
     <description>Recent content in boj on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/boj/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/boj/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>백준 1780번 종이의 개수</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1780%EB%B2%88-%EC%A2%85%EC%9D%B4%EC%9D%98-%EA%B0%9C%EC%88%98/</link>
+      <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1780%EB%B2%88-%EC%A2%85%EC%9D%B4%EC%9D%98-%EA%B0%9C%EC%88%98/</guid>
+      <description>1780번 종이의 개수 문제 보러가기
+🅰 코드 import sys N = int(sys.stdin.readline()) data = [] for _ in range(N): data.append(list(map(int, sys.stdin.readline().split()))) result = {&amp;#34;-1&amp;#34;: 0, &amp;#34;0&amp;#34;: 0, &amp;#34;1&amp;#34;: 0} # 체크 함수 def check(row, col, N): value = data[row][col] for i in range(N): for j in range(N): if value != data[row + i][col + j]: # 9분할 check(row, col, N // 3) check(row, col + N // 3, N // 3) check(row, col + N * 2 // 3, N // 3) check(row + N // 3, col, N // 3) check(row + N // 3, col + N // 3, N // 3) check(row + N // 3, col + N * 2 // 3, N // 3) check(row + N * 2 // 3, col, N // 3) check(row + N * 2 // 3, col + N // 3, N // 3) check(row + N * 2 // 3, col + N * 2 // 3, N // 3) return result[str(value)] += 1 check(0, 0, N) # 결과 출력 print(result[&amp;#34;-1&amp;#34;]) print(result[&amp;#34;0&amp;#34;]) print(result[&amp;#34;1&amp;#34;]) ✅ 후기  전에 풀어보았던 색종이 문제와 유사했다.</description>
+    </item>
+    
+    <item>
+      <title>백준 1927번 최소 힙</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1927%EB%B2%88-%EC%B5%9C%EC%86%8C-%ED%9E%99/</link>
+      <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1927%EB%B2%88-%EC%B5%9C%EC%86%8C-%ED%9E%99/</guid>
+      <description>1927번 최소 힙 문제 보러가기
+🅰 코드 import heapq import sys N = int(input()) heap = [] for _ in range(N): num = int(sys.stdin.readline()) if num == 0: if heap: print(heapq.heappop(heap)) else: print(0) else: heapq.heappush(heap, num) ✅ 후기   heap을 다루는 문제로 숫자가 들어왔을 때는 heappush로 출력하고 0이 들어오면 heappop을 한 뒤 print를 하도록 구상하였다.
+  이 문제의 중점은 시간단축을 위해 sys.stdin.readline()과 heapq을 사용하는 것이다. 전에도 종종 언급했었지만 다시한번 정리하자면 인풋받는 메소드의 속도차이는 다음과 같다.</description>
+    </item>
+    
+    <item>
+      <title>백준 1931번 회의실 배정</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</link>
+      <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</guid>
+      <description>1931번 회의실 배정 문제 보러가기
+🅰 코드 n = int(input()) arr = [] for i in range(n): tmp = list(map(int, input().split())) arr.append(tmp) # 람다함수 쓰는것 익숙해지기!!! arr.sort(key=lambda x: (x[1], x[0])) count = 0 end = 0 for i in range(n): if end &amp;lt;= arr[i][0]: count += 1 end = arr[i][1] print(count) ✅ 후기  문제에서 주어지는 입력값을 받은 다음 lambda함수를 사용해 끝나는 시간과 시작하는 시간순으로 두번 정렬해주면 금방 해결할 수 있는 문제이다.</description>
+    </item>
+    
+    <item>
+      <title>백준 1992번 쿼드트리</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1992%EB%B2%88-%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC/</link>
+      <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1992%EB%B2%88-%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC/</guid>
+      <description>1992번 쿼드트리 문제 보러가기
+🅰 코드 # 정답을 담을 변수 result = [] def Test(a): # 모두 0이거나 모두 1이면 끝 if sum( sum(a,[]) ) == 0 or len( sum(a,[]) ) == sum(a,[]).count(1): if sum( sum(a,[])) == 0: result.append(&amp;#39;0&amp;#39;) else: result.append(&amp;#39;1&amp;#39;) return else: result.append(&amp;#39;(&amp;#39;) div = int(len(a)/2) # a/2 x a/2 크기의 행렬을 만들기위해. tmp_l =[] # 좌측 tmp_r =[] # 우측 # 한행씩 불러온다. for sub in a: # 1/2 앞쪽 열 tmp_l.</description>
+    </item>
+    
+    <item>
+      <title>백준 2579번 회의실 배정</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-2579%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</link>
+      <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-2579%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</guid>
+      <description>2579번 계단 오르기 문제 보러가기
+🅰 코드 import sys input = sys.stdin.readline n = int(input()) stairs = [] res = [] for i in range(n): stairs.append(int(input())) if n==1: print(stairs[0]) exit() elif n == 2: print(max(stairs[0]+stairs[1], stairs[1])) exit() res.append(stairs[0]) res.append(max(res[0]+stairs[1], stairs[1])) res.append(max(res[0]+stairs[2], stairs[1]+stairs[2])) for i in range(3, n): res.append(max(res[i-2]+stairs[i], res[i-3]+stairs[i-1]+stairs[i])) print(res[-1]) ✅ 후기   DP문제로 각 계단의 경우의 수마다 2가지의 경우를 고려하면서 진행해 나간다.
+첫번째 경우) 2계단 전에서 한번에 올라오는 경우 두번째 경우) 3계단 전에서 2계단 한번에 올라온 후 1계단 올라온 경우   </description>
+    </item>
+    
     <item>
       <title>백준 1676번 팩토리얼 0의 개수</title>
       <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1676%EB%B2%88-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-0%EC%9D%98-%EA%B0%9C%EC%88%98/</link>

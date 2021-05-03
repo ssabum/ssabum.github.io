@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1931 on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/1931/</link>
+    <description>Recent content in 1931 on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/1931/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>백준 1931번 회의실 배정</title>
+      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</link>
+      <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</guid>
+      <description>1931번 회의실 배정 문제 보러가기
+🅰 코드 n = int(input()) arr = [] for i in range(n): tmp = list(map(int, input().split())) arr.append(tmp) # 람다함수 쓰는것 익숙해지기!!! arr.sort(key=lambda x: (x[1], x[0])) count = 0 end = 0 for i in range(n): if end &amp;lt;= arr[i][0]: count += 1 end = arr[i][1] print(count) ✅ 후기  문제에서 주어지는 입력값을 받은 다음 lambda함수를 사용해 끝나는 시간과 시작하는 시간순으로 두번 정렬해주면 금방 해결할 수 있는 문제이다.</description>
+    </item>
+    
+  </channel>
+</rss>
