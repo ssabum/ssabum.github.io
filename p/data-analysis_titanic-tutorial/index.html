@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='데이터 분석 튜토리얼_타이타닉 생존률 예측'><title>Data analysis_titanic tutorial</title>
+
+<link rel='canonical' href='https://ssabum.github.io/p/data-analysis_titanic-tutorial/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Data analysis_titanic tutorial'>
+<meta property='og:description' content='데이터 분석 튜토리얼_타이타닉 생존률 예측'>
+<meta property='og:url' content='https://ssabum.github.io/p/data-analysis_titanic-tutorial/'>
+<meta property='og:site_name' content='Ssabum&#39;s Devlog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='data analysis' /><meta property='article:tag' content='데이터분석' /><meta property='article:tag' content='tutorial' /><meta property='article:tag' content='titanic' /><meta property='article:published_time' content='2021-07-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-07-09T00:00:00&#43;00:00'/><meta property='og:image' content='https://ssabum.github.io/p/data-analysis_titanic-tutorial/titanic.jpg' />
+<meta name="twitter:title" content="Data analysis_titanic tutorial">
+<meta name="twitter:description" content="데이터 분석 튜토리얼_타이타닉 생존률 예측"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://ssabum.github.io/p/data-analysis_titanic-tutorial/titanic.jpg' />
+    <link rel="shortcut icon" href="toy.ico" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-194544565-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<script data-ad-client="ca-pub-9695291411759023" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/image_hu5b1ed73fe36e0369d78710b778381c4e_70796_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">💻</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://ssabum.github.io/">Ssabum&#39;s Devlog</a></h1>
+        <h2 class="site-description">Lazy beginner developer</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://github.com/ssabum'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+                
+                <span>Github</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://github.com/ssabum/algorithm_study'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+</svg>
+                
+                <span>AlgoStudy</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://ssabum.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/data-analysis_titanic-tutorial/">
+                <img src="/p/data-analysis_titanic-tutorial/titanic_hu283fdd82a3189859b359fc7b8f11d672_184666_800x0_resize_q75_box.jpg"
+                        srcset="/p/data-analysis_titanic-tutorial/titanic_hu283fdd82a3189859b359fc7b8f11d672_184666_800x0_resize_q75_box.jpg 800w, /p/data-analysis_titanic-tutorial/titanic_hu283fdd82a3189859b359fc7b8f11d672_184666_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post Data analysis_titanic tutorial" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/data/" style="background-color: #2a9d8f; color: #fff;">
+                Data
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/data-analysis_titanic-tutorial/">Data analysis_titanic tutorial</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        데이터 분석 튜토리얼_타이타닉 생존률 예측
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jul 09, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h1 id="타이타닉-데이터-분석-">타이타닉 데이터 분석 🚢</h1>
+<blockquote>
+<p>본격적으로 데이터분석에 드러가기에 앞서 튜토리얼을 진행해보려한다.</p>
+<p>코딩을 처음 배울때 <code>Hello World</code>를 출력하는 것 처럼 데이터분석의 시작은 <code>타이타닉 데이터</code>이다!!</p>
+</blockquote>
+<h2 id="kaggle과-colab-연동">Kaggle과 Colab 연동</h2>
+<p>Google Colab 환경에서 프로젝트를 진행했는데 Kaggle의 data set을 가져오기 위해 하나하나 다운받을 필요없이 API를 이용해 불러올 수 있습니다!</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># kaggle과 colab 연동</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">kaggle</span>
+
+<span class="c1"># kaggle에서 api kaggle.json을 받아서 전송</span>
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">files</span>
+<span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
+<span class="err">!</span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/.</span><span class="n">kaggle</span>
+<span class="err">!</span><span class="n">cp</span> <span class="n">kaggle</span><span class="o">.</span><span class="n">json</span> <span class="o">~/.</span><span class="n">kaggle</span><span class="o">/</span>
+<span class="err">!</span><span class="n">chmod</span> <span class="mi">600</span> <span class="o">~/.</span><span class="n">kaggle</span><span class="o">/</span><span class="n">kaggle</span><span class="o">.</span><span class="n">json</span>
+
+<span class="c1"># API로 data set download</span>
+<span class="err">!</span><span class="n">kaggle</span> <span class="n">competitions</span> <span class="n">download</span> <span class="o">-</span><span class="n">c</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">1</span><span class="n">st</span><span class="o">-</span><span class="n">ml</span><span class="o">-</span><span class="n">month</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">kakr</span>
+
+<span class="c1"># 압축해제</span>
+<span class="err">!</span><span class="n">unzip</span> <span class="o">-</span><span class="n">q</span> <span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="mi">2019</span><span class="o">-</span><span class="mi">1</span><span class="n">st</span><span class="o">-</span><span class="n">ml</span><span class="o">-</span><span class="n">month</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">kakr</span>
+</code></pre></div><h2 id="왜-하필이면-타이타닉">왜 하필이면 타이타닉??</h2>
+<p>데이터 분석 전체 프로세스를 빠르게 경험할 수 있으며, 접근하기 좋은 Binary Classification 문제이기 때문에</p>
+<h2 id="진행-프로세스">진행 프로세스</h2>
+<ol>
+<li>데이터셋 확인</li>
+</ol>
+<ul>
+<li>데이터를 수집하고 전처리</li>
+</ul>
+<ol start="2">
+<li>탐색적 데이터 분석(EDA)</li>
+</ol>
+<ul>
+<li>여러 특성들을 분석하고 상관관계를 확인</li>
+<li>시각화를 통해 insight 도출</li>
+</ul>
+<ol start="3">
+<li>특성공학(Feature Engineering)</li>
+</ol>
+<ul>
+<li>모델의 성능을 높이기 위해 특성을 엔지니어링</li>
+</ul>
+<ol start="4">
+<li>모델 개발 및 학습</li>
+</ol>
+<ul>
+<li>sklearn, keras 등을 이용해 모델을 제작</li>
+</ul>
+<ol start="5">
+<li>모델 예측 및 평가</li>
+</ol>
+<ul>
+<li>
+<p>훈련 데이터를 가지고 모델을 학습시키고, 테스트 데이터를 가지고 예측합니다.</p>
+<hr>
+</li>
+</ul>
+<h2 id="1-데이터셋-확인">1. 데이터셋 확인</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 데이터셋 확인</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">keras</span>
+<span class="kn">import</span> <span class="nn">sklearn</span>
+
+<span class="c1"># seaborn 셋팅 =&gt; matplotlib을 기반으로 다양한 색상 테마와 통계용 기능을 추가한 시각화 패키지</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">font_scale</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">missingno</span> <span class="kn">as</span> <span class="nn">msno</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="c1"># 경고 메시지 생략</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;train.csv&#39;</span><span class="p">)</span>
+<span class="n">df_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;test.csv&#39;</span><span class="p">)</span>
+<span class="n">df_submit</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sample_submission.csv&#39;</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df_train</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div><p><figure style="flex-grow: 589; flex-basis: 1415px">
+		<a href="/p/data-analysis_titanic-tutorial/train_head.PNG" data-size="1427x242"><img src="/p/data-analysis_titanic-tutorial/train_head.PNG"
+				srcset="/p/data-analysis_titanic-tutorial/train_head_hu310a5aed62dbc181236ed1f42c4313b4_33875_480x0_resize_box_2.PNG 480w, /p/data-analysis_titanic-tutorial/train_head_hu310a5aed62dbc181236ed1f42c4313b4_33875_1024x0_resize_box_2.PNG 1024w"
+				width="1427"
+				height="242"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<h3 id="데이터-feature-설명">데이터 Feature 설명</h3>
+<ul>
+<li>survival - 생존유무 =&gt; target 값 (0=사망, 1=생존)</li>
+<li>pclass - 티켓클래스</li>
+<li>sex - 성별</li>
+<li>age - 나이</li>
+<li>sibsp - 함께 탑승한 형제자매, 배우자 수 총합</li>
+<li>parch - 함꺼 탑승한 부모, 자녀 수 총합</li>
+<li>ticket - 티켓 넘버</li>
+<li>fare - 탑승 요금</li>
+<li>cabin - 객실 넘버</li>
+<li>bembarked - 탑승 항구</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 결측치 확인 =&gt; train set과 test set에 비슷하게 age에 20% cabin에 80%의 결측지 발견</span>
+<span class="n">df_train</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">df_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div><p><figure style="flex-grow: 81; flex-basis: 196px">
+		<a href="/p/data-analysis_titanic-tutorial/train_nan.PNG" data-size="245x300"><img src="/p/data-analysis_titanic-tutorial/train_nan.PNG"
+				srcset="/p/data-analysis_titanic-tutorial/train_nan_hud16253a320c773ea34b2bc051b9cb158_5071_480x0_resize_box_2.PNG 480w, /p/data-analysis_titanic-tutorial/train_nan_hud16253a320c773ea34b2bc051b9cb158_5071_1024x0_resize_box_2.PNG 1024w"
+				width="245"
+				height="300"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<h3 id="target-label-확인">Target Label 확인</h3>
+<p>target label이 어떤 distribution을 가지고 있는지 확인 필요
+binary classification에서 분포가 어떠냐에 따라 모델의 평가방법이 달라지기 때문에</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># 파이그래프</span>
+<span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">shadow</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Pie plot - Survived&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="c1"># 항목별 개수를 카운트</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Count plot - Survived&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># target label의 분포가 제법 균일하므로 binary classification에 적합</span>
+</code></pre></div><p><figure style="flex-grow: 182; flex-basis: 437px">
+		<a href="/p/data-analysis_titanic-tutorial/pie.png" data-size="1007x552"><img src="/p/data-analysis_titanic-tutorial/pie.png"
+				srcset="/p/data-analysis_titanic-tutorial/pie_hu13667f57f5cdf18f61fc82ef51c28cca_47103_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/pie_hu13667f57f5cdf18f61fc82ef51c28cca_47103_1024x0_resize_box_2.png 1024w"
+				width="1007"
+				height="552"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<h3 id="파이그래프-속성">파이그래프 속성</h3>
+<blockquote>
+<p>plt.pie(slice, labels=activities, startangle=90, shadow=True, explode=(0, 0, 0.1, 0), autopct='%1.1f%%')</p>
+</blockquote>
+<ul>
+<li>
+<p>slice: 파이 조각의 데이터</p>
+</li>
+<li>
+<p>labels: 파이 조각의 라벨</p>
+</li>
+<li>
+<p>startangle: 그려지는 파이 조각 시작 위치</p>
+</li>
+<li>
+<p>shadow: 파이 차트의 그림자 효과 유무</p>
+</li>
+<li>
+<p>explode: 파이 조각이 돌출되는 크기</p>
+</li>
+<li>
+<p>autopct: 파이 조각의 전체 대비 백분율</p>
+<hr>
+</li>
+</ul>
+<h2 id="2-탐색적-데이터-분석exploratory-data-analysys">2. 탐색적 데이터 분석(Exploratory Data Analysys)</h2>
+<p>Feature별로 데이터 분석 Insight 도출해보자</p>
+<h3 id="1-pclass">1. Pclass</h3>
+<ul>
+<li>Pclass는 서수형 데이터입니다.</li>
+<li>Pclass,Survived 를 가져온 후, pclass 로 묶으면 각 pclass 마다 0, 1 이 count가 되는데, 이를 평균내면 각 pclass 별 생존률이 추출</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 생존률</span>
+<span class="n">df_train</span><span class="p">[[</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span> <span class="s1">&#39;Survived&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Pclass&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div><p><figure style="flex-grow: 96; flex-basis: 230px">
+		<a href="/p/data-analysis_titanic-tutorial/%EC%83%9D%EC%A1%B4%EB%A5%A0.PNG" data-size="194x202"><img src="/p/data-analysis_titanic-tutorial/%EC%83%9D%EC%A1%B4%EB%A5%A0.PNG"
+				srcset="/p/data-analysis_titanic-tutorial/%EC%83%9D%EC%A1%B4%EB%A5%A0_hu0bf42981f6910bdeaee91edb69c60927_5424_480x0_resize_box_2.PNG 480w, /p/data-analysis_titanic-tutorial/%EC%83%9D%EC%A1%B4%EB%A5%A0_hu0bf42981f6910bdeaee91edb69c60927_5424_1024x0_resize_box_2.PNG 1024w"
+				width="194"
+				height="202"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 막대그래프 시각화</span>
+<span class="n">df_train</span><span class="p">[[</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span> <span class="s1">&#39;Survived&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Pclass&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+<span class="c1"># 생존률에 Pclass가 큰 영향을 미친다고 생각할 수 있다.</span>
+<span class="c1"># 따라서 모델 생성시 해당 feature 사용이 좋을 것이라 판단</span>
+</code></pre></div><p><figure style="flex-grow: 143; flex-basis: 344px">
+		<a href="/p/data-analysis_titanic-tutorial/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84.png" data-size="423x295"><img src="/p/data-analysis_titanic-tutorial/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84.png"
+				srcset="/p/data-analysis_titanic-tutorial/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84_huacda953524a2e953708540019a2aba71_10577_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84_huacda953524a2e953708540019a2aba71_10577_1024x0_resize_box_2.png 1024w"
+				width="423"
+				height="295"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<h3 id="2-sex">2. Sex</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">df_train</span><span class="p">[[</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Survived&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Survived vs Sex&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Sex: Survived vs Dead&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># 남성보다 여성의 생존확률이 높습니다.</span>
+<span class="c1"># Pclass와 마찬가지로, Sex도 예측 모델에 쓰일 중요 featured임을 알 수 있다.</span>
+</code></pre></div><p><figure style="flex-grow: 173; flex-basis: 416px">
+		<a href="/p/data-analysis_titanic-tutorial/%EC%84%B1%EB%B3%84.png" data-size="1075x619"><img src="/p/data-analysis_titanic-tutorial/%EC%84%B1%EB%B3%84.png"
+				srcset="/p/data-analysis_titanic-tutorial/%EC%84%B1%EB%B3%84_hu4026bb368c9a80a856fae0706779e52f_38268_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/%EC%84%B1%EB%B3%84_hu4026bb368c9a80a856fae0706779e52f_38268_1024x0_resize_box_2.png 1024w"
+				width="1075"
+				height="619"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<h3 id="3-both-sex-and-pclass">3. Both Sex and Pclass</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># factor형의 변수의 시각화를 할 때 유용한 시각화</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">factorplot</span><span class="p">(</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span> <span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="c1"># 모든 클래스에서 여성의 생존률이 남성보다 높다.</span>
+</code></pre></div><p><figure style="flex-grow: 184; flex-basis: 443px">
+		<a href="/p/data-analysis_titanic-tutorial/factor.png" data-size="844x457"><img src="/p/data-analysis_titanic-tutorial/factor.png"
+				srcset="/p/data-analysis_titanic-tutorial/factor_hu0e21fbd7a247fec6384ef4938e762f2d_27815_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/factor_hu0e21fbd7a247fec6384ef4938e762f2d_27815_1024x0_resize_box_2.png 1024w"
+				width="844"
+				height="457"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<h3 id="4-age">4. Age</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 막대그래프는 어떤 분포로 퍼져있는지 확인할 수 없다. 그래서 분포를 확인할 때는 히스토그램을 사용</span>
+<span class="c1"># but, 히스토그램은 구간을 어떻게 설정하냐에 따라 결과물이 크게 달라진다.</span>
+<span class="c1"># 그 대안으로 분포를 곡선화 시켜주는 커널밀도추정(KDE)을 많이 사용</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">][</span><span class="s1">&#39;Age&#39;</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Age&#39;</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Survived == 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Survived == 0&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># 생존 KDE와 사망 KDE를 비교했을때 어린나이 구간에서 생존률이 상대적으로 높음을 알 수 있다.</span>
+</code></pre></div><p><figure style="flex-grow: 173; flex-basis: 416px">
+		<a href="/p/data-analysis_titanic-tutorial/kde.png" data-size="624x360"><img src="/p/data-analysis_titanic-tutorial/kde.png"
+				srcset="/p/data-analysis_titanic-tutorial/kde_huffa06a80f159fcf97a6e127dd10222f5_36271_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/kde_huffa06a80f159fcf97a6e127dd10222f5_36271_1024x0_resize_box_2.png 1024w"
+				width="624"
+				height="360"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cummulate_survival_ratio</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">80</span><span class="p">):</span>
+    <span class="n">cummulate_survival_ratio</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">][</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">][</span><span class="s1">&#39;Survived&#39;</span><span class="p">]))</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cummulate_survival_ratio</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Survival rate change depending on range of Age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Survival rate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Range of Age(0~x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># 나이가 어릴수록 생존률이 확실히 증가하는 것을 확인 가능</span>
+<span class="c1"># Age도 중요 feature임을 확인할 수 있다.</span>
+</code></pre></div><p><figure style="flex-grow: 147; flex-basis: 354px">
+		<a href="/p/data-analysis_titanic-tutorial/age.png" data-size="745x505"><img src="/p/data-analysis_titanic-tutorial/age.png"
+				srcset="/p/data-analysis_titanic-tutorial/age_hu83d0041b7fbe6c656505746fc15da4a7_33377_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/age_hu83d0041b7fbe6c656505746fc15da4a7_33377_1024x0_resize_box_2.png 1024w"
+				width="745"
+				height="505"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<h3 id="5-embarked">5. Embarked</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">df_train</span><span class="p">[[</span><span class="s1">&#39;Embarked&#39;</span><span class="p">,</span> <span class="s1">&#39;Survived&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Embarked&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="c1"># 탑승항구 별 생존률의 차이가 크진 않다.</span>
+</code></pre></div><p><figure style="flex-grow: 99; flex-basis: 239px">
+		<a href="/p/data-analysis_titanic-tutorial/emb.png" data-size="461x462"><img src="/p/data-analysis_titanic-tutorial/emb.png"
+				srcset="/p/data-analysis_titanic-tutorial/emb_hufef6e260bee620adb112eedcce76a432_13896_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/emb_hufef6e260bee620adb112eedcce76a432_13896_1024x0_resize_box_2.png 1024w"
+				width="461"
+				height="462"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 다른 feature와의 상관관계</span>
+<span class="n">f</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="s1">&#39;Embarked&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(1) No. Of Passengers Boarded&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="s1">&#39;Embarked&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(2) Male-Female Split for Embarked&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="s1">&#39;Embarked&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(3) Embarked vs Survived&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="s1">&#39;Embarked&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(4) Embarked vs Pclass&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div><p><figure style="flex-grow: 133; flex-basis: 319px">
+		<a href="/p/data-analysis_titanic-tutorial/emb2.png" data-size="1241x932"><img src="/p/data-analysis_titanic-tutorial/emb2.png"
+				srcset="/p/data-analysis_titanic-tutorial/emb2_hu5969f021ec55ea0aebcd11ac0500001b_72702_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/emb2_hu5969f021ec55ea0aebcd11ac0500001b_72702_1024x0_resize_box_2.png 1024w"
+				width="1241"
+				height="932"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<ul>
+<li>Figure(1) - 전체적으로 봤을 때, S 에서 가장 많은 사람이 탑승했습니다.</li>
+<li>Figure(2) - C와 Q 는 남녀의 비율이 비슷하고, S는 남자가 더 많습니다.</li>
+<li>Figure(3) - 생존확률이 S 경우 많이 낮은 걸 볼 수 있습니다. (이전 그래프에서 봤었습니다)</li>
+<li>Figure(4) - Class 로 split 해서 보니, C가 생존확률이 높은건 클래스가 높은 사람이 많이 타서 그렇습니다. S는 3rd class 가 많아서 생존확률이 낮게 나옵니다.</li>
+</ul>
+<h3 id="6-familysibsp--parch">6. Family(Sibsp + Parch)</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Sibsp와 Parch를 합치면 함께 탑승한 가족의 수가 되므로 새로운 Feature 생성</span>
+<span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;FamilySize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;SibSp&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Parch&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># 자신을 포함해야하니 1을 더합니다</span>
+<span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;FamilySize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;SibSp&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Parch&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># 자신을 포함해야하니 1을 더합니다</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">f</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="s1">&#39;FamilySize&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(1) No. Of Passengers Boarded&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="s1">&#39;FamilySize&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(2) Survived countplot depending on FamilySize&#39;</span><span class="p">,</span>  <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+
+<span class="n">df_train</span><span class="p">[[</span><span class="s1">&#39;FamilySize&#39;</span><span class="p">,</span> <span class="s1">&#39;Survived&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;FamilySize&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(3) Survived rate depending on FamilySize&#39;</span><span class="p">,</span>  <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div><p><figure style="flex-grow: 345; flex-basis: 830px">
+		<a href="/p/data-analysis_titanic-tutorial/family.png" data-size="2345x678"><img src="/p/data-analysis_titanic-tutorial/family.png"
+				srcset="/p/data-analysis_titanic-tutorial/family_hu554bd79400ac218fb3f3581c86510fda_71882_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/family_hu554bd79400ac218fb3f3581c86510fda_71882_1024x0_resize_box_2.png 1024w"
+				width="2345"
+				height="678"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<ul>
+<li>Figure (1) - 가족크기가 1~11까지 있음을 볼 수 있습니다. 대부분 1명이고 그 다음으로 2, 3, 4명입니다.</li>
+<li>Figure (2), (3) - 가족 크기에 따른 생존비교입니다. 가족이 4명인 경우가 가장 생존확률이 높습니다,
+가족수가 많아질수록, (5, 6, 7, 8, 11) 생존확률이 낮아지네요.
+가족수가 너무 작아도(1), 너무 커도(5, 6, 8, 11) 생존 확률이 작네요. 3~4명 선에서 생존확률이 높은 걸 확인할 수 있습니다.</li>
+</ul>
+<h3 id="7-fare">7. Fare</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 탑승요금은 연속적인 데이터이므로 히스토그램 시각화</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Skewness : {:.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">()),</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 특이하기도 train set 말고 test set에 Fare 피쳐에 널 값이 하나 존재하는 것을 확인할 수 있었습니다.</span>
+<span class="c1"># 그래서 평균 값으로 해당 널값을 넣어줍니다.</span>
+<span class="n">df_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_test</span><span class="o">.</span><span class="n">Fare</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="s1">&#39;Fare&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># testset 에 있는 nan value 를 평균값으로 치환합니다.</span>
+<span class="c1"># log를 취해 보기 편하게 변환</span>
+<span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Skewness : {:.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">()),</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+</code></pre></div><p><figure style="flex-grow: 105; flex-basis: 252px">
+		<a href="/p/data-analysis_titanic-tutorial/fare.png" data-size="550x523"><img src="/p/data-analysis_titanic-tutorial/fare.png"
+				srcset="/p/data-analysis_titanic-tutorial/fare_hu679a37d0371a9ba0dda89b8521ac3601_27662_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/fare_hu679a37d0371a9ba0dda89b8521ac3601_27662_1024x0_resize_box_2.png 1024w"
+				width="550"
+				height="523"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<h3 id="8-cabin">8. Cabin</h3>
+<p>NaN이 대략 80% 이므로, 생존에 영향을 미칠 중요한 정보를 얻어내기가 쉽지는 않습니다.</p>
+<h3 id="9-ticket">9. Ticket</h3>
+<p>NaN은 없지만 이 데이터로 유효한 결과를 뽑아내기위해선 아이디어가 필요</p>
+<hr>
+<h2 id="3-특성공학feature-engineering">3. 특성공학(Feature Engineering)</h2>
+<h3 id="fill-null">Fill Null</h3>
+<p>null data를 어떻게 채우느냐에 따라 모델의 성능이 좌지우지되므로 중요, train 뿐만 아니라 test도 똑같이 적용</p>
+<h4 id="1-age">1. Age</h4>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Initial&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">Name</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">&#39;([A-Za-z]+)\.&#39;</span><span class="p">)</span> <span class="c1">#lets extract the Salutations</span>
+<span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Initial&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">df_test</span><span class="o">.</span><span class="n">Name</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">&#39;([A-Za-z]+)\.&#39;</span><span class="p">)</span> <span class="c1">#lets extract the Salutations</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Initial과 Sex간의 count</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Initial&#39;</span><span class="p">],</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;summer_r&#39;</span><span class="p">)</span> <span class="c1">#Checking the Initials with the Sex</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Initial&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;Mlle&#39;</span><span class="p">,</span><span class="s1">&#39;Mme&#39;</span><span class="p">,</span><span class="s1">&#39;Ms&#39;</span><span class="p">,</span><span class="s1">&#39;Dr&#39;</span><span class="p">,</span><span class="s1">&#39;Major&#39;</span><span class="p">,</span><span class="s1">&#39;Lady&#39;</span><span class="p">,</span><span class="s1">&#39;Countess&#39;</span><span class="p">,</span><span class="s1">&#39;Jonkheer&#39;</span><span class="p">,</span><span class="s1">&#39;Col&#39;</span><span class="p">,</span><span class="s1">&#39;Rev&#39;</span><span class="p">,</span><span class="s1">&#39;Capt&#39;</span><span class="p">,</span><span class="s1">&#39;Sir&#39;</span><span class="p">,</span><span class="s1">&#39;Don&#39;</span><span class="p">,</span> <span class="s1">&#39;Dona&#39;</span><span class="p">],</span>
+                        <span class="p">[</span><span class="s1">&#39;Miss&#39;</span><span class="p">,</span><span class="s1">&#39;Miss&#39;</span><span class="p">,</span><span class="s1">&#39;Miss&#39;</span><span class="p">,</span><span class="s1">&#39;Mr&#39;</span><span class="p">,</span><span class="s1">&#39;Mr&#39;</span><span class="p">,</span><span class="s1">&#39;Mrs&#39;</span><span class="p">,</span><span class="s1">&#39;Mrs&#39;</span><span class="p">,</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span><span class="s1">&#39;Mr&#39;</span><span class="p">,</span><span class="s1">&#39;Mr&#39;</span><span class="p">,</span><span class="s1">&#39;Mr&#39;</span><span class="p">,</span> <span class="s1">&#39;Mr&#39;</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Initial&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;Mlle&#39;</span><span class="p">,</span><span class="s1">&#39;Mme&#39;</span><span class="p">,</span><span class="s1">&#39;Ms&#39;</span><span class="p">,</span><span class="s1">&#39;Dr&#39;</span><span class="p">,</span><span class="s1">&#39;Major&#39;</span><span class="p">,</span><span class="s1">&#39;Lady&#39;</span><span class="p">,</span><span class="s1">&#39;Countess&#39;</span><span class="p">,</span><span class="s1">&#39;Jonkheer&#39;</span><span class="p">,</span><span class="s1">&#39;Col&#39;</span><span class="p">,</span><span class="s1">&#39;Rev&#39;</span><span class="p">,</span><span class="s1">&#39;Capt&#39;</span><span class="p">,</span><span class="s1">&#39;Sir&#39;</span><span class="p">,</span><span class="s1">&#39;Don&#39;</span><span class="p">,</span> <span class="s1">&#39;Dona&#39;</span><span class="p">],</span>
+                        <span class="p">[</span><span class="s1">&#39;Miss&#39;</span><span class="p">,</span><span class="s1">&#39;Miss&#39;</span><span class="p">,</span><span class="s1">&#39;Miss&#39;</span><span class="p">,</span><span class="s1">&#39;Mr&#39;</span><span class="p">,</span><span class="s1">&#39;Mr&#39;</span><span class="p">,</span><span class="s1">&#39;Mrs&#39;</span><span class="p">,</span><span class="s1">&#39;Mrs&#39;</span><span class="p">,</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span><span class="s1">&#39;Mr&#39;</span><span class="p">,</span><span class="s1">&#39;Mr&#39;</span><span class="p">,</span><span class="s1">&#39;Mr&#39;</span><span class="p">,</span> <span class="s1">&#39;Mr&#39;</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># train 에서 얻은 statistics 를 기반으로 null data 채우기</span>
+<span class="n">df_train</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Initial&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 각 initial 그룹별 Age 평균 값을 사용해서 채우기</span>
+<span class="n">df_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_train</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_train</span><span class="o">.</span><span class="n">Initial</span><span class="o">==</span><span class="s1">&#39;Mr&#39;</span><span class="p">),</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="n">df_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_train</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_train</span><span class="o">.</span><span class="n">Initial</span><span class="o">==</span><span class="s1">&#39;Mrs&#39;</span><span class="p">),</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">36</span>
+<span class="n">df_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_train</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_train</span><span class="o">.</span><span class="n">Initial</span><span class="o">==</span><span class="s1">&#39;Master&#39;</span><span class="p">),</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">df_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_train</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_train</span><span class="o">.</span><span class="n">Initial</span><span class="o">==</span><span class="s1">&#39;Miss&#39;</span><span class="p">),</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">22</span>
+<span class="n">df_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_train</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_train</span><span class="o">.</span><span class="n">Initial</span><span class="o">==</span><span class="s1">&#39;Other&#39;</span><span class="p">),</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">46</span>
+
+<span class="n">df_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_test</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_test</span><span class="o">.</span><span class="n">Initial</span><span class="o">==</span><span class="s1">&#39;Mr&#39;</span><span class="p">),</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="n">df_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_test</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_test</span><span class="o">.</span><span class="n">Initial</span><span class="o">==</span><span class="s1">&#39;Mrs&#39;</span><span class="p">),</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">36</span>
+<span class="n">df_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_test</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_test</span><span class="o">.</span><span class="n">Initial</span><span class="o">==</span><span class="s1">&#39;Master&#39;</span><span class="p">),</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">df_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_test</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_test</span><span class="o">.</span><span class="n">Initial</span><span class="o">==</span><span class="s1">&#39;Miss&#39;</span><span class="p">),</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">22</span>
+<span class="n">df_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_test</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_test</span><span class="o">.</span><span class="n">Initial</span><span class="o">==</span><span class="s1">&#39;Other&#39;</span><span class="p">),</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">46</span>
+</code></pre></div><h4 id="2-embarked">2. Embarked</h4>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># S에서 가장 많이 탔으므로 S로 채우기</span>
+<span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Embarked&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">df_train</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="n">df_train</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+</code></pre></div><h3 id="change-age">Change Age</h3>
+<p>Age는 continuous feature이지만 그룹화하여 카테코리화 시켜줄 수 있다.
+continous를 categorical로 바꾸면 impormation loss가 생길 수 있으므로 주의</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">category_age</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">3</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">4</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">5</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">6</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">7</span>    
+    
+<span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Age_cat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">category_age</span><span class="p">)</span>
+<span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Age_cat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">category_age</span><span class="p">)</span>
+</code></pre></div><p><figure style="flex-grow: 126; flex-basis: 304px">
+		<a href="/p/data-analysis_titanic-tutorial/group.PNG" data-size="303x239"><img src="/p/data-analysis_titanic-tutorial/group.PNG"
+				srcset="/p/data-analysis_titanic-tutorial/group_hue389f9c52567641f81460bc89bb237c9_2929_480x0_resize_box_2.PNG 480w, /p/data-analysis_titanic-tutorial/group_hue389f9c52567641f81460bc89bb237c9_2929_1024x0_resize_box_2.PNG 1024w"
+				width="303"
+				height="239"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<h3 id="change-initial-embarked-and-sex">Change Initial, Embarked and Sex</h3>
+<p>컴퓨터가 인식할 수 있도록 수치화</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Initial&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Initial&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;Master&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Miss&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Mr&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Mrs&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Other&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+<span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Initial&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Initial&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;Master&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Miss&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Mr&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Mrs&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Other&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+
+<span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Embarked&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Embarked&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+<span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Embarked&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Embarked&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+
+<span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;female&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;male&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;female&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;male&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 각 feature별 상관관계 시각화</span>
+<span class="n">heatmap_data</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[[</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="s1">&#39;Pclass&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Fare&#39;</span><span class="p">,</span> <span class="s1">&#39;Embarked&#39;</span><span class="p">,</span> <span class="s1">&#39;FamilySize&#39;</span><span class="p">,</span> <span class="s1">&#39;Initial&#39;</span><span class="p">,</span> <span class="s1">&#39;Age_cat&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">]]</span> 
+
+<span class="n">colormap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">RdBu</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Pearson Correlation of Features&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.05</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">heatmap_data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+           <span class="n">square</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">colormap</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">annot_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;size&#34;</span><span class="p">:</span> <span class="mi">16</span><span class="p">})</span>
+
+<span class="k">del</span> <span class="n">heatmap_data</span>
+</code></pre></div><p><figure style="flex-grow: 112; flex-basis: 269px">
+		<a href="/p/data-analysis_titanic-tutorial/heat.png" data-size="949x846"><img src="/p/data-analysis_titanic-tutorial/heat.png"
+				srcset="/p/data-analysis_titanic-tutorial/heat_hu22b4d03cbac95ed7f31edec3bf660b70_109354_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/heat_hu22b4d03cbac95ed7f31edec3bf660b70_109354_1024x0_resize_box_2.png 1024w"
+				width="949"
+				height="846"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<ul>
+<li>Sex 와 Pclass 가 Survived 에 상관관계가 어느 정도 있음을 볼 수 있습니다.</li>
+<li>생각보다 fare 와 Embarked 도 상관관계가 있음을 볼 수 있습니다.</li>
+<li>강한 상관관계를 가지는 feature들이 없다.
+따라서 모델을 학습시킬 때, 불필요한 feature 가 없다.</li>
+</ul>
+<h3 id="데이터전처리data-preprocessing">데이터전처리(Data Preprocessing)</h3>
+<p>모델의 성능을 높이기 위해 데이터 전처리 과정</p>
+<h4 id="one-hot-encoding-on-initiall-and-embarked">One-hot encoding on Initiall and Embarked</h4>
+<p>One-hot encoding을 통해 각 클래스간 연관성을 동이하게 생성<!-- raw HTML omitted -->
+category가 많을 경우 column이 너무 많이 생성되어 <code>차원의 저주</code> 발생 주의</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Initial&#39;</span><span class="p">],</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;Initial&#39;</span><span class="p">)</span>
+<span class="n">df_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df_test</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Initial&#39;</span><span class="p">],</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;Initial&#39;</span><span class="p">)</span>
+</code></pre></div><p><figure style="flex-grow: 343; flex-basis: 824px">
+		<a href="/p/data-analysis_titanic-tutorial/one_hot.PNG" data-size="1776x517"><img src="/p/data-analysis_titanic-tutorial/one_hot.PNG"
+				srcset="/p/data-analysis_titanic-tutorial/one_hot_hu4a4a65c97c0259e2c630b42248737c4d_46316_480x0_resize_box_2.PNG 480w, /p/data-analysis_titanic-tutorial/one_hot_hu4a4a65c97c0259e2c630b42248737c4d_46316_1024x0_resize_box_2.PNG 1024w"
+				width="1776"
+				height="517"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Embarked&#39;</span><span class="p">],</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;Embarked&#39;</span><span class="p">)</span>
+<span class="n">df_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df_test</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Embarked&#39;</span><span class="p">],</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;Embarked&#39;</span><span class="p">)</span>
+</code></pre></div><h4 id="drop-columns">Drop Columns</h4>
+<p>필요없는 피쳐 제거</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df_train</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;PassengerId&#39;</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;SibSp&#39;</span><span class="p">,</span> <span class="s1">&#39;Parch&#39;</span><span class="p">,</span> <span class="s1">&#39;Ticket&#39;</span><span class="p">,</span> <span class="s1">&#39;Cabin&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">df_test</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;PassengerId&#39;</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="p">,</span>  <span class="s1">&#39;SibSp&#39;</span><span class="p">,</span> <span class="s1">&#39;Parch&#39;</span><span class="p">,</span> <span class="s1">&#39;Ticket&#39;</span><span class="p">,</span> <span class="s1">&#39;Cabin&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div><h2 id="4-모델-개발-및-학습">4. 모델 개발 및 학습</h2>
+<p>Sklearn은 머신러닝에 관련된 모든 작업들이 손쉬운 인터페이스로 구현되어 있다.
+현재 우리는 train set의 survived를 제외한 input을 가지고 모델을 최적화 시켜 탑승객의 생존유무를 판단하는 모델을 생성
+그 후 test set을 input으로 주어서 탑승객의 생존유무를 예측</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#importing all the required ML packages</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span> <span class="c1"># 유명한 randomforestclassfier 입니다. </span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span> <span class="c1"># 모델의 평가를 위해서 씁니다</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> <span class="c1"># traning set을 쉽게 나눠주는 함수입니다.</span>
+
+<span class="c1">### Preparation - Split dataset into train, valid, test set</span>
+
+<span class="err">​</span><span class="sb">``</span><span class="err">`</span><span class="n">python</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="n">target_label</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="o">.</span><span class="n">values</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">X_tr</span><span class="p">,</span> <span class="n">X_vld</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">,</span> <span class="n">y_vld</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">target_label</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">2018</span><span class="p">)</span>
+</code></pre></div><h3 id="model-generation-and-prediction">Model generation and prediction</h3>
+<h4 id="random-forest">Random Forest</h4>
+<p>여러 알고리즘 중 랜덤포레스트를 사용
+랜덤포레스트는 결정트리기반 모델로 여러 결정 트리들을 앙상블한 모델</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span> <span class="c1"># 생성</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_tr</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">)</span> <span class="c1"># 학습</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_vld</span><span class="p">)</span> <span class="c1"># 예측</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s1">&#39;총 {}명 중 {:.2f}% 정확도로 생존을 맞춤&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y_vld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="n">y_vld</span><span class="p">)))</span>
+<span class="c1"># 총 179명 중 81.56% 정확도로 생존을 맞춤</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 학습된 모델은 feature importance를 가지게 되는데,</span>
+<span class="c1"># 이는 어떤 feature가 결과에 영향을 많이 미쳤는지 확인할 수 있다.</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">Series</span>
+
+<span class="n">feature_importance</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">feature_importances_</span>
+<span class="n">Series_feat_imp</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">feature_importance</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">df_test</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">Series_feat_imp</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Feature importance&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Feature&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div><p><figure style="flex-grow: 129; flex-basis: 310px">
+		<a href="/p/data-analysis_titanic-tutorial/importance.png" data-size="677x523"><img src="/p/data-analysis_titanic-tutorial/importance.png"
+				srcset="/p/data-analysis_titanic-tutorial/importance_hu338a68d5c948af4244e56939e2555ee7_32325_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/importance_hu338a68d5c948af4244e56939e2555ee7_32325_1024x0_resize_box_2.png 1024w"
+				width="677"
+				height="523"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<h4 id="nn모델neural-network-model---딥러닝-모델">NN모델(Neural Network model) - 딥러닝 모델</h4>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">keras.layers.core</span> <span class="kn">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Dropout</span>
+<span class="kn">from</span> <span class="nn">keras.optimizers</span> <span class="kn">import</span> <span class="n">Adam</span><span class="p">,</span> <span class="n">SGD</span>
+
+<span class="n">nn_model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">nn_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span><span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,)))</span>
+<span class="n">nn_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">))</span>
+<span class="n">nn_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span><span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+<span class="n">nn_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">))</span>
+<span class="n">nn_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+<span class="n">nn_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">))</span>
+<span class="n">nn_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">activation</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">))</span>
+
+<span class="n">Loss</span> <span class="o">=</span> <span class="s1">&#39;binary_crossentropy&#39;</span>
+<span class="n">nn_model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="n">Loss</span><span class="p">,</span><span class="n">optimizer</span><span class="o">=</span><span class="n">Adam</span><span class="p">(),</span><span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">history</span> <span class="o">=</span> <span class="n">nn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_tr</span><span class="p">,</span><span class="n">y_tr</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">X_vld</span><span class="p">,</span> <span class="n">y_vld</span><span class="p">),</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">hists</span> <span class="o">=</span> <span class="p">[</span><span class="n">history</span><span class="p">]</span>
+<span class="n">hist_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">hist</span><span class="o">.</span><span class="n">history</span><span class="p">)</span> <span class="k">for</span> <span class="n">hist</span> <span class="ow">in</span> <span class="n">hists</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">hist_df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">hist_df</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hist_df</span><span class="o">.</span><span class="n">val_accuracy</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Validation Accuracy&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hist_df</span><span class="o">.</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training Accuracy&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Accuracy&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Epoch&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hist_df</span><span class="o">.</span><span class="n">val_loss</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Validation MLogLoss&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hist_df</span><span class="o">.</span><span class="n">loss</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training MLogLoss&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;MLogLoss&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Epoch&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;hist.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</code></pre></div><p><figure style="flex-grow: 158; flex-basis: 379px">
+		<a href="/p/data-analysis_titanic-tutorial/nn_model.png" data-size="997x631"><img src="/p/data-analysis_titanic-tutorial/nn_model.png"
+				srcset="/p/data-analysis_titanic-tutorial/nn_model_hu880a59ef64daaa0c3d3936b78d9b7398_88514_480x0_resize_box_2.png 480w, /p/data-analysis_titanic-tutorial/nn_model_hu880a59ef64daaa0c3d3936b78d9b7398_88514_1024x0_resize_box_2.png 1024w"
+				width="997"
+				height="631"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<h2 id="5-모델-예측-및-평가">5. 모델 예측 및 평가</h2>
+<h3 id="랜덤포레스트">랜덤포레스트</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">submission</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sample_submission.csv&#39;</span><span class="p">)</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">submission</span><span class="p">[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prediction</span>
+<span class="n">submission</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;my_first_submission.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="c1"># 정확도 스코어: 0.75598</span>
+</code></pre></div><h3 id="nn모델">NN모델</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">submission</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sample_submission.csv&#39;</span><span class="p">)</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">nn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">prediction</span> <span class="o">&gt;</span> <span class="mf">0.5</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">submission</span><span class="p">[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prediction</span>
+<span class="n">submission</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;my_nn_submission.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="c1"># 정확도 사코어: 0.77990</span>
+</code></pre></div><hr>
+<p><code>Google Colab</code>환경에서 진행하고 <code>markdown</code>으로 포스팅하는 거라 설명이 부족한 점은 양해바랍니다;;💦💦</p>
+<p>예전에 잠깐 해보았던 데이터분석이지만 오랜만에 다시한번 해보니 감회가 새로웠고 진행하는 과정에서 느낀 궁금점들은 따로 정리하여 포스팅하도록 하겠습니당!!!</p>
+<p>원본소스코드.ipynb 👉 <a href="https://github.com/ssabum/note/blob/master/data_analysis/titanic.ipynb">https://github.com/ssabum/note/blob/master/data_analysis/titanic.ipynb</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/data-analysis/">data analysis</a>
+        
+            <a href="/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/">데이터분석</a>
+        
+            <a href="/tags/tutorial/">tutorial</a>
+        
+            <a href="/tags/titanic/">titanic</a>
+        
+    </section>
+
+
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">관련 글</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/big-data-pilot-project/">
+        
+        
+            <div class="article-image">
+                <img src="/p/big-data-pilot-project/big.635a7b3dbd9b0f88115319d62a5ab2f9_huc3341fa433694cc25a4a023e642e485d_212847_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-Y1p7Pb2bD4gRUxnWKlqy&#43;Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Big data pilot project</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="ssabum/comments"
+        issue-term="pathname"
+        
+        theme="github-light"
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.body.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Ssabum&#39;s Devlog
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

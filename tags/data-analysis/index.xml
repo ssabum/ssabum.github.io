@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data analysis on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/data-analysis/</link>
+    <description>Recent content in data analysis on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data analysis_titanic tutorial</title>
+      <link>https://ssabum.github.io/p/data-analysis_titanic-tutorial/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/data-analysis_titanic-tutorial/</guid>
+      <description>타이타닉 데이터 분석 🚢  본격적으로 데이터분석에 드러가기에 앞서 튜토리얼을 진행해보려한다.
+코딩을 처음 배울때 Hello World를 출력하는 것 처럼 데이터분석의 시작은 타이타닉 데이터이다!!
+ Kaggle과 Colab 연동 Google Colab 환경에서 프로젝트를 진행했는데 Kaggle의 data set을 가져오기 위해 하나하나 다운받을 필요없이 API를 이용해 불러올 수 있습니다!
+# kaggle과 colab 연동 !pip install kaggle # kaggle에서 api kaggle.json을 받아서 전송 from google.colab import files files.upload() !mkdir -p ~/.kaggle !cp kaggle.json ~/.kaggle/ !chmod 600 ~/.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,32 @@
     <description>Recent content in Posts on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data analysis_titanic tutorial</title>
+      <link>https://ssabum.github.io/p/data-analysis_titanic-tutorial/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/data-analysis_titanic-tutorial/</guid>
+      <description>타이타닉 데이터 분석 🚢  본격적으로 데이터분석에 드러가기에 앞서 튜토리얼을 진행해보려한다.
+코딩을 처음 배울때 Hello World를 출력하는 것 처럼 데이터분석의 시작은 타이타닉 데이터이다!!
+ Kaggle과 Colab 연동 Google Colab 환경에서 프로젝트를 진행했는데 Kaggle의 data set을 가져오기 위해 하나하나 다운받을 필요없이 API를 이용해 불러올 수 있습니다!
+# kaggle과 colab 연동 !pip install kaggle # kaggle에서 api kaggle.json을 받아서 전송 from google.colab import files files.upload() !mkdir -p ~/.kaggle !cp kaggle.json ~/.kaggle/ !chmod 600 ~/.</description>
+    </item>
+    
+    <item>
+      <title>근황이요</title>
+      <link>https://ssabum.github.io/p/%EA%B7%BC%ED%99%A9%EC%9D%B4%EC%9A%94/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/p/%EA%B7%BC%ED%99%A9%EC%9D%B4%EC%9A%94/</guid>
+      <description>내 근황&amp;hellip; 그동안 블로그 활동을 하지 못했는데&amp;hellip;마음이 뜬 것도 있고, ssafy 1학기 프로젝트에 정신 팔린 것도 있고&amp;hellip;
+이제 다시 맘먹고 열심히 할 생각이다!!
+생각보다 난 한게 아무것도 없었고 앞으로 할 수 있는게 많다는 뜻이니!!
+그래도 그동안 ssafy 1학기를 잘 마무리하고, 정보처리기사와 sqld 자격정을 취득했다.
+이제는 ssafy 2학기 프로젝트를 진행하면서 본격적으로 내 실력을 키우기 위한 공부를 시작해야겠지!</description>
+    </item>
+    
     <item>
       <title>백준 1780번 종이의 개수</title>
       <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1780%EB%B2%88-%EC%A2%85%EC%9D%B4%EC%9D%98-%EA%B0%9C%EC%88%98/</link>
