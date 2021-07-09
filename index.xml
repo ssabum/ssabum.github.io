@@ -7,12 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Data analysis_titanic tutorial</title>
-        <link>https://ssabum.github.io/p/data-analysis_titanic-tutorial/</link>
+        <title>Data analysis 타이타닉</title>
+        <link>https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/</link>
         <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://ssabum.github.io/p/data-analysis_titanic-tutorial/</guid>
-        <description>&lt;img src="https://ssabum.github.io/p/data-analysis_titanic-tutorial/titanic.jpg" alt="Featured image of post Data analysis_titanic tutorial" /&gt;&lt;h1 id=&#34;타이타닉-데이터-분석-&#34;&gt;타이타닉 데이터 분석 🚢&lt;/h1&gt;
+        <guid>https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/titanic.jpg" alt="Featured image of post Data analysis 타이타닉" /&gt;&lt;h1 id=&#34;타이타닉-데이터-분석-&#34;&gt;타이타닉 데이터 분석 🚢&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;본격적으로 데이터분석에 드러가기에 앞서 튜토리얼을 진행해보려한다.&lt;/p&gt;
 &lt;p&gt;코딩을 처음 배울때 &lt;code&gt;Hello World&lt;/code&gt;를 출력하는 것 처럼 데이터분석의 시작은 &lt;code&gt;타이타닉 데이터&lt;/code&gt;이다!!&lt;/p&gt;
@@ -97,8 +97,8 @@
 &lt;span class=&#34;n&#34;&gt;df_submit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read_csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;sample_submission.csv&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 589; flex-basis: 1415px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/train_head.PNG&#34; data-size=&#34;1427x242&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/train_head.PNG&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/train_head_hu310a5aed62dbc181236ed1f42c4313b4_33875_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/train_head_hu310a5aed62dbc181236ed1f42c4313b4_33875_1024x0_resize_box_2.PNG 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/train_head.PNG&#34; data-size=&#34;1427x242&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/train_head.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/train_head_hu310a5aed62dbc181236ed1f42c4313b4_33875_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/train_head_hu310a5aed62dbc181236ed1f42c4313b4_33875_1024x0_resize_box_2.PNG 1024w&#34;
 				width=&#34;1427&#34;
 				height=&#34;242&#34;
 				loading=&#34;lazy&#34;
@@ -122,8 +122,8 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 결측치 확인 =&amp;gt; train set과 test set에 비슷하게 age에 20% cabin에 80%의 결측지 발견&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;isnull&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;shape&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 81; flex-basis: 196px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/train_nan.PNG&#34; data-size=&#34;245x300&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/train_nan.PNG&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/train_nan_hud16253a320c773ea34b2bc051b9cb158_5071_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/train_nan_hud16253a320c773ea34b2bc051b9cb158_5071_1024x0_resize_box_2.PNG 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/train_nan.PNG&#34; data-size=&#34;245x300&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/train_nan.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/train_nan_hud16253a320c773ea34b2bc051b9cb158_5071_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/train_nan_hud16253a320c773ea34b2bc051b9cb158_5071_1024x0_resize_box_2.PNG 1024w&#34;
 				width=&#34;245&#34;
 				height=&#34;300&#34;
 				loading=&#34;lazy&#34;
@@ -147,8 +147,8 @@ binary classification에서 분포가 어떠냐에 따라 모델의 평가방법
 &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# target label의 분포가 제법 균일하므로 binary classification에 적합&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 182; flex-basis: 437px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/pie.png&#34; data-size=&#34;1007x552&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/pie.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/pie_hu13667f57f5cdf18f61fc82ef51c28cca_47103_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/pie_hu13667f57f5cdf18f61fc82ef51c28cca_47103_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/pie.png&#34; data-size=&#34;1007x552&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/pie.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/pie_hu13667f57f5cdf18f61fc82ef51c28cca_47103_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/pie_hu13667f57f5cdf18f61fc82ef51c28cca_47103_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;1007&#34;
 				height=&#34;552&#34;
 				loading=&#34;lazy&#34;
@@ -191,8 +191,8 @@ binary classification에서 분포가 어떠냐에 따라 모델의 평가방법
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 생존률&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Pclass&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Survived&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;groupby&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Pclass&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;as_index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 96; flex-basis: 230px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EC%83%9D%EC%A1%B4%EB%A5%A0.PNG&#34; data-size=&#34;194x202&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EC%83%9D%EC%A1%B4%EB%A5%A0.PNG&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EC%83%9D%EC%A1%B4%EB%A5%A0_hu0bf42981f6910bdeaee91edb69c60927_5424_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EC%83%9D%EC%A1%B4%EB%A5%A0_hu0bf42981f6910bdeaee91edb69c60927_5424_1024x0_resize_box_2.PNG 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EC%83%9D%EC%A1%B4%EB%A5%A0.PNG&#34; data-size=&#34;194x202&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EC%83%9D%EC%A1%B4%EB%A5%A0.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EC%83%9D%EC%A1%B4%EB%A5%A0_hu0bf42981f6910bdeaee91edb69c60927_5424_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EC%83%9D%EC%A1%B4%EB%A5%A0_hu0bf42981f6910bdeaee91edb69c60927_5424_1024x0_resize_box_2.PNG 1024w&#34;
 				width=&#34;194&#34;
 				height=&#34;202&#34;
 				loading=&#34;lazy&#34;
@@ -205,8 +205,8 @@ binary classification에서 분포가 어떠냐에 따라 모델의 평가방법
 &lt;span class=&#34;c1&#34;&gt;# 생존률에 Pclass가 큰 영향을 미친다고 생각할 수 있다.&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# 따라서 모델 생성시 해당 feature 사용이 좋을 것이라 판단&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 143; flex-basis: 344px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84.png&#34; data-size=&#34;423x295&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84_huacda953524a2e953708540019a2aba71_10577_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84_huacda953524a2e953708540019a2aba71_10577_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84.png&#34; data-size=&#34;423x295&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84_huacda953524a2e953708540019a2aba71_10577_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84_huacda953524a2e953708540019a2aba71_10577_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;423&#34;
 				height=&#34;295&#34;
 				loading=&#34;lazy&#34;
@@ -224,8 +224,8 @@ binary classification에서 분포가 어떠냐에 따라 모델의 평가방법
 &lt;span class=&#34;c1&#34;&gt;# 남성보다 여성의 생존확률이 높습니다.&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# Pclass와 마찬가지로, Sex도 예측 모델에 쓰일 중요 featured임을 알 수 있다.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 173; flex-basis: 416px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EC%84%B1%EB%B3%84.png&#34; data-size=&#34;1075x619&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EC%84%B1%EB%B3%84.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EC%84%B1%EB%B3%84_hu4026bb368c9a80a856fae0706779e52f_38268_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/%EC%84%B1%EB%B3%84_hu4026bb368c9a80a856fae0706779e52f_38268_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EC%84%B1%EB%B3%84.png&#34; data-size=&#34;1075x619&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EC%84%B1%EB%B3%84.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EC%84%B1%EB%B3%84_hu4026bb368c9a80a856fae0706779e52f_38268_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/%EC%84%B1%EB%B3%84_hu4026bb368c9a80a856fae0706779e52f_38268_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;1075&#34;
 				height=&#34;619&#34;
 				loading=&#34;lazy&#34;
@@ -238,8 +238,8 @@ binary classification에서 분포가 어떠냐에 따라 모델의 평가방법
 &lt;span class=&#34;n&#34;&gt;sns&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;factorplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Pclass&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Survived&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Sex&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;aspect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# 모든 클래스에서 여성의 생존률이 남성보다 높다.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 184; flex-basis: 443px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/factor.png&#34; data-size=&#34;844x457&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/factor.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/factor_hu0e21fbd7a247fec6384ef4938e762f2d_27815_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/factor_hu0e21fbd7a247fec6384ef4938e762f2d_27815_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/factor.png&#34; data-size=&#34;844x457&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/factor.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/factor_hu0e21fbd7a247fec6384ef4938e762f2d_27815_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/factor_hu0e21fbd7a247fec6384ef4938e762f2d_27815_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;844&#34;
 				height=&#34;457&#34;
 				loading=&#34;lazy&#34;
@@ -258,8 +258,8 @@ binary classification에서 분포가 어떠냐에 따라 모델의 평가방법
 &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# 생존 KDE와 사망 KDE를 비교했을때 어린나이 구간에서 생존률이 상대적으로 높음을 알 수 있다.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 173; flex-basis: 416px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/kde.png&#34; data-size=&#34;624x360&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/kde.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/kde_huffa06a80f159fcf97a6e127dd10222f5_36271_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/kde_huffa06a80f159fcf97a6e127dd10222f5_36271_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/kde.png&#34; data-size=&#34;624x360&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/kde.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/kde_huffa06a80f159fcf97a6e127dd10222f5_36271_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/kde_huffa06a80f159fcf97a6e127dd10222f5_36271_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;624&#34;
 				height=&#34;360&#34;
 				loading=&#34;lazy&#34;
@@ -280,8 +280,8 @@ binary classification에서 분포가 어떠냐에 따라 모델의 평가방법
 &lt;span class=&#34;c1&#34;&gt;# 나이가 어릴수록 생존률이 확실히 증가하는 것을 확인 가능&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# Age도 중요 feature임을 확인할 수 있다.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 147; flex-basis: 354px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/age.png&#34; data-size=&#34;745x505&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/age.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/age_hu83d0041b7fbe6c656505746fc15da4a7_33377_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/age_hu83d0041b7fbe6c656505746fc15da4a7_33377_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/age.png&#34; data-size=&#34;745x505&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/age.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/age_hu83d0041b7fbe6c656505746fc15da4a7_33377_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/age_hu83d0041b7fbe6c656505746fc15da4a7_33377_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;745&#34;
 				height=&#34;505&#34;
 				loading=&#34;lazy&#34;
@@ -294,8 +294,8 @@ binary classification에서 분포가 어떠냐에 따라 모델의 평가방법
 &lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Embarked&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Survived&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;groupby&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Embarked&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;as_index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sort_values&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;by&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Survived&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ascending&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# 탑승항구 별 생존률의 차이가 크진 않다.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 99; flex-basis: 239px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/emb.png&#34; data-size=&#34;461x462&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/emb.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/emb_hufef6e260bee620adb112eedcce76a432_13896_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/emb_hufef6e260bee620adb112eedcce76a432_13896_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/emb.png&#34; data-size=&#34;461x462&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/emb.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/emb_hufef6e260bee620adb112eedcce76a432_13896_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/emb_hufef6e260bee620adb112eedcce76a432_13896_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;461&#34;
 				height=&#34;462&#34;
 				loading=&#34;lazy&#34;
@@ -316,8 +316,8 @@ binary classification에서 분포가 어떠냐에 따라 모델의 평가방법
 &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subplots_adjust&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wspace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hspace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 133; flex-basis: 319px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/emb2.png&#34; data-size=&#34;1241x932&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/emb2.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/emb2_hu5969f021ec55ea0aebcd11ac0500001b_72702_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/emb2_hu5969f021ec55ea0aebcd11ac0500001b_72702_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/emb2.png&#34; data-size=&#34;1241x932&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/emb2.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/emb2_hu5969f021ec55ea0aebcd11ac0500001b_72702_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/emb2_hu5969f021ec55ea0aebcd11ac0500001b_72702_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;1241&#34;
 				height=&#34;932&#34;
 				loading=&#34;lazy&#34;
@@ -348,8 +348,8 @@ binary classification에서 분포가 어떠냐에 따라 모델의 평가방법
 &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subplots_adjust&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wspace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hspace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 345; flex-basis: 830px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/family.png&#34; data-size=&#34;2345x678&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/family.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/family_hu554bd79400ac218fb3f3581c86510fda_71882_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/family_hu554bd79400ac218fb3f3581c86510fda_71882_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/family.png&#34; data-size=&#34;2345x678&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/family.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/family_hu554bd79400ac218fb3f3581c86510fda_71882_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/family_hu554bd79400ac218fb3f3581c86510fda_71882_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;2345&#34;
 				height=&#34;678&#34;
 				loading=&#34;lazy&#34;
@@ -379,8 +379,8 @@ binary classification에서 분포가 어떠냐에 따라 모델의 평가방법
 &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sns&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Fare&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;label&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Skewness : {:.2f}&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Fare&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;skew&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;legend&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;best&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 105; flex-basis: 252px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/fare.png&#34; data-size=&#34;550x523&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/fare.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/fare_hu679a37d0371a9ba0dda89b8521ac3601_27662_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/fare_hu679a37d0371a9ba0dda89b8521ac3601_27662_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/fare.png&#34; data-size=&#34;550x523&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/fare.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/fare_hu679a37d0371a9ba0dda89b8521ac3601_27662_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/fare_hu679a37d0371a9ba0dda89b8521ac3601_27662_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;550&#34;
 				height=&#34;523&#34;
 				loading=&#34;lazy&#34;
@@ -448,8 +448,8 @@ continous를 categorical로 바꾸면 impormation loss가 생길 수 있으므�
 &lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Age_cat&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Age&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;category_age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;df_test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Age_cat&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df_test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Age&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;category_age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 126; flex-basis: 304px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/group.PNG&#34; data-size=&#34;303x239&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/group.PNG&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/group_hue389f9c52567641f81460bc89bb237c9_2929_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/group_hue389f9c52567641f81460bc89bb237c9_2929_1024x0_resize_box_2.PNG 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/group.PNG&#34; data-size=&#34;303x239&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/group.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/group_hue389f9c52567641f81460bc89bb237c9_2929_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/group_hue389f9c52567641f81460bc89bb237c9_2929_1024x0_resize_box_2.PNG 1024w&#34;
 				width=&#34;303&#34;
 				height=&#34;239&#34;
 				loading=&#34;lazy&#34;
@@ -478,8 +478,8 @@ continous를 categorical로 바꾸면 impormation loss가 생길 수 있으므�
 
 &lt;span class=&#34;k&#34;&gt;del&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;heatmap_data&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 112; flex-basis: 269px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/heat.png&#34; data-size=&#34;949x846&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/heat.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/heat_hu22b4d03cbac95ed7f31edec3bf660b70_109354_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/heat_hu22b4d03cbac95ed7f31edec3bf660b70_109354_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/heat.png&#34; data-size=&#34;949x846&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/heat.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/heat_hu22b4d03cbac95ed7f31edec3bf660b70_109354_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/heat_hu22b4d03cbac95ed7f31edec3bf660b70_109354_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;949&#34;
 				height=&#34;846&#34;
 				loading=&#34;lazy&#34;
@@ -501,8 +501,8 @@ category가 많을 경우 column이 너무 많이 생성되어 &lt;code&gt;차�
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get_dummies&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df_train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;columns&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Initial&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prefix&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Initial&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;df_test&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get_dummies&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df_test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;columns&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Initial&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prefix&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Initial&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 343; flex-basis: 824px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/one_hot.PNG&#34; data-size=&#34;1776x517&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/one_hot.PNG&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/one_hot_hu4a4a65c97c0259e2c630b42248737c4d_46316_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/one_hot_hu4a4a65c97c0259e2c630b42248737c4d_46316_1024x0_resize_box_2.PNG 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/one_hot.PNG&#34; data-size=&#34;1776x517&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/one_hot.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/one_hot_hu4a4a65c97c0259e2c630b42248737c4d_46316_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/one_hot_hu4a4a65c97c0259e2c630b42248737c4d_46316_1024x0_resize_box_2.PNG 1024w&#34;
 				width=&#34;1776&#34;
 				height=&#34;517&#34;
 				loading=&#34;lazy&#34;
@@ -553,8 +553,8 @@ category가 많을 경우 column이 너무 많이 생성되어 &lt;code&gt;차�
 &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ylabel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Feature&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 129; flex-basis: 310px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/importance.png&#34; data-size=&#34;677x523&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/importance.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/importance_hu338a68d5c948af4244e56939e2555ee7_32325_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/importance_hu338a68d5c948af4244e56939e2555ee7_32325_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/importance.png&#34; data-size=&#34;677x523&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/importance.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/importance_hu338a68d5c948af4244e56939e2555ee7_32325_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/importance_hu338a68d5c948af4244e56939e2555ee7_32325_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;677&#34;
 				height=&#34;523&#34;
 				loading=&#34;lazy&#34;
@@ -598,8 +598,8 @@ category가 많을 경우 column이 너무 많이 생성되어 &lt;code&gt;차�
 &lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savefig&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;hist.png&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dpi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;300&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure style=&#34;flex-grow: 158; flex-basis: 379px&#34;&gt;
-		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/nn_model.png&#34; data-size=&#34;997x631&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/nn_model.png&#34;
-				srcset=&#34;https://ssabum.github.io/p/data-analysis_titanic-tutorial/nn_model_hu880a59ef64daaa0c3d3936b78d9b7398_88514_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis_titanic-tutorial/nn_model_hu880a59ef64daaa0c3d3936b78d9b7398_88514_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/nn_model.png&#34; data-size=&#34;997x631&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/nn_model.png&#34;
+				srcset=&#34;https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/nn_model_hu880a59ef64daaa0c3d3936b78d9b7398_88514_480x0_resize_box_2.png 480w, https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/nn_model_hu880a59ef64daaa0c3d3936b78d9b7398_88514_1024x0_resize_box_2.png 1024w&#34;
 				width=&#34;997&#34;
 				height=&#34;631&#34;
 				loading=&#34;lazy&#34;
@@ -639,7 +639,7 @@ category가 많을 경우 column이 너무 많이 생성되어 &lt;code&gt;차�
 &lt;p&gt;그동안 블로그 활동을 하지 못했는데&amp;hellip;마음이 뜬 것도 있고, ssafy 1학기 프로젝트에 정신 팔린 것도 있고&amp;hellip;&lt;/p&gt;
 &lt;p&gt;이제 다시 맘먹고 열심히 할 생각이다!!&lt;/p&gt;
 &lt;p&gt;생각보다 난 한게 아무것도 없었고 앞으로 할 수 있는게 많다는 뜻이니!!&lt;/p&gt;
-&lt;p&gt;그래도 그동안 ssafy 1학기를 잘 마무리하고, 정보처리기사와 sqld 자격정을 취득했다.&lt;/p&gt;
+&lt;p&gt;그래도 그동안 &lt;code&gt;ssafy 1학기&lt;/code&gt;를 잘 마무리하고, &lt;code&gt;정보처리기사&lt;/code&gt;와 &lt;code&gt;sqld&lt;/code&gt; 자격정을 취득했다.&lt;/p&gt;
 &lt;p&gt;이제는 ssafy 2학기 프로젝트를 진행하면서 본격적으로 내 실력을 키우기 위한 공부를 시작해야겠지!&lt;/p&gt;
 </description>
         </item>
