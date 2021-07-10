@@ -6,7 +6,124 @@
         <description>Recent content on Ssabum&#39;s Devlog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>타이타닉 프로젝트 리뷰</title>
+        <link>https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/</link>
+        <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/</guid>
+        <description>&lt;img src="https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/end.jpg" alt="Featured image of post 타이타닉 프로젝트 리뷰" /&gt;&lt;h1 id=&#34;타이타닉-데이터-분석-프로젝트-후기&#34;&gt;타이타닉 데이터 분석 프로젝트 후기❓&lt;/h1&gt;
+&lt;p&gt;타이타닉 데이터분석 프로젝트를 진행하면서 느꼈던 궁금증 해결하기!!!&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;1-null-data-채우는-다양한-방식&#34;&gt;1. NULL Data 채우는 다양한 방식&lt;/h2&gt;
+&lt;p&gt;데이터 분석 초기 과정에서 가장 중요한 일 중 하나가 바로 결측치/결측값 처리이다.&lt;/p&gt;
+&lt;p&gt;여기에 따라 모델 생성과 결과 도출에 이르기까지 큰 영향을 끼치기 때문이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;첫번째 방법, 제거하기&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;목록삭제(Listwise)&lt;/p&gt;
+&lt;p&gt;결측치가 존재하는 전체 행을 삭제&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 344; flex-basis: 827px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_1.PNG&#34; data-size=&#34;852x247&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_1.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_1_hu13df6059a8a84fc10bae037125349f5e_79417_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_1_hu13df6059a8a84fc10bae037125349f5e_79417_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;852&#34;
+				height=&#34;247&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;단일값 삭제(Pairwise)&lt;/p&gt;
+&lt;p&gt;손실된 관측치 자체만 삭제&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 347; flex-basis: 833px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_2.PNG&#34; data-size=&#34;851x245&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_2.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_2_hua3b0af3f72dbe44f2aa6092f4b4c9d37_66123_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_2_hua3b0af3f72dbe44f2aa6092f4b4c9d37_66123_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;851&#34;
+				height=&#34;245&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;두번째 방법, 채우기&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;평균화 기법(Popular Averaging)&lt;/p&gt;
+&lt;p&gt;가장 널리 사용되는 기술로, 그룹의 평균값을 결측값에 채워준다.&lt;/p&gt;
+&lt;p&gt;결측치를 빠르게 채울 수 있는 장점이 있지만, 결측치들이 동일한 값도 가질 수 있기 때문에 데이터셋의 변동을 인위적으로 줄여줘야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 219; flex-basis: 526px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_3.PNG&#34; data-size=&#34;849x387&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_3.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_3_hubf8b8cc65246c06c4e4bb4116976ef98_126408_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_3_hubf8b8cc65246c06c4e4bb4116976ef98_126408_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;849&#34;
+				height=&#34;387&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;예측 기법(Predictive)&lt;/p&gt;
+&lt;p&gt;결측치들의 특성이 무작위로 완전히 관찰되지 않는다고 가정하고 예측모델을 사용하여 결측값을 대치할 예측값을 생성&lt;/p&gt;
+&lt;p&gt;회귀 분석 기술을 활용하거나 SVM과 같은 머신러닝 등의 데이터마이닝 방법을 사용&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-feature별-상관관계-heatmap-해석하기&#34;&gt;2. Feature별 상관관계, Heatmap 해석하기&lt;/h2&gt;
+&lt;h3 id=&#34;heatmap이란&#34;&gt;Heatmap이란?&lt;/h3&gt;
+&lt;p&gt;열을 의미하는 &lt;code&gt;heat&lt;/code&gt;와 지도를 뜻하는 &lt;code&gt;map&lt;/code&gt;을 합친 단어로 데이터들의 배열을 색상으로 표현&lt;/p&gt;
+&lt;p&gt;여러 카테고리 값에 대한 값 변화를 한눈에 알기 쉽다는 장점이 있다.&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 161; flex-basis: 387px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/heatmap.PNG&#34; data-size=&#34;800x496&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/heatmap.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/heatmap_hu49d48cbfeb8374041cefa428144d158d_65492_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/heatmap_hu49d48cbfeb8374041cefa428144d158d_65492_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;800&#34;
+				height=&#34;496&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;위의 데이터는 월별 비행기 이용 승객수이다. 빨간색이 짙을수록 승객수가 적음을 의미하고 빨간색이 얕아질수록 승객수가 높음을 의미한다.&lt;/p&gt;
+&lt;p&gt;데이터 형태가 테이블 형태일때보다 히트맵으로 나타내면 언제 승객이 많은지, 승객수 변화가 어떠한지 쉽게 알 수 있다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-label-encoding-vs-one-hot-encoding&#34;&gt;3. Label Encoding VS One-Hot Encoding&lt;/h2&gt;
+&lt;p&gt;머신러닝을 위한 대표적인 인코딩 방식으로 &lt;code&gt;Label&lt;/code&gt;과 &lt;code&gt;One-Hot&lt;/code&gt;이 존재한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;레이블 인코딩은 간단하게 문자열 값을 숫자형 카테고리 값으로 변환한다.&lt;/p&gt;
+&lt;p&gt;그러나, 일괄적인 숫자값으로의 변환은 예측능력을 떨어트리는 원인이 될 수 있다.&lt;/p&gt;
+&lt;p&gt;숫자에 따라 각 카테고리들의 가중치 차이가 발생할 수 있기 때문으로 선형회귀와 같은 &lt;code&gt;ML알고리즘&lt;/code&gt;에서는 맞지 않는다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;원-핫 인코딩은 레이블 인코딩의 문제점을 해결하기 위한 인코딩 방식으로&lt;/p&gt;
+&lt;p&gt;feature값의 유형에 따라 새로운 feature를 추가하고 고유 값에 해당하는 칼럼에만 1을 표시하는 방식이다.&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 261; flex-basis: 626px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/one_hot.PNG&#34; data-size=&#34;781x299&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/one_hot.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/one_hot_huce757ceda310537b64da7f3ad0c8c2d2_57855_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/one_hot_huce757ceda310537b64da7f3ad0c8c2d2_57855_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;781&#34;
+				height=&#34;299&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;위의 사진은 가전제품 feature를 원-핫 인코딩을 걸친 것이다.&lt;/p&gt;
+&lt;p&gt;주의할 점이있다면 원-핫 인코딩하기 전에 모든 문자열 값이 숫자형 값으로 변환돼야 하며, 입력값으로 2차원 데이터가 필요하다는 것이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Data analysis 타이타닉</title>
         <link>https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/</link>
         <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
