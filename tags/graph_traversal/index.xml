@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/graph_traversal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>백준 1697번 숨바꼭질</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</guid>
       <description>1697번 숨바꼭질 문제 보러가기
 🅰 설계   수빈이와 동생의 위치가 주어졌을때 수빈이가 동생의 위치로 이동할 수 있는 최소 거리를 찾는 것이 문제의 목표이다.
   현재의 위치에서 이동할 수 있는 수단이 3가지이기 때문에 BFS로 접근하면 되겠다 생각하고 풀이해 나갔지만 문제에서 요구하는 정확한 알고리즘 구조를 짜기가 어려웠다&amp;hellip;💦

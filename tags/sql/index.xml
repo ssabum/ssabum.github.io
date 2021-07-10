@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SQL문법</title>
-      <link>https://ssabum.github.io/p/sql%EB%AC%B8%EB%B2%95/</link>
+      <link>https://ssabum.github.io/content/sql%EB%AC%B8%EB%B2%95/</link>
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/sql%EB%AC%B8%EB%B2%95/</guid>
+      <guid>https://ssabum.github.io/content/sql%EB%AC%B8%EB%B2%95/</guid>
       <description>SQL 개념  https://www.sqlitetutorial.net/
 SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDBMS)의데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어이다.
  SQL 문법의 세가지 종류
@@ -22,10 +22,10 @@ SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDB
     
     <item>
       <title>SQLD</title>
-      <link>https://ssabum.github.io/p/sqld/</link>
+      <link>https://ssabum.github.io/content/sqld/</link>
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/sqld/</guid>
+      <guid>https://ssabum.github.io/content/sqld/</guid>
       <description>&lt;h1 id=&#34;sqld란-무엇일까&#34;&gt;SQLD란 무엇일까?&lt;/h1&gt;
 &lt;p&gt;한국데이터산업진흥원에서 주관하는 시험으로, Structured  Query Language Developer의 줄임말로 데이터베이스 SQL국가공인 자격증이다😎&lt;/p&gt;</description>
     </item>

@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>타이타닉 프로젝트 리뷰</title>
-      <link>https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/</link>
+      <link>https://ssabum.github.io/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/</link>
       <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/</guid>
+      <guid>https://ssabum.github.io/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/</guid>
       <description>타이타닉 데이터 분석 프로젝트 후기❓ 타이타닉 데이터분석 프로젝트를 진행하면서 느꼈던 궁금증 해결하기!!!
 1. NULL Data 채우는 다양한 방식 데이터 분석 초기 과정에서 가장 중요한 일 중 하나가 바로 결측치/결측값 처리이다.
 여기에 따라 모델 생성과 결과 도출에 이르기까지 큰 영향을 끼치기 때문이다.

@@ -9,20 +9,20 @@
     <lastBuildDate>Mon, 03 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/divide_and_conquer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>백준 1780번 종이의 개수</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1780%EB%B2%88-%EC%A2%85%EC%9D%B4%EC%9D%98-%EA%B0%9C%EC%88%98/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1780%EB%B2%88-%EC%A2%85%EC%9D%B4%EC%9D%98-%EA%B0%9C%EC%88%98/</link>
       <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1780%EB%B2%88-%EC%A2%85%EC%9D%B4%EC%9D%98-%EA%B0%9C%EC%88%98/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1780%EB%B2%88-%EC%A2%85%EC%9D%B4%EC%9D%98-%EA%B0%9C%EC%88%98/</guid>
       <description>1780번 종이의 개수 문제 보러가기
 🅰 코드 import sys N = int(sys.stdin.readline()) data = [] for _ in range(N): data.append(list(map(int, sys.stdin.readline().split()))) result = {&amp;#34;-1&amp;#34;: 0, &amp;#34;0&amp;#34;: 0, &amp;#34;1&amp;#34;: 0} # 체크 함수 def check(row, col, N): value = data[row][col] for i in range(N): for j in range(N): if value != data[row + i][col + j]: # 9분할 check(row, col, N // 3) check(row, col + N // 3, N // 3) check(row, col + N * 2 // 3, N // 3) check(row + N // 3, col, N // 3) check(row + N // 3, col + N // 3, N // 3) check(row + N // 3, col + N * 2 // 3, N // 3) check(row + N * 2 // 3, col, N // 3) check(row + N * 2 // 3, col + N // 3, N // 3) check(row + N * 2 // 3, col + N * 2 // 3, N // 3) return result[str(value)] += 1 check(0, 0, N) # 결과 출력 print(result[&amp;#34;-1&amp;#34;]) print(result[&amp;#34;0&amp;#34;]) print(result[&amp;#34;1&amp;#34;]) ✅ 후기  전에 풀어보았던 색종이 문제와 유사했다.</description>
     </item>
     
     <item>
       <title>백준 1992번 쿼드트리</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1992%EB%B2%88-%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1992%EB%B2%88-%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC/</link>
       <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1992%EB%B2%88-%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1992%EB%B2%88-%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC/</guid>
       <description>1992번 쿼드트리 문제 보러가기
 🅰 코드 # 정답을 담을 변수 result = [] def Test(a): # 모두 0이거나 모두 1이면 끝 if sum( sum(a,[]) ) == 0 or len( sum(a,[]) ) == sum(a,[]).count(1): if sum( sum(a,[])) == 0: result.append(&amp;#39;0&amp;#39;) else: result.append(&amp;#39;1&amp;#39;) return else: result.append(&amp;#39;(&amp;#39;) div = int(len(a)/2) # a/2 x a/2 크기의 행렬을 만들기위해. tmp_l =[] # 좌측 tmp_r =[] # 우측 # 한행씩 불러온다. for sub in a: # 1/2 앞쪽 열 tmp_l.</description>
     </item>

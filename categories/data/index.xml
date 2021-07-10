@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/categories/data/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>타이타닉 프로젝트 리뷰</title>
-      <link>https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/</link>
+      <link>https://ssabum.github.io/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/</link>
       <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/</guid>
+      <guid>https://ssabum.github.io/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/</guid>
       <description>타이타닉 데이터 분석 프로젝트 후기❓ 타이타닉 데이터분석 프로젝트를 진행하면서 느꼈던 궁금증 해결하기!!!
 1. NULL Data 채우는 다양한 방식 데이터 분석 초기 과정에서 가장 중요한 일 중 하나가 바로 결측치/결측값 처리이다.
 여기에 따라 모델 생성과 결과 도출에 이르기까지 큰 영향을 끼치기 때문이다.
@@ -28,10 +28,10 @@
     
     <item>
       <title>Data analysis 타이타닉</title>
-      <link>https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/</link>
+      <link>https://ssabum.github.io/content/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/</link>
       <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/</guid>
+      <guid>https://ssabum.github.io/content/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/</guid>
       <description>타이타닉 데이터 분석 🚢  본격적으로 데이터분석에 드러가기에 앞서 튜토리얼을 진행해보려한다.
 코딩을 처음 배울때 Hello World를 출력하는 것 처럼 데이터분석의 시작은 타이타닉 데이터이다!!
  Kaggle과 Colab 연동 Google Colab 환경에서 프로젝트를 진행했는데 Kaggle의 data set을 가져오기 위해 하나하나 다운받을 필요없이 API를 이용해 불러올 수 있습니다!
@@ -40,10 +40,10 @@
     
     <item>
       <title>Big data pilot project</title>
-      <link>https://ssabum.github.io/p/big-data-pilot-project/</link>
+      <link>https://ssabum.github.io/content/big-data-pilot-project/</link>
       <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/big-data-pilot-project/</guid>
+      <guid>https://ssabum.github.io/content/big-data-pilot-project/</guid>
       <description>빅데이터란  지구상에선 지금 이순간에도 방대한 크기volumn의 다양한varity 데이터들이 빠른 속도velocity로 발생하고 있다. 빅데이터는 이를 수용하며, 데이터의 진실성veracity을 확보하고, 분석 데이터를 시각화visualization함으로써 새로운 효이기을 가져다 줄 가치value를 창출하는 것이다.
 빅데이터는 수집 &amp;gt; 적재 &amp;gt; 처리 &amp;gt; 탐색 &amp;gt; 분석 &amp;gt; 응용의 단계를 거친다.
  빅데이터 구현기술 

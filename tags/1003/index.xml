@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 05 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/1003/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>백준 1003번 피보나치 함수</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1003%EB%B2%88-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%ED%95%A8%EC%88%98/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1003%EB%B2%88-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%ED%95%A8%EC%88%98/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1003%EB%B2%88-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%ED%95%A8%EC%88%98/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1003%EB%B2%88-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%ED%95%A8%EC%88%98/</guid>
       <description>1003번_피보나치 함수 문제 보러가기
 🅰 설계 t = int(input()) for i in range(t): n = int(input()) # fib(0), fib(1), tmp 설정 zero, one, tmp = 1, 0, 0 # 피보나치 수행 for _ in range(n): tmp = one one = one + zero zero = tmp # 출력 print(zero, one) ✅ 후기 // 풀이과정
  처음 문제를 읽고 어떻게 해야할지 풀이가 떠오르지 않아 꽤나 고생했다.😥 하지만 5까지의 경우의 수를 직접 표로 그려보니 간단한 문제임을 알 수 있었다.</description>

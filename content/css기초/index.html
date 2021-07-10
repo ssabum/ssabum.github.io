@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='프론트엔드 CSS의 기초에 대해 첫번째'><title>CSS기초</title>
+
+<link rel='shortcut icon' href="https://ssabum.github.io/content/css%EA%B8%B0%EC%B4%88/">
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='CSS기초'>
+<meta property='og:description' content='프론트엔드 CSS의 기초에 대해 첫번째'>
+<meta property='og:url' content='https://ssabum.github.io/content/css%EA%B8%B0%EC%B4%88/'>
+<meta property='og:site_name' content='Ssabum&#39;s Devlog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='python' /><meta property='article:tag' content='css' /><meta property='article:published_time' content='2021-03-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-03-26T00:00:00&#43;00:00'/><meta property='og:image' content='https://ssabum.github.io/content/css%EA%B8%B0%EC%B4%88/css.png' />
+<meta name="twitter:title" content="CSS기초">
+<meta name="twitter:description" content="프론트엔드 CSS의 기초에 대해 첫번째"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://ssabum.github.io/content/css%EA%B8%B0%EC%B4%88/css.png' />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-194544565-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+<link rel="manifest" href="static/site.webmanifest">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/image_hu5b1ed73fe36e0369d78710b778381c4e_70796_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">💻</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://ssabum.github.io/">Ssabum&#39;s Devlog</a></h1>
+        <h2 class="site-description">Lazy beginner developer</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/algorithm/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+</svg>
+                
+                <span>Algorithm</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/data/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-dots" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 3v18h18" />
+  <circle cx="9" cy="9" r="2" />
+  <circle cx="19" cy="7" r="2" />
+  <circle cx="14" cy="15" r="2" />
+  <line x1="10.16" y1="10.62" x2="12.5" y2="13.5" />
+  <path d="M15.088 13.328l2.837 -4.586" />
+</svg>
+                
+                <span>Data</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/diary/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Diary</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/til/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+  <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
+  <line x1="9.7" y1="17" x2="14.3" y2="17" />
+</svg>
+                
+                <span>TIL</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/toy-project/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-apple-arcade" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="12" cy="5" r="2" />
+  <path d="M20 12.5v4.75a0.734 .734 0 0 1 -.055 .325a0.704 .704 0 0 1 -.348 .366l-5.462 2.58a4.998 4.998 0 0 1 -4.27 0l-5.462 -2.58a0.705 .705 0 0 1 -.401 -.691l-.002 -4.75" />
+  <path d="M4.431 12.216l5.634 -2.332a5.065 5.065 0 0 1 3.87 0l5.634 2.332a0.692 .692 0 0 1 .028 1.269l-5.462 2.543a5.064 5.064 0 0 1 -4.27 0l-5.462 -2.543a0.691 .691 0 0 1 .028 -1.27z" />
+  <line x1="12" y1="7" x2="12" y2="13" />
+</svg>
+                
+                <span>Toy project</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://github.com/ssabum'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+                
+                <span>Github</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://ssabum.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/content/css%EA%B8%B0%EC%B4%88/">
+                <img src="/content/css%EA%B8%B0%EC%B4%88/css_hu42497fb400a464be61c8fe27b05f0811_45708_800x0_resize_box_2.png"
+                        srcset="/content/css%EA%B8%B0%EC%B4%88/css_hu42497fb400a464be61c8fe27b05f0811_45708_800x0_resize_box_2.png 800w, /content/css%EA%B8%B0%EC%B4%88/css_hu42497fb400a464be61c8fe27b05f0811_45708_1600x0_resize_box_2.png 1600w"
+                        width="800" 
+                        height="400" 
+                        loading="lazy"
+                        alt="Featured image of post CSS기초" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/til/" style="background-color: #2a9d8f; color: #fff;">
+                TIL
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/content/css%EA%B8%B0%EC%B4%88/">CSS기초</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        프론트엔드 CSS의 기초에 대해 첫번째
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Mar 26, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h1 id="css">CSS</h1>
+<blockquote>
+<p>스타일, 레이아웃 등을 통해 HTML이 사용자에게 어떻게 표시 되는지를 지정하는 언어</p>
+<p>사용자에게 문서(HTML)를 표시하는 방법을 지정하는 언어</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h2 id="css-구문">CSS 구문</h2>
+<ul>
+<li>구문은 선택자와 함께 열린다.</li>
+<li>스타일을 지정할 html 요소를 선택.</li>
+<li>다음 중괄호가 있는데 이 안에는 속성과 값 쌍 형태를 가지는 하나 또는 그 이상의 선언(declaration)이 있다.</li>
+<li>각 쌍은 우리가 선택한 요소의 속성을 지정하고 속성에 부여할 값을 지정한다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>선언문</strong></p>
+<ul>
+<li>속성 (Property)
+<ul>
+<li>사람이 읽을 수 있는 식별자로, 어떤 (글꼴, 너비, 배경색 등) 스타일 기능을 변경할지 나타냅니다.</li>
+</ul>
+</li>
+<li>값 (Value)
+<ul>
+<li>각 속성에는 값을 부여한다.</li>
+<li>값은 어떻게 (글꼴을 이걸로, 배경 색을 저걸로 등)스타일 기능을 변경할 건지 나타낸다.</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>CSS 정의 방법</strong></p>
+<ol>
+<li><code>Inline style</code></li>
+<li>내부 참조 (<code>Embedding style</code>)</li>
+<li>외부 참조 (<code>Link style</code>)</li>
+</ol>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="css-selector">CSS Selector</h2>
+<blockquote>
+<p>선택자는 스타일을 지정할 웹 페이지의 HTML 요소를 대상으로 하는 데 사용</p>
+</blockquote>
+<p><strong>클래스(class) 선택자</strong></p>
+<ul>
+<li>클래스 선택자는 마침표( .) 문자로 시작 하며 해당 클래스가 적용된 문서의 모든 항목을 선택</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>아이디(id) 선택자</strong></p>
+<ul>
+<li>아이디 선택자는 <code>#</code> 문자로 시작하며 기본적으로 클래스 선택자와 같은 방식으로 사용</li>
+<li>그러나 아이디는 문서 당 한 번만 사용할 수 있으며 요소에는 단일 id값만 적용 할 수 있다</li>
+<li>문서에서 동일한 아이디를 여러 번 사용해도 동작하나 그렇게 하면 안된다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>결합자</strong>(combinators)</p>
+<ul>
+<li>자손 결합자
+<ul>
+<li>셀렉터A  <code> </code>(공백) 셀렉터B</li>
+<li>셀렉터A의 모든 후손 요소(level n) 중 셀렉터B와 일치하는 요소 선택</li>
+</ul>
+</li>
+<li>자식 결합자
+<ul>
+<li>셀렉터A <code>&gt;</code> 셀렉터B</li>
+<li>셀렉터A의 모든 자식 요소(level 1) 중 셀렉터B와 일치하는 요소 선택</li>
+</ul>
+</li>
+<li>일반 형제 결합자
+<ul>
+<li>셀렉터A <code>~</code> 셀렉터B</li>
+<li>셀렉터A의 형제 요소 중 셀렉터A 뒤에 위치하는 셀렉터B 요소를 모두 선택</li>
+</ul>
+</li>
+<li>인접 형제 결합자
+<ul>
+<li>셀렉터A <code>+</code> 셀렉터B</li>
+<li>셀렉터A의 형제 요소 중 셀렉터A 바로 뒤에 위치하는 셀렉터B 요소를 선택</li>
+<li>단, A와 B 사이에 다른 요소가 존재하면 선택되지 않음</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>적용 우선순위</strong></p>
+<ol>
+<li><code>!important</code>
+<ul>
+<li>다른 사람들의 코드에서 발견할 때 그 의미를 알 수 있는 것은 좋다.</li>
+<li>하지만 반드시 필요한 경우가 아니면 절대 사용하지 않는 것이 좋다.,</li>
+<li><code>!important</code> 는 cascading이 정상적으로 작동하는 방식을 변경하므로, CSS 스타일 문제를 해결하기가 어렵습니다.</li>
+</ul>
+</li>
+<li>inline style</li>
+<li>id 선택자
+<ul>
+<li>id는 대부분의 다른 선택자보다 우선순위가 높기 때문에 다루기가 어려워 질 수 있다.</li>
+<li>대부분의 경우 id 보다는 모두  class 선택자로 작성하는 것이 좋다.</li>
+<li>만약 문서 내 <code>링크 이동</code>이나 <code>for</code>를 사용하는 특별한 경우에만 아이디를 사용한다.</li>
+</ul>
+</li>
+<li>class 선택자</li>
+<li>요소 선택자</li>
+<li>소스 순서</li>
+</ol>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="css-단위">CSS 단위</h2>
+<p><strong>(상대) 크기 단위</strong></p>
+<p><strong>px</strong></p>
+<ul>
+<li>모니터 해상도의 한 화소인 &lsquo;픽셀&rsquo;을 기준</li>
+<li>픽셀의 크기는 변하지 않기 때문에 고정적인 단위</li>
+</ul>
+<p><strong>%</strong></p>
+<ul>
+<li>백분율 단위</li>
+<li>가변적인 레이아웃에서 자주 사용</li>
+</ul>
+<p><strong>em</strong></p>
+<ul>
+<li>em은 상속의 영향 받음, rem은 최상위 요소(html)를 기준으로 결정됨.</li>
+<li>상황에 따라 각기 다른 값을 가질 수 있다.</li>
+</ul>
+<p><strong>rem</strong></p>
+<ul>
+<li>최상위 요소인 html(root em)을  절대 단위를 기준으로 삼음. 상속의 영향을 받지 않음.</li>
+<li>상속에 영향을 받지 않기 때문에 대부분의 경우 <code>rem</code> 을 많이 사용한다.</li>
+</ul>
+<p><strong>viewport</strong></p>
+<ul>
+<li>(스크롤을 내리지 않은 상태에서) 웹 페이지를 방문한 유저에게 현재 보이는 웹 컨텐츠의 영역</li>
+<li>viewport를 기준으로한 상대적인 사이즈</li>
+<li>주로 스마트폰이나 테블릿 디바이스의 화면을 일컫는 용어로 사용된다.</li>
+<li>vw, vh</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>색상 표현 단위</strong></p>
+<ol>
+<li>색상 키워드
+<ul>
+<li>색상 키워드는 대소문자를 구분하지 않는 식별자로, red, blue, black처럼 특정 색을 나타낸다</li>
+</ul>
+</li>
+<li>RGB 색상
+<ul>
+<li>빨강, 초록, 파랑을 통해 특정 색을 표현</li>
+<li>16진수 표기법이나 함수형 표기법으로 사용</li>
+<li>a는 alpha(투명도)가 추가된 것</li>
+</ul>
+</li>
+<li>HSL 색상
+<ul>
+<li>색상, 채도, 명도를 통해 특정 색상을 표현</li>
+<li>a는 alpha(투명도)가 추가된 것</li>
+</ul>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="box-model">Box Model</h2>
+<blockquote>
+<p>웹 디자인은 contents를 담을 box model을 정의하고 CSS 속성을 통해 스타일(배경, 폰트와 텍스트 등)과 위치 및 정렬을 지정하는 것.</p>
+</blockquote>
+<ul>
+<li>모든 HTML 요소는 box 형태로 되어있다.</li>
+<li>하나의 박스는 네 부분(영역)으로 이루어 진다.
+<ul>
+<li>content / padding / border / margin</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ol>
+<li>Content
+<ul>
+<li>글이나 이미지, 비디오 등 요소의 실제 내용</li>
+</ul>
+</li>
+<li>Padding (안쪽 여백)
+<ul>
+<li>Border(테두리) 안쪽의 내부 여백</li>
+<li>배경색, 이미지 지정 가능</li>
+</ul>
+</li>
+<li>Border</li>
+<li>Margin (바깥쪽 여백)
+<ul>
+<li>테두리 바깥의 외부 여백</li>
+<li>배경색 지정 불가</li>
+</ul>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<p><strong>마진 상쇄</strong></p>
+<ul>
+<li>block의 top 및 bottom margin이 때로는 (결합되는 마진 중 크기가) 가장 큰 한 마진으로 결합(combine, 상쇄(collapsed))된다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="display">Display</h2>
+<blockquote>
+<p>display CSS 속성은 요소를 블록과 인라인 요소 중 어느 쪽으로 처리할지와 함께 자식 요소를 배치할 때 사용할 레이아웃을 설정한다.</p>
+</blockquote>
+<p><strong>block</strong></p>
+<ul>
+<li>쌓이는 박스</li>
+<li>요소는 블록 요소 상자를 생성하여 일반 흐름에서 요소 앞뒤에 줄 바꿈을 생성한다.</li>
+<li>블록 레벨 요소안에 인라인 레벨 요소가 들어갈 수 있다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>inline</strong></p>
+<ul>
+<li>줄바꿈이 일어나지 않는 행의 일부 요소</li>
+<li>content 너비만큼 가로 폭을 차지</li>
+<li>width, height, margin-top, margin-bottom을 지정할 수 없음</li>
+<li>상하 여백은 line-height로 지정</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>inline-block</strong></p>
+<ul>
+<li>inline 처럼 텍스트 흐름대로 나열, block처럼 박스 형태이기 block 속성 사용가능</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>none</strong></p>
+<ul>
+<li>해당 요소를 화면에서 사라지게 하며 요소의 공간조차 사라지게 한다.</li>
+<li><code>visibility: hidden;</code>은 해당 요소를 화면에서 사라지게는 하나 공간은 사라지지 않는다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="position">Position</h2>
+<p><strong>박스의 위치 속성 &amp; 값</strong></p>
+<ul>
+<li>position
+<ul>
+<li>static / absolute / relative / fixed</li>
+<li>z-index</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>기본 개념</strong></p>
+<ol>
+<li>static (기본 위치)
+<ul>
+<li>모든 태그의 기본</li>
+<li>태그의 default 값</li>
+</ul>
+</li>
+<li>relative (상대 위치)
+<ul>
+<li>기본 위치(static)를 기준으로 좌표 속성을 사용해 위치 이동</li>
+</ul>
+</li>
+<li>absolute (절대 위치)
+<ul>
+<li>static 이 아닌 부모/조상 요소를 기준으로 좌표 속성 만큼 이동</li>
+<li>부모 요소를 찾아가고 나아가 없다면 body에 붙는다.</li>
+</ul>
+</li>
+<li>fixed (고정 위치)
+<ul>
+<li>부모/조상 요소와 관계없이 브라우저의 viewport를 기준으로 좌표 속성 만큼 이동</li>
+<li>스크롤을 내리거나 올려도 화면에서 사라지지 않고 항상 같은 곳에 위치</li>
+</ul>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<p><strong>absolute</strong></p>
+<ul>
+<li><code>absolute</code>는 원래 위치해 있었던 과거 위치에 있던 공간은 더 이상 존재하지 않는다는 점이 특징이다.</li>
+<li>즉, 다른 모든 것과는 별개로 독자적인 곳에 놓이게 된다.</li>
+<li>대체 언제 쓸까?
+<ul>
+<li>페이지의 다른 요소의 위치와 간섭하지 않는 격리된 사용자 인터페이스 기능을 만들 수 있다.</li>
+<li>팝업 정보 상자 및 제어 메뉴, 롤오버 패널, 페이지 어느 곳에서나 끌어서 놓기할 수 있는 유저 인터페이스 페이지 등</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<hr>
+<h2 id="참고문헌">참고문헌</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors</a></p>
+<p><a href="https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance</a></p>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/CSS/inheritance">https://developer.mozilla.org/ko/docs/Web/CSS/inheritance</a></p>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/HTML/Block-level_elements">https://developer.mozilla.org/ko/docs/Web/HTML/Block-level_elements</a></p>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/HTML/Inline_elements">https://developer.mozilla.org/ko/docs/Web/HTML/Inline_elements</a></p>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/CSS/display">https://developer.mozilla.org/ko/docs/Web/CSS/display</a></p>
+<p><a href="https://docs.emmet.io/cheat-sheet/">https://docs.emmet.io/cheat-sheet/</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/python/">python</a>
+        
+            <a href="/tags/css/">css</a>
+        
+    </section>
+
+
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">관련 글</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/content/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/">
+        
+        
+            <div class="article-image">
+                <img src="/content/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/css.a6664c4e9cafde9a54bc372360b436e3_hu42497fb400a464be61c8fe27b05f0811_45708_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-pmZMTpyv3ppUvDcjYLQ24w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CSS기초 레이아웃</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/content/django-%EA%B8%B0%EB%B3%B8/">
+        
+        
+            <div class="article-image">
+                <img src="/content/django-%EA%B8%B0%EB%B3%B8/icon.1d528e2cb5fbc29ad16c74e5d883c371_hu080e9ab032fb83faecb2fd0168b96dc6_15390_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-HVKOLLX7wprRbHTl2IPDcQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Django 기본</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/content/html%EA%B8%B0%EC%B4%88/">
+        
+        
+            <div class="article-image">
+                <img src="/content/html%EA%B8%B0%EC%B4%88/html.f7f7a110726b9719a545201b3ce84214_hu5ae5770cb34043b5079993437294d24c_21751_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-9/ehEHJrlxmlRSAbPOhCFA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">HTML기초</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/content/oop/">
+        
+        
+            <div class="article-image">
+                <img src="/content/oop/oop.3eb8170c9a2ed13ee707547870af9c18_hu77071c61b22f59609cf235d78dd545c9_23490_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-PrgXDJou0T7nB1R4cK&#43;cGA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">OOP</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/content/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/">
+        
+        
+            <div class="article-image">
+                <img src="/content/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/algorithm.b18140096ea1e03a0ee075f358006811_hue59cc96f39be3bdd739f8972409a29e2_15547_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-sYFACW6h4DoO4HXzWABoEQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">알고리즘 기초이론</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="ssabum/comments"
+        issue-term="pathname"
+        
+        theme="github-light"
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.body.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Ssabum&#39;s Devlog
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

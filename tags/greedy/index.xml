@@ -9,20 +9,20 @@
     <lastBuildDate>Mon, 03 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/greedy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>백준 1931번 회의실 배정</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</link>
       <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</guid>
       <description>1931번 회의실 배정 문제 보러가기
 🅰 코드 n = int(input()) arr = [] for i in range(n): tmp = list(map(int, input().split())) arr.append(tmp) # 람다함수 쓰는것 익숙해지기!!! arr.sort(key=lambda x: (x[1], x[0])) count = 0 end = 0 for i in range(n): if end &amp;lt;= arr[i][0]: count += 1 end = arr[i][1] print(count) ✅ 후기  문제에서 주어지는 입력값을 받은 다음 lambda함수를 사용해 끝나는 시간과 시작하는 시간순으로 두번 정렬해주면 금방 해결할 수 있는 문제이다.</description>
     </item>
     
     <item>
       <title>백준 1541번 잃어버린 괄호</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1541%EB%B2%88-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1541%EB%B2%88-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/</link>
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1541%EB%B2%88-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1541%EB%B2%88-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/</guid>
       <description>1541번 잃어버린 괄호 문제 보러가기
 🅰 코드 # &amp;#39;-&amp;#39;부호로 나눠진 문자열 저장 arr = input().split(&amp;#39;-&amp;#39;) # 결과 변수 생성 result = 0 # 처음 &amp;#39;-&amp;#39;부호가 나오는 부분까지 더하기 for i in arr[0].split(&amp;#39;+&amp;#39;): result += int(i) # 그 뒤엔 다 빼주는데 &amp;#39;+&amp;#39;부호로 묶인 것도 나눠서 빼기 → -(a+b) = -a-b for i in arr[1:]: for j in i.split(&amp;#39;+&amp;#39;): result -= int(j) print(result) ✅ 후기  문제에 주어진 문자열에서 차례로 연산을 하기만 하면 되는 비교적 쉬운 문제였다고 생각했지만 중간에 한번 함정이 있어서 고민이 필요했다&amp;hellip; 문제에서 요구하는 가장 최소의 값이 나오긴 위해서는 -부호 뒤에 오는 숫자들의 값이 커야 했으며 이를 표현하기 위해 -부호 뒤의 문자열에서 +부호로 나누어 각각을 빼주는 작업을 진행하였다.</description>
     </item>

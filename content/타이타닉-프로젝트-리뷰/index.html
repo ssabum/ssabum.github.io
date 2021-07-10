@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='타이타닉 데이터 분석 프로젝트 리뷰'><title>타이타닉 프로젝트 리뷰</title>
+
+<link rel='shortcut icon' href="https://ssabum.github.io/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/">
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='타이타닉 프로젝트 리뷰'>
+<meta property='og:description' content='타이타닉 데이터 분석 프로젝트 리뷰'>
+<meta property='og:url' content='https://ssabum.github.io/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/'>
+<meta property='og:site_name' content='Ssabum&#39;s Devlog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='데이터 분석' /><meta property='article:tag' content='타이타닉' /><meta property='article:tag' content='리뷰' /><meta property='article:published_time' content='2021-07-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-07-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://ssabum.github.io/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/end.jpg' />
+<meta name="twitter:title" content="타이타닉 프로젝트 리뷰">
+<meta name="twitter:description" content="타이타닉 데이터 분석 프로젝트 리뷰"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://ssabum.github.io/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/end.jpg' />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-194544565-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+<link rel="manifest" href="static/site.webmanifest">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/image_hu5b1ed73fe36e0369d78710b778381c4e_70796_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">💻</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://ssabum.github.io/">Ssabum&#39;s Devlog</a></h1>
+        <h2 class="site-description">Lazy beginner developer</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/algorithm/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+</svg>
+                
+                <span>Algorithm</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/data/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-dots" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 3v18h18" />
+  <circle cx="9" cy="9" r="2" />
+  <circle cx="19" cy="7" r="2" />
+  <circle cx="14" cy="15" r="2" />
+  <line x1="10.16" y1="10.62" x2="12.5" y2="13.5" />
+  <path d="M15.088 13.328l2.837 -4.586" />
+</svg>
+                
+                <span>Data</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/diary/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Diary</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/til/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+  <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
+  <line x1="9.7" y1="17" x2="14.3" y2="17" />
+</svg>
+                
+                <span>TIL</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/toy-project/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-apple-arcade" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="12" cy="5" r="2" />
+  <path d="M20 12.5v4.75a0.734 .734 0 0 1 -.055 .325a0.704 .704 0 0 1 -.348 .366l-5.462 2.58a4.998 4.998 0 0 1 -4.27 0l-5.462 -2.58a0.705 .705 0 0 1 -.401 -.691l-.002 -4.75" />
+  <path d="M4.431 12.216l5.634 -2.332a5.065 5.065 0 0 1 3.87 0l5.634 2.332a0.692 .692 0 0 1 .028 1.269l-5.462 2.543a5.064 5.064 0 0 1 -4.27 0l-5.462 -2.543a0.691 .691 0 0 1 .028 -1.27z" />
+  <line x1="12" y1="7" x2="12" y2="13" />
+</svg>
+                
+                <span>Toy project</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://github.com/ssabum'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+                
+                <span>Github</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://ssabum.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/">
+                <img src="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/end_hu771523524522bf8edc036416ae7f1a7b_21048_800x0_resize_q75_box.jpg"
+                        srcset="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/end_hu771523524522bf8edc036416ae7f1a7b_21048_800x0_resize_q75_box.jpg 800w, /content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/end_hu771523524522bf8edc036416ae7f1a7b_21048_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post 타이타닉 프로젝트 리뷰" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/data/" style="background-color: #2a9d8f; color: #fff;">
+                Data
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/">타이타닉 프로젝트 리뷰</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        타이타닉 데이터 분석 프로젝트 리뷰
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jul 10, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h1 id="타이타닉-데이터-분석-프로젝트-후기">타이타닉 데이터 분석 프로젝트 후기❓</h1>
+<p>타이타닉 데이터분석 프로젝트를 진행하면서 느꼈던 궁금증 해결하기!!!</p>
+<!-- raw HTML omitted -->
+<h2 id="1-null-data-채우는-다양한-방식">1. NULL Data 채우는 다양한 방식</h2>
+<p>데이터 분석 초기 과정에서 가장 중요한 일 중 하나가 바로 결측치/결측값 처리이다.</p>
+<p>여기에 따라 모델 생성과 결과 도출에 이르기까지 큰 영향을 끼치기 때문이다.</p>
+<ul>
+<li>
+<p>첫번째 방법, 제거하기</p>
+<ol>
+<li>
+<p>목록삭제(Listwise)</p>
+<p>결측치가 존재하는 전체 행을 삭제</p>
+<p><figure style="flex-grow: 344; flex-basis: 827px">
+		<a href="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_1.PNG" data-size="852x247"><img src="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_1.PNG"
+				srcset="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_1_hu13df6059a8a84fc10bae037125349f5e_79417_480x0_resize_box_2.PNG 480w, /content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_1_hu13df6059a8a84fc10bae037125349f5e_79417_1024x0_resize_box_2.PNG 1024w"
+				width="852"
+				height="247"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+</li>
+<li>
+<p>단일값 삭제(Pairwise)</p>
+<p>손실된 관측치 자체만 삭제</p>
+<p><figure style="flex-grow: 347; flex-basis: 833px">
+		<a href="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_2.PNG" data-size="851x245"><img src="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_2.PNG"
+				srcset="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_2_hua3b0af3f72dbe44f2aa6092f4b4c9d37_66123_480x0_resize_box_2.PNG 480w, /content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_2_hua3b0af3f72dbe44f2aa6092f4b4c9d37_66123_1024x0_resize_box_2.PNG 1024w"
+				width="851"
+				height="245"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+</li>
+</ol>
+</li>
+<li>
+<p>두번째 방법, 채우기</p>
+<ol>
+<li>
+<p>평균화 기법(Popular Averaging)</p>
+<p>가장 널리 사용되는 기술로, 그룹의 평균값을 결측값에 채워준다.</p>
+<p>결측치를 빠르게 채울 수 있는 장점이 있지만, 결측치들이 동일한 값도 가질 수 있기 때문에 데이터셋의 변동을 인위적으로 줄여줘야 한다.</p>
+<p><figure style="flex-grow: 219; flex-basis: 526px">
+		<a href="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_3.PNG" data-size="849x387"><img src="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_3.PNG"
+				srcset="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_3_hubf8b8cc65246c06c4e4bb4116976ef98_126408_480x0_resize_box_2.PNG 480w, /content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/nan_3_hubf8b8cc65246c06c4e4bb4116976ef98_126408_1024x0_resize_box_2.PNG 1024w"
+				width="849"
+				height="387"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+</li>
+<li>
+<p>예측 기법(Predictive)</p>
+<p>결측치들의 특성이 무작위로 완전히 관찰되지 않는다고 가정하고 예측모델을 사용하여 결측값을 대치할 예측값을 생성</p>
+<p>회귀 분석 기술을 활용하거나 SVM과 같은 머신러닝 등의 데이터마이닝 방법을 사용</p>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="2-feature별-상관관계-heatmap-해석하기">2. Feature별 상관관계, Heatmap 해석하기</h2>
+<h3 id="heatmap이란">Heatmap이란?</h3>
+<p>열을 의미하는 <code>heat</code>와 지도를 뜻하는 <code>map</code>을 합친 단어로 데이터들의 배열을 색상으로 표현</p>
+<p>여러 카테고리 값에 대한 값 변화를 한눈에 알기 쉽다는 장점이 있다.</p>
+<p><figure style="flex-grow: 161; flex-basis: 387px">
+		<a href="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/heatmap.PNG" data-size="800x496"><img src="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/heatmap.PNG"
+				srcset="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/heatmap_hu49d48cbfeb8374041cefa428144d158d_65492_480x0_resize_box_2.PNG 480w, /content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/heatmap_hu49d48cbfeb8374041cefa428144d158d_65492_1024x0_resize_box_2.PNG 1024w"
+				width="800"
+				height="496"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<p>위의 데이터는 월별 비행기 이용 승객수이다. 빨간색이 짙을수록 승객수가 적음을 의미하고 빨간색이 얕아질수록 승객수가 높음을 의미한다.</p>
+<p>데이터 형태가 테이블 형태일때보다 히트맵으로 나타내면 언제 승객이 많은지, 승객수 변화가 어떠한지 쉽게 알 수 있다.</p>
+<hr>
+<h2 id="3-label-encoding-vs-one-hot-encoding">3. Label Encoding VS One-Hot Encoding</h2>
+<p>머신러닝을 위한 대표적인 인코딩 방식으로 <code>Label</code>과 <code>One-Hot</code>이 존재한다.</p>
+<ul>
+<li>
+<p>레이블 인코딩은 간단하게 문자열 값을 숫자형 카테고리 값으로 변환한다.</p>
+<p>그러나, 일괄적인 숫자값으로의 변환은 예측능력을 떨어트리는 원인이 될 수 있다.</p>
+<p>숫자에 따라 각 카테고리들의 가중치 차이가 발생할 수 있기 때문으로 선형회귀와 같은 <code>ML알고리즘</code>에서는 맞지 않는다.</p>
+</li>
+<li>
+<p>원-핫 인코딩은 레이블 인코딩의 문제점을 해결하기 위한 인코딩 방식으로</p>
+<p>feature값의 유형에 따라 새로운 feature를 추가하고 고유 값에 해당하는 칼럼에만 1을 표시하는 방식이다.</p>
+<p><figure style="flex-grow: 261; flex-basis: 626px">
+		<a href="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/one_hot.PNG" data-size="781x299"><img src="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/one_hot.PNG"
+				srcset="/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/one_hot_huce757ceda310537b64da7f3ad0c8c2d2_57855_480x0_resize_box_2.PNG 480w, /content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/one_hot_huce757ceda310537b64da7f3ad0c8c2d2_57855_1024x0_resize_box_2.PNG 1024w"
+				width="781"
+				height="299"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<p>위의 사진은 가전제품 feature를 원-핫 인코딩을 걸친 것이다.</p>
+<p>주의할 점이있다면 원-핫 인코딩하기 전에 모든 문자열 값이 숫자형 값으로 변환돼야 하며, 입력값으로 2차원 데이터가 필요하다는 것이다.</p>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D/">데이터 분석</a>
+        
+            <a href="/tags/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/">타이타닉</a>
+        
+            <a href="/tags/%EB%A6%AC%EB%B7%B0/">리뷰</a>
+        
+    </section>
+
+
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">관련 글</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/content/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/">
+        
+        
+            <div class="article-image">
+                <img src="/content/data-analysis-%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89/titanic.a548083f89de576646bb73be03176539_hu283fdd82a3189859b359fc7b8f11d672_184666_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-pUgIP4neV2ZGu3O&#43;AxdlOQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Data analysis 타이타닉</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/content/big-data-pilot-project/">
+        
+        
+            <div class="article-image">
+                <img src="/content/big-data-pilot-project/big.635a7b3dbd9b0f88115319d62a5ab2f9_huc3341fa433694cc25a4a023e642e485d_212847_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-Y1p7Pb2bD4gRUxnWKlqy&#43;Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Big data pilot project</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="ssabum/comments"
+        issue-term="pathname"
+        
+        theme="github-light"
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.body.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Ssabum&#39;s Devlog
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

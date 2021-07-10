@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/1463/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>백준 1463번 1로 만들기</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1463%EB%B2%88-1%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1463%EB%B2%88-1%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1463%EB%B2%88-1%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1463%EB%B2%88-1%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
       <description>1463번 1로 만들기 문제 보러가기
 🅰 설계   문제에서 주어진 아래의 조건에 맞추어 코드를 구현하고 카운트의 최솟값을 구하는 알고리즘을 실행시켰지만 답이 나오지 않았다&amp;hellip;
   x가 3으로 나누어 떨어지면, 3으로 나눈다.

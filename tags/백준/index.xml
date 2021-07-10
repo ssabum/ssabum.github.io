@@ -9,20 +9,20 @@
     <lastBuildDate>Mon, 03 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/%EB%B0%B1%EC%A4%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>백준 1780번 종이의 개수</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1780%EB%B2%88-%EC%A2%85%EC%9D%B4%EC%9D%98-%EA%B0%9C%EC%88%98/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1780%EB%B2%88-%EC%A2%85%EC%9D%B4%EC%9D%98-%EA%B0%9C%EC%88%98/</link>
       <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1780%EB%B2%88-%EC%A2%85%EC%9D%B4%EC%9D%98-%EA%B0%9C%EC%88%98/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1780%EB%B2%88-%EC%A2%85%EC%9D%B4%EC%9D%98-%EA%B0%9C%EC%88%98/</guid>
       <description>1780번 종이의 개수 문제 보러가기
 🅰 코드 import sys N = int(sys.stdin.readline()) data = [] for _ in range(N): data.append(list(map(int, sys.stdin.readline().split()))) result = {&amp;#34;-1&amp;#34;: 0, &amp;#34;0&amp;#34;: 0, &amp;#34;1&amp;#34;: 0} # 체크 함수 def check(row, col, N): value = data[row][col] for i in range(N): for j in range(N): if value != data[row + i][col + j]: # 9분할 check(row, col, N // 3) check(row, col + N // 3, N // 3) check(row, col + N * 2 // 3, N // 3) check(row + N // 3, col, N // 3) check(row + N // 3, col + N // 3, N // 3) check(row + N // 3, col + N * 2 // 3, N // 3) check(row + N * 2 // 3, col, N // 3) check(row + N * 2 // 3, col + N // 3, N // 3) check(row + N * 2 // 3, col + N * 2 // 3, N // 3) return result[str(value)] += 1 check(0, 0, N) # 결과 출력 print(result[&amp;#34;-1&amp;#34;]) print(result[&amp;#34;0&amp;#34;]) print(result[&amp;#34;1&amp;#34;]) ✅ 후기  전에 풀어보았던 색종이 문제와 유사했다.</description>
     </item>
     
     <item>
       <title>백준 1927번 최소 힙</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1927%EB%B2%88-%EC%B5%9C%EC%86%8C-%ED%9E%99/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1927%EB%B2%88-%EC%B5%9C%EC%86%8C-%ED%9E%99/</link>
       <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1927%EB%B2%88-%EC%B5%9C%EC%86%8C-%ED%9E%99/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1927%EB%B2%88-%EC%B5%9C%EC%86%8C-%ED%9E%99/</guid>
       <description>1927번 최소 힙 문제 보러가기
 🅰 코드 import heapq import sys N = int(input()) heap = [] for _ in range(N): num = int(sys.stdin.readline()) if num == 0: if heap: print(heapq.heappop(heap)) else: print(0) else: heapq.heappush(heap, num) ✅ 후기   heap을 다루는 문제로 숫자가 들어왔을 때는 heappush로 출력하고 0이 들어오면 heappop을 한 뒤 print를 하도록 구상하였다.
   이 문제의 중점은 시간단축을 위해 sys.stdin.readline()과 heapq을 사용하는 것이다. 전에도 종종 언급했었지만 다시한번 정리하자면 인풋받는 메소드의 속도차이는 다음과 같다.</description>
@@ -30,30 +30,30 @@
     
     <item>
       <title>백준 1931번 회의실 배정</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</link>
       <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1931%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</guid>
       <description>1931번 회의실 배정 문제 보러가기
 🅰 코드 n = int(input()) arr = [] for i in range(n): tmp = list(map(int, input().split())) arr.append(tmp) # 람다함수 쓰는것 익숙해지기!!! arr.sort(key=lambda x: (x[1], x[0])) count = 0 end = 0 for i in range(n): if end &amp;lt;= arr[i][0]: count += 1 end = arr[i][1] print(count) ✅ 후기  문제에서 주어지는 입력값을 받은 다음 lambda함수를 사용해 끝나는 시간과 시작하는 시간순으로 두번 정렬해주면 금방 해결할 수 있는 문제이다.</description>
     </item>
     
     <item>
       <title>백준 1992번 쿼드트리</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1992%EB%B2%88-%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1992%EB%B2%88-%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC/</link>
       <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1992%EB%B2%88-%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1992%EB%B2%88-%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC/</guid>
       <description>1992번 쿼드트리 문제 보러가기
 🅰 코드 # 정답을 담을 변수 result = [] def Test(a): # 모두 0이거나 모두 1이면 끝 if sum( sum(a,[]) ) == 0 or len( sum(a,[]) ) == sum(a,[]).count(1): if sum( sum(a,[])) == 0: result.append(&amp;#39;0&amp;#39;) else: result.append(&amp;#39;1&amp;#39;) return else: result.append(&amp;#39;(&amp;#39;) div = int(len(a)/2) # a/2 x a/2 크기의 행렬을 만들기위해. tmp_l =[] # 좌측 tmp_r =[] # 우측 # 한행씩 불러온다. for sub in a: # 1/2 앞쪽 열 tmp_l.</description>
     </item>
     
     <item>
       <title>백준 2579번 회의실 배정</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-2579%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-2579%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</link>
       <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-2579%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-2579%EB%B2%88-%ED%9A%8C%EC%9D%98%EC%8B%A4-%EB%B0%B0%EC%A0%95/</guid>
       <description>2579번 계단 오르기 문제 보러가기
 🅰 코드 import sys input = sys.stdin.readline n = int(input()) stairs = [] res = [] for i in range(n): stairs.append(int(input())) if n==1: print(stairs[0]) exit() elif n == 2: print(max(stairs[0]+stairs[1], stairs[1])) exit() res.append(stairs[0]) res.append(max(res[0]+stairs[1], stairs[1])) res.append(max(res[0]+stairs[2], stairs[1]+stairs[2])) for i in range(3, n): res.append(max(res[i-2]+stairs[i], res[i-3]+stairs[i-1]+stairs[i])) print(res[-1]) ✅ 후기   DP문제로 각 계단의 경우의 수마다 2가지의 경우를 고려하면서 진행해 나간다.
 첫번째 경우) 2계단 전에서 한번에 올라오는 경우 두번째 경우) 3계단 전에서 2계단 한번에 올라온 후 1계단 올라온 경우   </description>
@@ -61,20 +61,20 @@
     
     <item>
       <title>백준 1676번 팩토리얼 0의 개수</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1676%EB%B2%88-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-0%EC%9D%98-%EA%B0%9C%EC%88%98/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1676%EB%B2%88-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-0%EC%9D%98-%EA%B0%9C%EC%88%98/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1676%EB%B2%88-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-0%EC%9D%98-%EA%B0%9C%EC%88%98/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1676%EB%B2%88-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-0%EC%9D%98-%EA%B0%9C%EC%88%98/</guid>
       <description>1676번 팩토리얼 0의 개수 문제 보러가기
 🅰 코드 # n 입력 (0 ~ 500) N = int(input()) # 팩토리얼 계산 # 뒤에서부터 처음 0이 아닌 숫자가 나올 때까지 0의 개수 → 5의 개수 print(N//5 + N//25 + N//125) ✅ 후기  알고리즘 코딩 문제라기 보다는 그냥 창의력 문제인 느낌이 물씬 풍겼다. 규칙을 찾기 위해 30!까지 숫자를 나열해 보면서 코드에서도 나와 있듯이 5의 개수로 0의 개수가 정해지는 규칙이 있다. 여기서 주의 할 점이 5, 25, 125를 따로 생각해준 것처럼 5의 제곱 형태일 때는 여러개가 있기 때문에 이점을 고려해야 한다는 것이다.</description>
     </item>
     
     <item>
       <title>백준 1697번 숨바꼭질</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1697%EB%B2%88-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88/</guid>
       <description>1697번 숨바꼭질 문제 보러가기
 🅰 설계   수빈이와 동생의 위치가 주어졌을때 수빈이가 동생의 위치로 이동할 수 있는 최소 거리를 찾는 것이 문제의 목표이다.
   현재의 위치에서 이동할 수 있는 수단이 3가지이기 때문에 BFS로 접근하면 되겠다 생각하고 풀이해 나갔지만 문제에서 요구하는 정확한 알고리즘 구조를 짜기가 어려웠다&amp;hellip;💦
@@ -84,20 +84,20 @@ python에서 list로 queue를 구현하면 시간복잡도가 O(n)으로 매우 
     
     <item>
       <title>백준 1764번 듣보잡</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1764%EB%B2%88-%EB%93%A3%EB%B3%B4%EC%9E%A1/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1764%EB%B2%88-%EB%93%A3%EB%B3%B4%EC%9E%A1/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1764%EB%B2%88-%EB%93%A3%EB%B3%B4%EC%9E%A1/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1764%EB%B2%88-%EB%93%A3%EB%B3%B4%EC%9E%A1/</guid>
       <description>1764번 듣보잡 문제 보러가기
 🅰 코드 # N: 듣도 못한 사람 (~ 500000) # M: 보도 못한 사람 (~ 500000) N , M = map(int,input().split()) # 중복되는 이름을 없애기 위해 arr_N = set() arr_M = set() for _ in range(N): arr_N.add(input()) for _ in range(M): arr_M.add(input()) # 교집합 개수 출력 arr = sorted(list(arr_N &amp;amp; arr_M)) print(len(arr)) # 교집합 이름 출력 for i in arr: print(i) ✅ 후기   문제에서 주어진 대로 중복을 허용하지 않는 두개의 그룹SET으로 나누어 차례로 추가해주고 출력해주는 문제였다.</description>
     </item>
     
     <item>
       <title>백준 1463번 1로 만들기</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1463%EB%B2%88-1%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1463%EB%B2%88-1%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1463%EB%B2%88-1%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1463%EB%B2%88-1%EB%A1%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
       <description>1463번 1로 만들기 문제 보러가기
 🅰 설계   문제에서 주어진 아래의 조건에 맞추어 코드를 구현하고 카운트의 최솟값을 구하는 알고리즘을 실행시켰지만 답이 나오지 않았다&amp;hellip;
   x가 3으로 나누어 떨어지면, 3으로 나눈다.
@@ -110,30 +110,30 @@ python에서 list로 queue를 구현하면 시간복잡도가 O(n)으로 매우 
     
     <item>
       <title>백준 1541번 잃어버린 괄호</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1541%EB%B2%88-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1541%EB%B2%88-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/</link>
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1541%EB%B2%88-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1541%EB%B2%88-%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0-%EA%B4%84%ED%98%B8/</guid>
       <description>1541번 잃어버린 괄호 문제 보러가기
 🅰 코드 # &amp;#39;-&amp;#39;부호로 나눠진 문자열 저장 arr = input().split(&amp;#39;-&amp;#39;) # 결과 변수 생성 result = 0 # 처음 &amp;#39;-&amp;#39;부호가 나오는 부분까지 더하기 for i in arr[0].split(&amp;#39;+&amp;#39;): result += int(i) # 그 뒤엔 다 빼주는데 &amp;#39;+&amp;#39;부호로 묶인 것도 나눠서 빼기 → -(a+b) = -a-b for i in arr[1:]: for j in i.split(&amp;#39;+&amp;#39;): result -= int(j) print(result) ✅ 후기  문제에 주어진 문자열에서 차례로 연산을 하기만 하면 되는 비교적 쉬운 문제였다고 생각했지만 중간에 한번 함정이 있어서 고민이 필요했다&amp;hellip; 문제에서 요구하는 가장 최소의 값이 나오긴 위해서는 -부호 뒤에 오는 숫자들의 값이 커야 했으며 이를 표현하기 위해 -부호 뒤의 문자열에서 +부호로 나누어 각각을 빼주는 작업을 진행하였다.</description>
     </item>
     
     <item>
       <title>백준 1620번 나는야 포켓몬 마스터 이다솜</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1620%EB%B2%88-%EB%82%98%EB%8A%94%EC%95%BC-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EB%A7%88%EC%8A%A4%ED%84%B0-%EC%9D%B4%EB%8B%A4%EC%86%9C/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1620%EB%B2%88-%EB%82%98%EB%8A%94%EC%95%BC-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EB%A7%88%EC%8A%A4%ED%84%B0-%EC%9D%B4%EB%8B%A4%EC%86%9C/</link>
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1620%EB%B2%88-%EB%82%98%EB%8A%94%EC%95%BC-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EB%A7%88%EC%8A%A4%ED%84%B0-%EC%9D%B4%EB%8B%A4%EC%86%9C/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1620%EB%B2%88-%EB%82%98%EB%8A%94%EC%95%BC-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EB%A7%88%EC%8A%A4%ED%84%B0-%EC%9D%B4%EB%8B%A4%EC%86%9C/</guid>
       <description>1620번 나는야 포켓몬 마스터 이다솜 문제 보러가기
 🅰 코드 # 데이터 입력 N, M = map(int,input().split()) # 포켓몬을 &amp;#39;이름:번호&amp;#39;로 딕셔너리 생성 arr = [0] dict = {} for num in range(1,N+1): monster = input().strip() arr.append(monster) dict[monster] = num # 주어진 문제에 대해 숫자인지, 문자인지 판별 후 검색 for _ in range(M): q = input().strip() if q.isalpha() : print(dict[q]) elif q.isdigit() : print(arr[int(q)]) ✅ 후기  일단 문제를 읽기 싫었다&amp;hellip;포켓몬컨셉인건 알겠는데 사설이 너무 길다&amp;hellip; 나중에 기회가 된다면 내가 직접 깔끔하고 섹시한 문제를 만들어 올릴 것이다.</description>
     </item>
     
     <item>
       <title>백준 1003번 피보나치 함수</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1003%EB%B2%88-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%ED%95%A8%EC%88%98/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1003%EB%B2%88-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%ED%95%A8%EC%88%98/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1003%EB%B2%88-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%ED%95%A8%EC%88%98/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1003%EB%B2%88-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%ED%95%A8%EC%88%98/</guid>
       <description>1003번_피보나치 함수 문제 보러가기
 🅰 설계 t = int(input()) for i in range(t): n = int(input()) # fib(0), fib(1), tmp 설정 zero, one, tmp = 1, 0, 0 # 피보나치 수행 for _ in range(n): tmp = one one = one + zero zero = tmp # 출력 print(zero, one) ✅ 후기 // 풀이과정
  처음 문제를 읽고 어떻게 해야할지 풀이가 떠오르지 않아 꽤나 고생했다.😥 하지만 5까지의 경우의 수를 직접 표로 그려보니 간단한 문제임을 알 수 있었다.</description>
@@ -141,50 +141,50 @@ python에서 list로 queue를 구현하면 시간복잡도가 O(n)으로 매우 
     
     <item>
       <title>백준 1012번 유기농 배추</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1012%EB%B2%88-%EC%9C%A0%EA%B8%B0%EB%86%8D-%EB%B0%B0%EC%B6%94/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1012%EB%B2%88-%EC%9C%A0%EA%B8%B0%EB%86%8D-%EB%B0%B0%EC%B6%94/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1012%EB%B2%88-%EC%9C%A0%EA%B8%B0%EB%86%8D-%EB%B0%B0%EC%B6%94/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1012%EB%B2%88-%EC%9C%A0%EA%B8%B0%EB%86%8D-%EB%B0%B0%EC%B6%94/</guid>
       <description>1012번_유기농 배추 문제 보러가기
 🅰 설계 import sys sys.stdin = open(&amp;#34;input.txt&amp;#34;) T = int(input()) for tc in range(1, T+1): # m: 가로길이, n: 세로길이, k: 배추개수 m, n, k = map(int, input().split()) # 입력된 데이터에 맞춰 밭 만들어 주기 field = list(list(0 for i in range(m)) for _ in range(n)) # 밭에 배추 심기 for i in range(k): x, y = map(int, input().split()) field[y][x] = 1 # 지렁이 검사 cnt = 0 # 이후 접근을 어떻게 해야할지.</description>
     </item>
     
     <item>
       <title>백준 1074번 Z</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1074%EB%B2%88-z/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1074%EB%B2%88-z/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1074%EB%B2%88-z/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1074%EB%B2%88-z/</guid>
       <description>1074번_Z 문제 보러가기
 🅰 설계 import sys result = 0 def z(n, x, y): global result # 기본이 되는 탈출 조건 생성 if x == r and y == c: print(int(result)) exit(0) if n == 1: result += 1 return # 처음에 시간초과 떠서 경우의 수도 합쳐 주었다. # 하지만 나중에 알고보니 할 필요 없었다... if not (x &amp;lt;= r &amp;lt; x + n and y &amp;lt;= c &amp;lt; y + n): result += n * n return # 재귀함수 z(n / 2, x, y) z(n / 2, x, y + n / 2) z(n / 2, x + n / 2, y) z(n / 2, x + n / 2, y + n / 2) # 시간초과 안나기 위해 sys.</description>
     </item>
     
     <item>
       <title>백준 1107번 리모컨</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1107%EB%B2%88-%EB%A6%AC%EB%AA%A8%EC%BB%A8/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1107%EB%B2%88-%EB%A6%AC%EB%AA%A8%EC%BB%A8/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1107%EB%B2%88-%EB%A6%AC%EB%AA%A8%EC%BB%A8/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1107%EB%B2%88-%EB%A6%AC%EB%AA%A8%EC%BB%A8/</guid>
       <description>1107번_리모컨 문제 보러가기
 🅰 코드 # N: 목표로 하는 채널번호(0~500000), M: 고장난 버튼의 개수(0~10) N = int(input()) M = int(input()) # button: 숫자 버튼 / 고장난 버튼이 있으면 빼준다 button = {i for i in range(10)} if M != 0: button -= set(map(int, input().split())) # 100번에서 N번으로 +, - 버튼만 쓴 경우 cnt = abs(100 - N) # 50만 채널인데 최악의 경우를 고려할 때 # 작은수에서 +만 사용(50만)에 큰수에서 -만 사용(50만)을 더하면 100만 가지의 경우의 수가 발생 for i in range(1000000): flag = True for j in str(i): if int(j) not in button: flag = False break if flag: # button으로 접근 할 수 있는 수에다가 목표 채널의 차이(+, - 으로 이동)를 더한 값 cnt = min(cnt, len(str(i)) + abs(N-i)) print(cnt) 🅰 &amp;amp;연산자 사용 !</description>
     </item>
     
     <item>
       <title>백준 1260번 DFS와 BFS</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1260%EB%B2%88-dfs%EC%99%80-bfs/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1260%EB%B2%88-dfs%EC%99%80-bfs/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1260%EB%B2%88-dfs%EC%99%80-bfs/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1260%EB%B2%88-dfs%EC%99%80-bfs/</guid>
       <description>1260번_DFS와 BFS 문제 보러가기
 🅰 코드 N,M,V=map(int,input().split()) matrix=[[0]*(N+1) for i in range(N+1)] for i in range(M): a,b = map(int,input().split()) matrix[a][b]=matrix[b][a]=1 visit_list=[0]*(N+1) def dfs(V): visit_list[V]=1 print(V, end=&amp;#39; &amp;#39;) for i in range(1,N+1): if(visit_list[i]==0 and matrix[V][i]==1): dfs(i) def bfs(V): queue=[V] visit_list[V]=0 while queue: V=queue.pop(0) print(V, end=&amp;#39; &amp;#39;) for i in range(1, N+1): if(visit_list[i]==1 and matrix[V][i]==1): queue.append(i) visit_list[i]=0 dfs(V) print() bfs(V) ✅ 후기  문제 자체는 SSAFY교육에도 진행되었던 DFS, BFS의 가장 기본인 코드를 구현하는 것이었다.</description>
     </item>
     
     <item>
       <title>백준 1389번 케빈 베이컨의 6단계 법칙</title>
-      <link>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1389%EB%B2%88-%EC%BC%80%EB%B9%88-%EB%B2%A0%EC%9D%B4%EC%BB%A8%EC%9D%98-6%EB%8B%A8%EA%B3%84-%EB%B2%95%EC%B9%99/</link>
+      <link>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1389%EB%B2%88-%EC%BC%80%EB%B9%88-%EB%B2%A0%EC%9D%B4%EC%BB%A8%EC%9D%98-6%EB%8B%A8%EA%B3%84-%EB%B2%95%EC%B9%99/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EB%B0%B1%EC%A4%80-1389%EB%B2%88-%EC%BC%80%EB%B9%88-%EB%B2%A0%EC%9D%B4%EC%BB%A8%EC%9D%98-6%EB%8B%A8%EA%B3%84-%EB%B2%95%EC%B9%99/</guid>
+      <guid>https://ssabum.github.io/content/%EB%B0%B1%EC%A4%80-1389%EB%B2%88-%EC%BC%80%EB%B9%88-%EB%B2%A0%EC%9D%B4%EC%BB%A8%EC%9D%98-6%EB%8B%A8%EA%B3%84-%EB%B2%95%EC%B9%99/</guid>
       <description>1389번_케빈 베이컨의 6단계 법칙 문제 보러가기
 🅰 코드 from collections import deque def bfs(num, n): # 기본 base setting bacon = [0] * (n + 1) visited = [num] queue = deque() queue.append(num) while queue: # queue에서 popleft사용 k = queue.popleft() for i in relation[k]: if i not in visited: bacon[i] = bacon[k] + 1 visited.append(i) queue.append(i) return sum(bacon) # n: 유저수(2~100), m: 관계수(1~5000) n, m = map(int, input().split()) # 관계 dict생성 후 입력 relation = {i: [] for i in range(1, n + 1)} for i in range(m): a, b = map(int, input().</description>
     </item>

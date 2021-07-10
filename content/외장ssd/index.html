@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='외장하드는 들어봤는데 외장SSD는 무엇이지?'><title>외장SSD</title>
+
+<link rel='shortcut icon' href="https://ssabum.github.io/content/%EC%99%B8%EC%9E%A5ssd/">
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='외장SSD'>
+<meta property='og:description' content='외장하드는 들어봤는데 외장SSD는 무엇이지?'>
+<meta property='og:url' content='https://ssabum.github.io/content/%EC%99%B8%EC%9E%A5ssd/'>
+<meta property='og:site_name' content='Ssabum&#39;s Devlog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='삼성' /><meta property='article:tag' content='외장ssd' /><meta property='article:tag' content='t5' /><meta property='article:published_time' content='2021-04-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-04-04T00:00:00&#43;00:00'/><meta property='og:image' content='https://ssabum.github.io/content/%EC%99%B8%EC%9E%A5ssd/ssd.jpg' />
+<meta name="twitter:title" content="외장SSD">
+<meta name="twitter:description" content="외장하드는 들어봤는데 외장SSD는 무엇이지?"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://ssabum.github.io/content/%EC%99%B8%EC%9E%A5ssd/ssd.jpg' />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-194544565-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+<link rel="manifest" href="static/site.webmanifest">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/image_hu5b1ed73fe36e0369d78710b778381c4e_70796_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">💻</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://ssabum.github.io/">Ssabum&#39;s Devlog</a></h1>
+        <h2 class="site-description">Lazy beginner developer</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/algorithm/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+</svg>
+                
+                <span>Algorithm</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/data/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-dots" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 3v18h18" />
+  <circle cx="9" cy="9" r="2" />
+  <circle cx="19" cy="7" r="2" />
+  <circle cx="14" cy="15" r="2" />
+  <line x1="10.16" y1="10.62" x2="12.5" y2="13.5" />
+  <path d="M15.088 13.328l2.837 -4.586" />
+</svg>
+                
+                <span>Data</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/diary/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Diary</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/til/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+  <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
+  <line x1="9.7" y1="17" x2="14.3" y2="17" />
+</svg>
+                
+                <span>TIL</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://ssabum.github.io/categories/toy-project/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-apple-arcade" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="12" cy="5" r="2" />
+  <path d="M20 12.5v4.75a0.734 .734 0 0 1 -.055 .325a0.704 .704 0 0 1 -.348 .366l-5.462 2.58a4.998 4.998 0 0 1 -4.27 0l-5.462 -2.58a0.705 .705 0 0 1 -.401 -.691l-.002 -4.75" />
+  <path d="M4.431 12.216l5.634 -2.332a5.065 5.065 0 0 1 3.87 0l5.634 2.332a0.692 .692 0 0 1 .028 1.269l-5.462 2.543a5.064 5.064 0 0 1 -4.27 0l-5.462 -2.543a0.691 .691 0 0 1 .028 -1.27z" />
+  <line x1="12" y1="7" x2="12" y2="13" />
+</svg>
+                
+                <span>Toy project</span>
+            </a>
+        </li>
+            
+        
+
+        <li >
+            <a href='https://github.com/ssabum'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="0.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+                
+                <span>Github</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://ssabum.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/content/%EC%99%B8%EC%9E%A5ssd/">
+                <img src="/content/%EC%99%B8%EC%9E%A5ssd/ssd_hu01a8af33eb5f2295d769ee49d18187fb_121432_800x0_resize_q75_box.jpg"
+                        srcset="/content/%EC%99%B8%EC%9E%A5ssd/ssd_hu01a8af33eb5f2295d769ee49d18187fb_121432_800x0_resize_q75_box.jpg 800w, /content/%EC%99%B8%EC%9E%A5ssd/ssd_hu01a8af33eb5f2295d769ee49d18187fb_121432_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="566" 
+                        loading="lazy"
+                        alt="Featured image of post 외장SSD" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/diary/" style="background-color: #2a9d8f; color: #fff;">
+                Diary
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/content/%EC%99%B8%EC%9E%A5ssd/">외장SSD</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        외장하드는 들어봤는데 외장SSD는 무엇이지?
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Apr 04, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h1 id="외장ssd">외장SSD?</h1>
+<blockquote>
+<p>외장하드, 즉 <code>외장HDD</code>는 많이들 들어보았을 것이다. <code>외장SSD</code>는 <code>HDD</code> 대신 <code>SSD</code>를 사용하여 만들어낸 외장 메모리 저장장치이다.  <code>SSD</code>는 <code>HDD</code>와 비교해 데이터 전송 속도가 빠르고, 전력 소모가 적으며, 플래터, 모터, 헤드 같은 부품이 없기 때문에 더 작고 얇게 제작할 수 있다.</p>
+<p>따라서 <code>외장SSD</code> 역시 단일 저장장치에서도 <code>HDD</code> 수준의 저장 용량을 확보할 수 있게 됐고, 입출력 인터페이스 역시 <code>SSD</code>의 빠른 속도를 선보이면서 휴대용 저장장치에 어울리는 방식으로 자리잡았다.</p>
+<p><code>외장SSD</code>의 가장 큰 장점은 전송 속도다. <code>HDD</code>는 바늘 처럼 생긴 헤드를 플래터 위에서 직접 움직이며 데이터를 찾거나 데이터를 기록하는 반면, 반도체로 제작한 <code>SSD</code>는 이러한 과정이 없는 만큼 더 빠르게 데이터를 읽고 쓸 수 있다.</p>
+</blockquote>
+<h2 id="그래서-나도">그래서 나도!</h2>
+<p>내 노트북의 용량은 <code>SSD256GB</code>이다. 그러나 필수 소프트웨어가 깔리고 프로그램과 파일들 몇 개 깔다보니 금방 금방 줄어들었다&hellip;</p>
+<p>그래서 고민끝에 구매하게된 삼성 포터블 <code>외장SSD T5</code> ㅎㅎ 통장 잔고가 좋지 못해 500GB짜리를 샀지만 나름 <code>FLEX</code>했다.</p>
+<p>그렇게 구매하고 배송받은 <code>외장SSD</code>를 연결하는 순간&hellip;<code>C tpye</code> 연결시에 접촉 불량이 발생했다&hellip;</p>
+<p><figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/content/%EC%99%B8%EC%9E%A5ssd/broken.jpg" data-size="500x375"><img src="/content/%EC%99%B8%EC%9E%A5ssd/broken.jpg"
+				srcset="/content/%EC%99%B8%EC%9E%A5ssd/broken_hufc6be62723d340c8edb0fb8f5b75736e_38473_480x0_resize_q75_box.jpg 480w, /content/%EC%99%B8%EC%9E%A5ssd/broken_hufc6be62723d340c8edb0fb8f5b75736e_38473_1024x0_resize_q75_box.jpg 1024w"
+				width="500"
+				height="375"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<p>바로 삼성서비스센터에 무상교체를 보낸 상태이다&hellip;</p>
+<p>빨리 정상작동되는 새걸로 받아서 가득 채워버려야지&hellip;🤪</p>
+<p>그때부터 <code>Big data</code> 포스팅 시작이다!</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%EC%82%BC%EC%84%B1/">삼성</a>
+        
+            <a href="/tags/%EC%99%B8%EC%9E%A5ssd/">외장ssd</a>
+        
+            <a href="/tags/t5/">t5</a>
+        
+    </section>
+
+
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">관련 글</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/content/%EA%B7%BC%ED%99%A9%EC%9D%B4%EC%9A%94/">
+        
+        
+            <div class="article-image">
+                <img src="/content/%EA%B7%BC%ED%99%A9%EC%9D%B4%EC%9A%94/todo.3044002636855974864bbcfe8223b120_hub8956bba192ccf8149451449a4cced01_62392_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-MEQAJjaFWXSGS7z&#43;giOxIA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">근황이요</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/content/samsung-sw-academy-for-youth/">
+        
+        
+            <div class="article-image">
+                <img src="/content/samsung-sw-academy-for-youth/ssafy.025a3155301aaa2c8dad71d4dc60afe7_hue71d9469f60f090ffbbc678fbd9daff1_167607_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-AloxVTAaqiyNrXHU3GCv5w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SAMSUNG SW ACADEMY FOR YOUTH</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/content/%EA%B4%91%EC%A3%BC%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EC%82%AC%EA%B4%80%ED%95%99%EA%B5%90/">
+        
+        
+            <div class="article-image">
+                <img src="/content/%EA%B4%91%EC%A3%BC%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EC%82%AC%EA%B4%80%ED%95%99%EA%B5%90/%EA%B4%91%EC%9D%B8%EC%82%AC.ff013b005d22ef78cc4c728db7d85f64_hu719e3fdc9e4ff866a1cd41d00cfaa62f_468099_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-/wE7AF0i73jMTHKNt9hfZA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">광주인공지능사관학교</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/content/%EB%82%B4%EA%B0%80-%EB%8B%B9%EC%8B%A0%EC%9D%98-%EA%B8%B0%EC%82%AC%EA%B0%80-%EB%90%98%EC%96%B4-%EC%A4%84%EA%B2%8C%EC%9A%94/">
+        
+        
+            <div class="article-image">
+                <img src="/content/%EB%82%B4%EA%B0%80-%EB%8B%B9%EC%8B%A0%EC%9D%98-%EA%B8%B0%EC%82%AC%EA%B0%80-%EB%90%98%EC%96%B4-%EC%A4%84%EA%B2%8C%EC%9A%94/book.5d88d05c21b4da0daed19469d227a363_hu7396fba383e6517fd1fea0f069a72db2_3435619_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-XYjQXCG02g2u0ZRp0iejYw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">내가 당신의 기사가 되어 줄게요</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/content/sqld/">
+        
+        
+            <div class="article-image">
+                <img src="/content/sqld/sql.e647ca68781e30d398b3348156d53e7c_hubbf8a9fc18cf0c0587203e8c4fcd3fa5_78275_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-5kfKaHgeMNOYszSBVtU&#43;fA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SQLD</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="ssabum/comments"
+        issue-term="pathname"
+        
+        theme="github-light"
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.body.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Ssabum&#39;s Devlog
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

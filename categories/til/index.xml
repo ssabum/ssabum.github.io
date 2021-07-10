@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>가상환경</title>
-      <link>https://ssabum.github.io/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</link>
+      <link>https://ssabum.github.io/content/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</link>
       <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</guid>
+      <guid>https://ssabum.github.io/content/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</guid>
       <description>가상머신 정의💻 가상 머신(Virtual Machine, VM)은 컴퓨팅 환경을 소프트웨어로 구현한 것, 즉 컴퓨터를 에뮬레이션하는 소프트웨어다. 가상머신상에서 운영체제나 응용프로그램을 설치 및 실행할 수 있다.
 시스템 가상 머신 시스템 가상 머신은 때로 하드웨어 가상 머신이라고 하며 각 운영 체제를 실행하는 가상 머신 사이의 기초가 되는 물리 컴퓨터를 다중화(multiplex)한다. 가상화를 제공하는 소프트웨어 계층은 가상 머신 모니터 또는 하이퍼바이저라고 한다. 하이퍼바이저는 순 그대로의 하드웨어 또는 호스트 운영 체제 위에서 실행할 수 있다.
 시스템 가상 머신의 주요 이점</description>
@@ -20,10 +20,10 @@
     
     <item>
       <title>SQL문법</title>
-      <link>https://ssabum.github.io/p/sql%EB%AC%B8%EB%B2%95/</link>
+      <link>https://ssabum.github.io/content/sql%EB%AC%B8%EB%B2%95/</link>
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/sql%EB%AC%B8%EB%B2%95/</guid>
+      <guid>https://ssabum.github.io/content/sql%EB%AC%B8%EB%B2%95/</guid>
       <description>SQL 개념  https://www.sqlitetutorial.net/
 SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDBMS)의데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어이다.
  SQL 문법의 세가지 종류
@@ -33,10 +33,10 @@ SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDB
     
     <item>
       <title>CSS기초</title>
-      <link>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88/</link>
+      <link>https://ssabum.github.io/content/css%EA%B8%B0%EC%B4%88/</link>
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88/</guid>
+      <guid>https://ssabum.github.io/content/css%EA%B8%B0%EC%B4%88/</guid>
       <description>CSS  스타일, 레이아웃 등을 통해 HTML이 사용자에게 어떻게 표시 되는지를 지정하는 언어
 사용자에게 문서(HTML)를 표시하는 방법을 지정하는 언어
  CSS 구문  구문은 선택자와 함께 열린다. 스타일을 지정할 html 요소를 선택. 다음 중괄호가 있는데 이 안에는 속성과 값 쌍 형태를 가지는 하나 또는 그 이상의 선언(declaration)이 있다. 각 쌍은 우리가 선택한 요소의 속성을 지정하고 속성에 부여할 값을 지정한다.  선언문
@@ -45,10 +45,10 @@ SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDB
     
     <item>
       <title>CSS기초 레이아웃</title>
-      <link>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</link>
+      <link>https://ssabum.github.io/content/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</link>
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</guid>
+      <guid>https://ssabum.github.io/content/css%EA%B8%B0%EC%B4%88-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</guid>
       <description>CSS Layout  웹페이지에 포함되는 요소들을 어떻게 취합하고 그것들이 어느 위치에 놓일 것인지를 제어한다.
  float  한 요소(element)가 정상 흐름(normal flow)으로부터 빠져 텍스트 및 인라인(inline) 요소가 그 주위를 감싸 자기 컨테이너의 좌,우측을 따라 배치되어야 함을 지정한다.
  clearfix
@@ -58,10 +58,10 @@ SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDB
     
     <item>
       <title>Django 기본</title>
-      <link>https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/</link>
+      <link>https://ssabum.github.io/content/django-%EA%B8%B0%EB%B3%B8/</link>
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/django-%EA%B8%B0%EB%B3%B8/</guid>
+      <guid>https://ssabum.github.io/content/django-%EA%B8%B0%EB%B3%B8/</guid>
       <description>Django wep programming  파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크
 즉, 쉽고 빠르게 웹사이트를 개발할 수 있도록 돕는 구성요소로 이루어진 웹 프레임워크
 여기서 프레임워크란, 애플리케이션 개발에 바탕이 되는 템플릿과 같은 역할을 하는 클래스들과 인터페이스의 집합
@@ -70,10 +70,10 @@ SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDB
     
     <item>
       <title>HTML기초</title>
-      <link>https://ssabum.github.io/p/html%EA%B8%B0%EC%B4%88/</link>
+      <link>https://ssabum.github.io/content/html%EA%B8%B0%EC%B4%88/</link>
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/html%EA%B8%B0%EC%B4%88/</guid>
+      <guid>https://ssabum.github.io/content/html%EA%B8%B0%EC%B4%88/</guid>
       <description>HTML  &amp;ldquo;웹 컨텐츠의 의미와 구조를 정의할 때 사용하는 언어&amp;rdquo;
  HTML 기초 Hyper
  텍스트 등의 정보가 동일 선상에 있는 것이 아니라 다중으로 연결되어 있는 상태  Hyper Text
@@ -83,19 +83,19 @@ SQL(StructuredQueryLanguage)는 관계형 데이터베이스 관리시스템(RDB
     
     <item>
       <title>OOP</title>
-      <link>https://ssabum.github.io/p/oop/</link>
+      <link>https://ssabum.github.io/content/oop/</link>
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/oop/</guid>
+      <guid>https://ssabum.github.io/content/oop/</guid>
       <description>&lt;p&gt;&lt;code&gt;Object-Oriented Programming&lt;/code&gt;의 약자로 &lt;code&gt;객체지향프로그래밍&lt;/code&gt;이다.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>알고리즘 기초이론</title>
-      <link>https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/</link>
+      <link>https://ssabum.github.io/content/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/</link>
       <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ssabum.github.io/p/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/</guid>
+      <guid>https://ssabum.github.io/content/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88%EC%9D%B4%EB%A1%A0/</guid>
       <description>&lt;p&gt;Algorithm기본 이론에 대해 알아보자&lt;/p&gt;</description>
     </item>
     
