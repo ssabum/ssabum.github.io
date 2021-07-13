@@ -6,7 +6,20 @@
     <description>Recent content in TIL on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CS]이산수학</title>
+      <link>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/</guid>
+      <description>이산수학(Discrete mathematics)  불연속적인 숫자를 다루는 수학
+컴퓨터를 위한 수학, 참과 거짓으로 판단할 수 있으며 자료구조 또는 알고리즘의 베이스, 논리적 사고, 컴퓨팅 사고력 향상
+ 1. 명제  참이나 거짓으로 진리를 구분할 수 있는 문장 명제는 0또는 1만을 가지는 컴퓨터 메모리처럼 항상 참과 거짓 중 하나의 값만을 가짐 여러 개의 명제를 조합할 수 있음  2. 연산자 명제를 다루기 위한 도구
+
+3. 명제의 역, 이, 대우  조건 명제에서 사용되는 역, 이, 대우는 하나의 명제를 변형하여 표현 증명하기 어려운 명제는 대우를 이용하여 증명할 수 있다 대우가 참인 경우 본 명제 또한 참이라는 특성을 가지고 있다</description>
+    </item>
+    
     <item>
       <title>가상환경</title>
       <link>https://ssabum.github.io/content/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</link>

@@ -6,7 +6,81 @@
         <description>Recent content on Ssabum&#39;s Devlog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[CS]이산수학</title>
+        <link>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/</link>
+        <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/</guid>
+        <description>&lt;img src="https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/math.jpg" alt="Featured image of post [CS]이산수학" /&gt;&lt;h1 id=&#34;이산수학discrete-mathematics&#34;&gt;이산수학(Discrete mathematics)&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;불연속적인 숫자를 다루는 수학&lt;/p&gt;
+&lt;p&gt;컴퓨터를 위한 수학, 참과 거짓으로 판단할 수 있으며 자료구조 또는  알고리즘의 베이스, 논리적 사고, 컴퓨팅 사고력 향상&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-명제&#34;&gt;1. 명제&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;참이나 거짓으로 진리를 구분할 수 있는 문장&lt;/li&gt;
+&lt;li&gt;명제는 0또는 1만을 가지는 컴퓨터 메모리처럼 항상 참과 거짓 중 하나의 값만을 가짐&lt;/li&gt;
+&lt;li&gt;여러 개의 명제를 조합할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-연산자&#34;&gt;2. 연산자&lt;/h2&gt;
+&lt;p&gt;명제를 다루기 위한 도구&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 89; flex-basis: 214px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/2.PNG&#34; data-size=&#34;283x316&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/2.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/2_hu535c4d46dbb69fdd8bbf7b20bc4ac604_48848_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/2_hu535c4d46dbb69fdd8bbf7b20bc4ac604_48848_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;283&#34;
+				height=&#34;316&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3-명제의-역-이-대우&#34;&gt;3. 명제의 역, 이, 대우&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;조건 명제에서 사용되는 &lt;code&gt;역, 이, 대우&lt;/code&gt;는 하나의 명제를 변형하여 표현&lt;/li&gt;
+&lt;li&gt;증명하기 어려운 명제는 &lt;code&gt;대우&lt;/code&gt;를 이용하여 증명할 수 있다&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;대우&lt;/code&gt;가 &lt;code&gt;참&lt;/code&gt;인 경우 본 명제 또한 &lt;code&gt;참&lt;/code&gt;이라는 특성을 가지고 있다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 162; flex-basis: 390px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/4.PNG&#34; data-size=&#34;880x541&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/4.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/4_hu0ae745c6bec42a5a82022cf5df59899e_92005_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/4_hu0ae745c6bec42a5a82022cf5df59899e_92005_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;880&#34;
+				height=&#34;541&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4-진리표&#34;&gt;4. 진리표&lt;/h2&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 109; flex-basis: 262px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/3.png&#34; data-size=&#34;223x204&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/3.png&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/3_hu8dfec70c98f97b8e81c951af0630ab74_1449_480x0_resize_box_2.png 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/3_hu8dfec70c98f97b8e81c951af0630ab74_1449_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;223&#34;
+				height=&#34;204&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;5-동치관계&#34;&gt;5. 동치관계&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;동치란 &lt;code&gt;논리적으로 일치한다&lt;/code&gt;는 의미&lt;/li&gt;
+&lt;li&gt;흔히 동치는 같은 의미를 가진 더 쉬운 명제를 발견하는 데 사용&lt;/li&gt;
+&lt;li&gt;동치법칙에는 다양한 종류가 존재&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 211; flex-basis: 506px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/6.png&#34; data-size=&#34;1024x485&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/6.png&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/6_hue79040345825658fe6e8193846bfd06d_84232_480x0_resize_box_2.png 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/6_hue79040345825658fe6e8193846bfd06d_84232_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1024&#34;
+				height=&#34;485&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>타이타닉 프로젝트 리뷰</title>
         <link>https://ssabum.github.io/content/%ED%83%80%EC%9D%B4%ED%83%80%EB%8B%89-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%EB%B7%B0/</link>
         <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
