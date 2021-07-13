@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JAVA on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/java/</link>
+    <description>Recent content in JAVA on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[JAVA]1일차</title>
+      <link>https://ssabum.github.io/content/java1%EC%9D%BC%EC%B0%A8/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/content/java1%EC%9D%BC%EC%B0%A8/</guid>
+      <description>1. 자바개발환경 설치 JDK는 java development kit의 줄임말로 개발하는데 필요한 라이브러리와 플랫폼이 포함
+
+ byte code는 exe파일이 아니기 때문에 바로 실행이 불가능하므로 JVM이 필요 따라서 실행파일이 메모리에 로딩되고 운영체제 플랫폼에 맞게 리소스를 재컴파일 실행 어떤 운영체제에서 작동할지 모르기 때문에 JVM이 각 OS에 맞게 재컴파일을 통해 실행 가상머신에 따라 실행하므로 속도가 비교적 느리고 JVM이 필요하기 때문에 JRE(실행환경) 필요  // 출력문 public class TPC01 { public static void main(String[] args) { // syso + Ctrl + spaceBar 	System.</description>
+    </item>
+    
+  </channel>
+</rss>
