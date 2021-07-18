@@ -81,6 +81,104 @@
 </description>
         </item>
         <item>
+        <title>[CS]이산수학 2nd</title>
+        <link>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/</link>
+        <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/</guid>
+        <description>&lt;img src="https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/math.jpg" alt="Featured image of post [CS]이산수학 2nd" /&gt;&lt;h1 id=&#34;명제&#34;&gt;명제&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;명제 = 주어 + 술어&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-명제-판별법&#34;&gt;1. 명제 판별법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;사실명제 : 관찰, 측정, 실험&lt;/li&gt;
+&lt;li&gt;논리명제 : 수학, 논리학&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-복합명제compound-proposition&#34;&gt;2. 복합명제(compound proposition)&lt;/h2&gt;
+&lt;p&gt;단순명제의 조합으로 이루어진 명제&lt;/p&gt;
+&lt;h1 id=&#34;추론reasoning&#34;&gt;추론(Reasoning)&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;참으로 알고 있는 명제로부터 새로운 참인 명제를 찾는 과정&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;연역법 : p → q, p가 참이므로 q가 참&lt;/li&gt;
+&lt;li&gt;귀납법 : 개별적 사실을 말하는 명제로부터 일반적인 결론을 도출&lt;/li&gt;
+&lt;li&gt;성급한 일반화 : 몇 개의 사례나 경험으로 전체 또는 전체의 속성을 단정짓고 판단&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;부울&#34;&gt;부울&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;어떤 명제의 참과 거짓을 이진수에 대응시켜 명제와 명제간의 관계를 수학적으로 표현&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;부울변수 : 집합 {0, 1}의 원소 값만을 갖는 변수&lt;/li&gt;
+&lt;li&gt;부울함수 : 0또는 1의 입력값들에 대하여 0또는 1의 출력값을 갖는 함수&lt;/li&gt;
+&lt;li&gt;쌍대성의 원리(Duality Principle) : 부울식으로 표현된 함수들 사이에 항등성이 유지되면 이들의 쌍대도 항등성을 유지&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 128; flex-basis: 307px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%B6%80%EC%9A%B8%EB%8C%80%EC%88%98.PNG&#34; data-size=&#34;757x590&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%B6%80%EC%9A%B8%EB%8C%80%EC%88%98.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%B6%80%EC%9A%B8%EB%8C%80%EC%88%98_hu9488bb328651dca7767f8a6677612e9a_375788_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%B6%80%EC%9A%B8%EB%8C%80%EC%88%98_hu9488bb328651dca7767f8a6677612e9a_375788_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;757&#34;
+				height=&#34;590&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&#34;논리회로&#34;&gt;논리회로&lt;/h1&gt;
+&lt;h2 id=&#34;1-논리회로설계&#34;&gt;1. 논리회로설계&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;문제 → 입력과 출력 정의 부울 함수 → 부울식 → 논리회로&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 201; flex-basis: 483px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%85%BC%EB%A6%AC%ED%9A%8C%EB%A1%9C.PNG&#34; data-size=&#34;540x268&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%85%BC%EB%A6%AC%ED%9A%8C%EB%A1%9C.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%85%BC%EB%A6%AC%ED%9A%8C%EB%A1%9C_hubbf29b872abf7bacfbed193bdc0a6860_142387_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%85%BC%EB%A6%AC%ED%9A%8C%EB%A1%9C_hubbf29b872abf7bacfbed193bdc0a6860_142387_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;540&#34;
+				height=&#34;268&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 144; flex-basis: 346px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%85%BC%EB%A6%AC%ED%9A%8C%EB%A1%9C2.PNG&#34; data-size=&#34;868x601&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%85%BC%EB%A6%AC%ED%9A%8C%EB%A1%9C2.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%85%BC%EB%A6%AC%ED%9A%8C%EB%A1%9C2_huf60da90707048a172a7ca74813c324ce_349248_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EB%85%BC%EB%A6%AC%ED%9A%8C%EB%A1%9C2_huf60da90707048a172a7ca74813c324ce_349248_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;868&#34;
+				height=&#34;601&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-부울식의-최소화&#34;&gt;2. 부울식의 최소화&lt;/h2&gt;
+&lt;p&gt;카르노맵에서 하나의 변수만이 다른 최소항들은 서로 인접한다고 한다, 이때 인접한 칸이 1일 때 인접된 칸을  나타내는 최소항은 변수 중에서 공통된 변수 하나만으로 나타낼 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;카르노맵 : 부울함수의 간단한 논리합 형식을 찾아내는 방법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 153; flex-basis: 368px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EC%B9%B4%EB%A5%B4%EB%85%B8%EB%A7%B5.PNG&#34; data-size=&#34;920x600&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EC%B9%B4%EB%A5%B4%EB%85%B8%EB%A7%B5.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EC%B9%B4%EB%A5%B4%EB%85%B8%EB%A7%B5_hu37d4c145e2d922db66af690660e44e82_359820_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EC%B9%B4%EB%A5%B4%EB%85%B8%EB%A7%B5_hu37d4c145e2d922db66af690660e44e82_359820_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;920&#34;
+				height=&#34;600&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&#34;예제&#34;&gt;예제&lt;/h1&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 199; flex-basis: 479px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EC%98%88%EC%A0%9C.PNG&#34; data-size=&#34;1055x528&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EC%98%88%EC%A0%9C.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EC%98%88%EC%A0%9C_hu1ac1ad2c0cb60209b225296da881744c_444657_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/%EC%98%88%EC%A0%9C_hu1ac1ad2c0cb60209b225296da881744c_444657_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;1055&#34;
+				height=&#34;528&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>[JAVA]1일차</title>
         <link>https://ssabum.github.io/content/java1%EC%9D%BC%EC%B0%A8/</link>
         <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>

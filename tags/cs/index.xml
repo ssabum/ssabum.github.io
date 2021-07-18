@@ -20,5 +20,17 @@
 3. 명제의 역, 이, 대우  조건 명제에서 사용되는 역, 이, 대우는 하나의 명제를 변형하여 표현 증명하기 어려운 명제는 대우를 이용하여 증명할 수 있다 대우가 참인 경우 본 명제 또한 참이라는 특성을 가지고 있다</description>
     </item>
     
+    <item>
+      <title>[CS]이산수학 2nd</title>
+      <link>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2nd/</guid>
+      <description>명제  명제 = 주어 + 술어
+ 1. 명제 판별법  사실명제 : 관찰, 측정, 실험 논리명제 : 수학, 논리학  2. 복합명제(compound proposition) 단순명제의 조합으로 이루어진 명제
+추론(Reasoning)  참으로 알고 있는 명제로부터 새로운 참인 명제를 찾는 과정
+  연역법 : p → q, p가 참이므로 q가 참 귀납법 : 개별적 사실을 말하는 명제로부터 일반적인 결론을 도출 성급한 일반화 : 몇 개의 사례나 경험으로 전체 또는 전체의 속성을 단정짓고 판단  부울  어떤 명제의 참과 거짓을 이진수에 대응시켜 명제와 명제간의 관계를 수학적으로 표현</description>
+    </item>
+    
   </channel>
 </rss>
