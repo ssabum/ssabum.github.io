@@ -6,7 +6,272 @@
         <description>Recent content on Ssabum&#39;s Devlog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[CS]이산수학 3rd</title>
+        <link>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/</link>
+        <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/</guid>
+        <description>&lt;img src="https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/math.jpg" alt="Featured image of post [CS]이산수학 3rd" /&gt;&lt;h1 id=&#34;알고리즘&#34;&gt;알고리즘&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;순서대로 정의된 절차&lt;/p&gt;
+&lt;p&gt;모든 동작은 명확하게 정의되어 실행 가능해야 한다.&lt;/p&gt;
+&lt;p&gt;일정한 시간 안에 반드시 원하는 결과가 나와야 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-알고리즘-구조&#34;&gt;1. 알고리즘 구조&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;순차적 구조&lt;/li&gt;
+&lt;li&gt;분기 구조&lt;/li&gt;
+&lt;li&gt;반복 구조&lt;/li&gt;
+&lt;li&gt;점프 구조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-알고리즘-기술-방법&#34;&gt;2. 알고리즘 기술 방법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;플로우 차트&lt;/li&gt;
+&lt;li&gt;프로그램 언어 코드&lt;/li&gt;
+&lt;li&gt;pseudocode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;그래프&#34;&gt;그래프&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;정점&lt;code&gt;vertex&lt;/code&gt;과 간선&lt;code&gt;edge&lt;/code&gt;들의 집합으로 이루어진 집합&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-오일러-그래프&#34;&gt;1. 오일러 그래프&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;오일러 경로 : 그래프의 모든 연결선을 한번만 방문하는 경로&lt;/li&gt;
+&lt;li&gt;오릴러 순환 : 시작점과 끝점이 동일한 오일러 경로&lt;/li&gt;
+&lt;li&gt;오일러 그래프 : 오일러 순환이 존재하는 그래프&lt;/li&gt;
+&lt;li&gt;차수 : 정점에 접합된 연결선의 수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-오일러-경로를-갖기-위한-필요충분-조건&#34;&gt;2. 오일러 경로를 갖기 위한 필요충분 조건&lt;/h2&gt;
+&lt;p&gt;2개 이상의 정점을 갖는 루프가 없는 연결그래프에서 홀수 차수를 갖는 정점이 하나도 없거나 오직 두개만 존재해야 한다. 특히 모든 정점이 짝수 차수를 자기면 오일러 순환이 존재하고, 이 그래프는 오일러 그래프이다.&lt;/p&gt;
+&lt;h2 id=&#34;3-해밀턴-경로&#34;&gt;3. 해밀턴 경로&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;그래프에서 모든 정점을 정확히 한번만 지나는 경로&lt;/li&gt;
+&lt;li&gt;해밀턴 순환 : 시작점과 끝점이 같은 해밀턴 경로&lt;/li&gt;
+&lt;li&gt;시간복잡도 : O(x^n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-그리드-알고리즘&#34;&gt;4. 그리드 알고리즘&lt;/h2&gt;
+&lt;p&gt;결정을 할 때마다 최종 결과에 관계없이 그 순간에서 최선의 선택을 진행, 하지만 최종의 결과가 최적이라는 보장은 없다.&lt;/p&gt;
+&lt;h1 id=&#34;신장트리&#34;&gt;신장트리&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;순환이 존재하지 않는 부분 그래프&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-최소-신장트리-알고리즘&#34;&gt;1. 최소 신장트리 알고리즘&lt;/h2&gt;
+&lt;h3 id=&#34;prim-알고리즘&#34;&gt;Prim 알고리즘&lt;/h3&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 198; flex-basis: 477px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%ED%94%84%EB%A6%BC.PNG&#34; data-size=&#34;1018x512&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%ED%94%84%EB%A6%BC.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%ED%94%84%EB%A6%BC_hu360ac90cfa0f5356fcd6c1629ee49fbc_138963_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%ED%94%84%EB%A6%BC_hu360ac90cfa0f5356fcd6c1629ee49fbc_138963_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;1018&#34;
+				height=&#34;512&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;가중그래프에서 가중치의 합을 최소로 하는 신장트리&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;그리디 알고리즘 방식을 사용하지만 그래프에서 항상 최적의 결과를 보장&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;간선의 개숭에 비해 정점의 개수가 적은 경우 유리&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;시간복잡도 : O(V^2) / O(ElogV)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;kruskal-알고리즘&#34;&gt;Kruskal 알고리즘&lt;/h3&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 165; flex-basis: 396px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BC.PNG&#34; data-size=&#34;964x584&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BC.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BC_hu8faf040913c3271408855bf753a22aa3_165793_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BC_hu8faf040913c3271408855bf753a22aa3_165793_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;964&#34;
+				height=&#34;584&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;가장 고려할 점은 계산할 때 순환을 만들지 않는 것&lt;/li&gt;
+&lt;li&gt;정점의 개수에 비해 간선의 개수가 적은 경우 유리&lt;/li&gt;
+&lt;li&gt;시간복잡도 : O(ElogV)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-최단-경로-알고리즘&#34;&gt;2. 최단 경로 알고리즘&lt;/h2&gt;
+&lt;h3 id=&#34;dijkstra-알고리즘&#34;&gt;Dijkstra 알고리즘&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;하나의 정점에서 다른 모든 정점으로 가는 최단 경로를 탐색&lt;/li&gt;
+&lt;li&gt;방향, 비방향 그래프 모두 적용&lt;/li&gt;
+&lt;li&gt;가중치값이 음수가 아니어야 한다.&lt;/li&gt;
+&lt;li&gt;시간복잡도 : O(ElogV)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 346; flex-basis: 830px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC1.PNG&#34; data-size=&#34;758x219&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC1.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC1_hu823664d29f6282cb3b249effc123d390_88402_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC1_hu823664d29f6282cb3b249effc123d390_88402_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;758&#34;
+				height=&#34;219&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 197; flex-basis: 474px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC2.PNG&#34; data-size=&#34;775x392&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC2.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC2_hu5f8e5d7e554634a60c30cee881df91ba_165220_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC2_hu5f8e5d7e554634a60c30cee881df91ba_165220_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;775&#34;
+				height=&#34;392&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;bellman-ford-알고리즘&#34;&gt;Bellman-ford 알고리즘&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;하나의 정점에서 다른 모든 정점으로 가는 최단 경로를 탐색&lt;/li&gt;
+&lt;li&gt;방향, 비방향 그래프 모두 적용&lt;/li&gt;
+&lt;li&gt;가중치가 음수일 때도 적용, 하지만 순환을 구성하는 연결선의 가중치는 양수여야 한다.&lt;/li&gt;
+&lt;li&gt;라우팅 프로토콜에 사용&lt;/li&gt;
+&lt;li&gt;시간복잡도 : O(VE) / O(E^2)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 199; flex-basis: 478px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C1.PNG&#34; data-size=&#34;853x428&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C1.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C1_hu23fa91e503d25fc3a0de828a58976b32_190700_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C1_hu23fa91e503d25fc3a0de828a58976b32_190700_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;853&#34;
+				height=&#34;428&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 212; flex-basis: 509px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C2.PNG&#34; data-size=&#34;852x401&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C2.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C2_hu0bf9d773334d8a773787c3a5c4333b22_192921_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C2_hu0bf9d773334d8a773787c3a5c4333b22_192921_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;852&#34;
+				height=&#34;401&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 413; flex-basis: 992px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C3.PNG&#34; data-size=&#34;852x206&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C3.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C3_hu4b37c5ca15df165c16c27e2aadbbd657_63006_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/%EB%B2%A8%EB%A7%8C%ED%8F%AC%EB%93%9C3_hu4b37c5ca15df165c16c27e2aadbbd657_63006_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;852&#34;
+				height=&#34;206&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>[CS]이산수학 4th</title>
+        <link>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/</link>
+        <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/</guid>
+        <description>&lt;img src="https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/math.jpg" alt="Featured image of post [CS]이산수학 4th" /&gt;&lt;h1 id=&#34;언어&#34;&gt;언어&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;기본요소들의 집합으로 만들어지는 문자열&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;알파벳 : 기호들의 집합&lt;/li&gt;
+&lt;li&gt;문법 : 알파벳으로부터 문장들의 집합을 형성하는 규칙이 존재&lt;/li&gt;
+&lt;li&gt;의미론 : 규칙에 합당하게 만들어진 문장들이 어떤 의미를 갖는지 결정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-형식언어&#34;&gt;1. 형식언어&lt;/h2&gt;
+&lt;p&gt;구성요소 : 심벌, 알파벳, 문자열, 공문자열&lt;/p&gt;
+&lt;h2 id=&#34;2-구-구문-문법&#34;&gt;2. 구-구문 문법&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;G = (V, T, S, P)&lt;/code&gt; 👉 &lt;code&gt;V : 기호의 집합&lt;/code&gt; &lt;code&gt;T : 단말기호&lt;/code&gt; &lt;code&gt;S : 시작기호&lt;/code&gt; &lt;code&gt;P : 생성규칙&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 158; flex-basis: 379px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EB%AC%B8%EB%B2%95.PNG&#34; data-size=&#34;598x378&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EB%AC%B8%EB%B2%95.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EB%AC%B8%EB%B2%95_huf8c74becae7c61e6171dd6e22e30ee53_212574_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EB%AC%B8%EB%B2%95_huf8c74becae7c61e6171dd6e22e30ee53_212574_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;598&#34;
+				height=&#34;378&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3-정규식&#34;&gt;3. 정규식&lt;/h2&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 181; flex-basis: 434px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%A0%95%EA%B7%9C%EC%8B%9D.PNG&#34; data-size=&#34;699x386&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%A0%95%EA%B7%9C%EC%8B%9D.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%A0%95%EA%B7%9C%EC%8B%9D_hu54e0d101417b0347d5f826ab3fea752e_232235_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%A0%95%EA%B7%9C%EC%8B%9D_hu54e0d101417b0347d5f826ab3fea752e_232235_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;699&#34;
+				height=&#34;386&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&#34;오토마타&#34;&gt;오토마타&lt;/h1&gt;
+&lt;h2 id=&#34;1-유한-상태기계&#34;&gt;1. 유한 상태기계&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;상태가 유한개 존재하는 기계&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 123; flex-basis: 295px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%9C%A0%ED%95%9C%EC%83%81%ED%83%9C%EA%B8%B0%EA%B3%84.PNG&#34; data-size=&#34;401x326&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%9C%A0%ED%95%9C%EC%83%81%ED%83%9C%EA%B8%B0%EA%B3%84.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%9C%A0%ED%95%9C%EC%83%81%ED%83%9C%EA%B8%B0%EA%B3%84_huba9201822ead67e3be604624483619cb_58349_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%9C%A0%ED%95%9C%EC%83%81%ED%83%9C%EA%B8%B0%EA%B3%84_huba9201822ead67e3be604624483619cb_58349_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;401&#34;
+				height=&#34;326&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;출력이 있는 유한 상태기계
+&lt;ul&gt;
+&lt;li&gt;출력이 상태의 추이함수에 의해 결정&lt;/li&gt;
+&lt;li&gt;출력이 상태에 의해 결정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 110; flex-basis: 264px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%B6%9C%EB%A0%A5%EC%9E%88%EC%9D%8C.PNG&#34; data-size=&#34;349x317&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%B6%9C%EB%A0%A5%EC%9E%88%EC%9D%8C.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%B6%9C%EB%A0%A5%EC%9E%88%EC%9D%8C_hu84250d1cafb07bacd391fe5eb49ecbf3_69794_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%B6%9C%EB%A0%A5%EC%9E%88%EC%9D%8C_hu84250d1cafb07bacd391fe5eb49ecbf3_69794_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;349&#34;
+				height=&#34;317&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;출력이 없는 유한 상태기계&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 154; flex-basis: 371px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%B6%9C%EB%A0%A5%EC%97%86%EC%9D%8C.PNG&#34; data-size=&#34;623x403&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%B6%9C%EB%A0%A5%EC%97%86%EC%9D%8C.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%B6%9C%EB%A0%A5%EC%97%86%EC%9D%8C_hu53746f34be42f490294b93556c392d90_112210_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/%EC%B6%9C%EB%A0%A5%EC%97%86%EC%9D%8C_hu53746f34be42f490294b93556c392d90_112210_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;623&#34;
+				height=&#34;403&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;튜닝머신 등등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-결정-오토마타&#34;&gt;2. 결정 오토마타&lt;/h2&gt;
+&lt;p&gt;입력값에 대해서 전이되는 상태가 정확하게 결정&lt;/p&gt;
+&lt;h2 id=&#34;3-비결정-오토마타&#34;&gt;3. 비결정 오토마타&lt;/h2&gt;
+&lt;p&gt;입력값에 대해서 상태 전이가 다수 존재, 입력값에 대해서 상태 전이가 발생하지 않을 수 있다.&lt;/p&gt;
+&lt;h1 id=&#34;셈&#34;&gt;셈&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;어떤 사건이 발생할 수 있는 경우의 수&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-곱의-법칙&#34;&gt;1. 곱의 법칙&lt;/h2&gt;
+&lt;p&gt;사건들이 동시에 발생할 경우&lt;/p&gt;
+&lt;h2 id=&#34;2-합의-법칙&#34;&gt;2. 합의 법칙&lt;/h2&gt;
+&lt;p&gt;사건들이 동시에 발생할 수 없는 경우&lt;/p&gt;
+&lt;h3 id=&#34;포함배제의-원리&#34;&gt;포함배제의 원리&lt;/h3&gt;
+&lt;p&gt;합의 법칙을 적용할때 중복되어 계산된 경우의 수를 고려&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>[CS]이산수학</title>
         <link>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/</link>
         <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>

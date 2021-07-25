@@ -6,7 +6,34 @@
     <description>Recent content in 이산수학 on Ssabum&#39;s Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CS]이산수학 3rd</title>
+      <link>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/</guid>
+      <description>알고리즘  순서대로 정의된 절차
+모든 동작은 명확하게 정의되어 실행 가능해야 한다.
+일정한 시간 안에 반드시 원하는 결과가 나와야 한다.
+ 1. 알고리즘 구조  순차적 구조 분기 구조 반복 구조 점프 구조  2. 알고리즘 기술 방법  플로우 차트 프로그램 언어 코드 pseudocode  그래프  정점vertex과 간선edge들의 집합으로 이루어진 집합
+ 1. 오일러 그래프  오일러 경로 : 그래프의 모든 연결선을 한번만 방문하는 경로 오릴러 순환 : 시작점과 끝점이 동일한 오일러 경로 오일러 그래프 : 오일러 순환이 존재하는 그래프 차수 : 정점에 접합된 연결선의 수  2.</description>
+    </item>
+    
+    <item>
+      <title>[CS]이산수학 4th</title>
+      <link>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-4th/</guid>
+      <description>언어  기본요소들의 집합으로 만들어지는 문자열
+  알파벳 : 기호들의 집합 문법 : 알파벳으로부터 문장들의 집합을 형성하는 규칙이 존재 의미론 : 규칙에 합당하게 만들어진 문장들이 어떤 의미를 갖는지 결정  1. 형식언어 구성요소 : 심벌, 알파벳, 문자열, 공문자열
+2. 구-구문 문법 G = (V, T, S, P) 👉 V : 기호의 집합 T : 단말기호 S : 시작기호 P : 생성규칙
+
+3. 정규식 
+오토마타 1. 유한 상태기계  상태가 유한개 존재하는 기계</description>
+    </item>
+    
     <item>
       <title>[CS]이산수학</title>
       <link>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/</link>
