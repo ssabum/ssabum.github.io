@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>프로그래머스 on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/</link>
+    <description>Recent content in 프로그래머스 on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[SQL]MySQL</title>
+      <link>https://ssabum.github.io/content/sqlmysql/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/content/sqlmysql/</guid>
+      <description>MySQL👨‍💻  MySQL은 가장 널리 사용되고 있는 관계형 데이터베이스 관리 시스템(RDBMS: Relational DBMS)이다!
+ 1. SQL문 기초  SHOW DATABASES : 서버에 있는 DB보여주기 USE : 특정 DB 사용 SHOW TABLE, SHOW TABLE STATUS : 해당 DB의 테이블 이름보기 / 정보 조회 DESCRIBE (DESC) : 특정 테이블에 무슨 열이 있는지 확인 SELECT : 원하는 결과 출력하기 WHERE : 출력을 위한 조건 BETWEEN : 조건이 특정값 사이에 있을 때 IN : 안에 있는지 없는지 LIKE : _ 한글자 % / 글자수 제한 X Sub Query : =로 연결한 서브쿼리 ANY(SOME) : 하나라도 만족하면 ALL : 모두 만족 ORDER BY : 정렬 AES 오름차순 / DESC 내림차순 DISTINCT : 중복제거 LIMIT : 출력할 결과물 개수제한 GROUP BY : 그룹으로 묶어서 집계함수와 함께 사용 HAVING : 집계함수에 대한 조건 ROLLUP : GROUP BY절에서 WITH ROLLUP으로 사용하며 총합 또는 중간합계 JOIN : 여러 테이블을 합칠때 사용, ON을 통해 조건을 제시  2.</description>
+    </item>
+    
+  </channel>
+</rss>

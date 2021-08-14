@@ -6,7 +6,131 @@
         <description>Recent content on Ssabum&#39;s Devlog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[SQL]MySQL</title>
+        <link>https://ssabum.github.io/content/sqlmysql/</link>
+        <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://ssabum.github.io/content/sqlmysql/</guid>
+        <description>&lt;img src="https://ssabum.github.io/content/sqlmysql/mysql.png" alt="Featured image of post [SQL]MySQL" /&gt;&lt;h1 id=&#34;mysql&#34;&gt;MySQL👨‍💻&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MySQL은 가장 널리 사용되고 있는 관계형 데이터베이스 관리 시스템(RDBMS: Relational DBMS)이다!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-sql문-기초&#34;&gt;1. SQL문 기초&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SHOW DATABASES : 서버에 있는 DB보여주기&lt;/li&gt;
+&lt;li&gt;USE : 특정 DB 사용&lt;/li&gt;
+&lt;li&gt;SHOW TABLE, SHOW TABLE STATUS : 해당 DB의 테이블 이름보기 / 정보 조회&lt;/li&gt;
+&lt;li&gt;DESCRIBE (DESC) : 특정 테이블에 무슨 열이 있는지 확인&lt;/li&gt;
+&lt;li&gt;SELECT : 원하는 결과 출력하기&lt;/li&gt;
+&lt;li&gt;WHERE : 출력을 위한 조건&lt;/li&gt;
+&lt;li&gt;BETWEEN : 조건이 특정값 사이에 있을 때&lt;/li&gt;
+&lt;li&gt;IN : 안에 있는지 없는지&lt;/li&gt;
+&lt;li&gt;LIKE : _ 한글자 % / 글자수 제한 X&lt;/li&gt;
+&lt;li&gt;Sub Query : =로 연결한 서브쿼리&lt;/li&gt;
+&lt;li&gt;ANY(SOME) : 하나라도 만족하면&lt;/li&gt;
+&lt;li&gt;ALL : 모두 만족&lt;/li&gt;
+&lt;li&gt;ORDER BY : 정렬 AES 오름차순 / DESC 내림차순&lt;/li&gt;
+&lt;li&gt;DISTINCT : 중복제거&lt;/li&gt;
+&lt;li&gt;LIMIT : 출력할 결과물 개수제한&lt;/li&gt;
+&lt;li&gt;GROUP BY : 그룹으로 묶어서 집계함수와 함께 사용&lt;/li&gt;
+&lt;li&gt;HAVING : 집계함수에 대한 조건&lt;/li&gt;
+&lt;li&gt;ROLLUP : GROUP BY절에서 WITH ROLLUP으로 사용하며 총합 또는 중간합계&lt;/li&gt;
+&lt;li&gt;JOIN : 여러 테이블을 합칠때 사용, ON을 통해 조건을 제시&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-mysql-내장함수&#34;&gt;2. MySQL 내장함수&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;LENGTH() : 문자열 길이 반환&lt;/li&gt;
+&lt;li&gt;CONCAT() : 전달받은 문자열을 모두 결합하여 하나의 문자열로 반환, 하나라도 NULL값이 있으면 NULL을 반환&lt;/li&gt;
+&lt;li&gt;LOCATE() : 찾는 문자열이 처음으로 나타나는 위치를 찾아서 반환, 없으면 0을 반환하며, MySQL에서는 문자열의 시작 인덱스를 1로 계산&lt;/li&gt;
+&lt;li&gt;LEFT(), RIGHT() : 문자열의 왼쪽 / 오른쪽에서 부터 지정한 개수만큼 문자 반환&lt;/li&gt;
+&lt;li&gt;LOWER(), UPPER() : 소문자 / 대문자 변환하여 반환&lt;/li&gt;
+&lt;li&gt;REPLACE() : 문자열에서 특정 문자열을 다른 문자열로 변환하여 반환&lt;/li&gt;
+&lt;li&gt;TRIM() : 공백제거 / LEADING : 앞에 존재하면 제거 / TRAILING : 뒤에 존재하면 제거&lt;/li&gt;
+&lt;li&gt;FORMAT() : 숫자타입의 데이터를 세자리마다 쉼표로 구분&lt;/li&gt;
+&lt;li&gt;FLOOR(), CEIL(), ROUND() : 내림 / 올림 / 반올리&lt;/li&gt;
+&lt;li&gt;SQRT(), POW(), EXP(), LOG() : 양의 제곱근 / 첫째 인수를 밑, 둘째 인수를 지수로 거듭제곱 / 자연상수의 거듭제곱 / 자연로그&lt;/li&gt;
+&lt;li&gt;SIN(), COS(), TAN() : 사인 / 코사인 / 탄젠트&lt;/li&gt;
+&lt;li&gt;ABS(), RAND() : 절대값 / 0~1사이의 하나의 실수를 무작위로 생성&lt;/li&gt;
+&lt;li&gt;NOW(), CURDATE(), CURTIME() : 현재 날짜와 시간 / 현재 날짜 / 현재 시간&lt;/li&gt;
+&lt;li&gt;DATE(), MONTH(), DAY(), HOUR(), MINUTE(), SECOND() : 전달받은 값에 대한 날짜 정보 / 월 정보 / 일 정보 / 시간 정보 / 분 정보 / 초 정보&lt;/li&gt;
+&lt;li&gt;MONTHNAME(), DAYNAME() : 월에 해당하는 이름을 반환 / 요일에 해당하는 이름을 반환&lt;/li&gt;
+&lt;li&gt;DAYOFWEEK(), DAYOFMONTH, DAYOFYEAR() : 일자가 해당 주에서 몇번째 날짜인지(일요일=1, 토요일=7) / 일자가 해당 월에서 몇번째 날짜인지(0~31) / 일자가 해당 연도에서 몇번째 날인지(1~366)&lt;/li&gt;
+&lt;li&gt;DATE_FORMAT() : 전달받은 형식에 맞춰 날짜와 시간 정보를 문자열로 반환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-sql-고급&#34;&gt;3. SQL 고급&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CREATE TABLE AS SELECT : 테이블을 복사하여 생성&lt;/li&gt;
+&lt;li&gt;CREATE DATABASE : DB 생성&lt;/li&gt;
+&lt;li&gt;CREATE TABLE : 테이블 생성&lt;/li&gt;
+&lt;li&gt;ALTER TABLE (ADD, MODIFY, DROP) : 테이블 컬럼 수정 작업 추가 / 타입 수정 / 삭제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;1-index&#34;&gt;1. INDEX&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;원하는 데이터를 빠르게 찾기 위해 사용&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;CREATE INDEX, ADD INDEX : ON을 사용해 특정 테이블에 인덱스 생성 / 추가&lt;/li&gt;
+&lt;li&gt;SHOW INDEX : 인덱스 정보 보기&lt;/li&gt;
+&lt;li&gt;CREATE UNIQUE INDEX : 중복값을 허용하지 않는 인덱스 생성&lt;/li&gt;
+&lt;li&gt;FULLTEXT INDEX : 일반 인덱스와 다르게 매우 빠르게 테이블의 모든 텍스트 컬럼을 검색&lt;/li&gt;
+&lt;li&gt;INDEX 삭제 (ALTER) : 인덱스 삭제&lt;/li&gt;
+&lt;li&gt;DROP INDEX : ON을 사용해 특정 테이블의 인덱스 삭제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-view&#34;&gt;2. VIEW&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DB에 존재하는 일종의 가상 테이블&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;CREATE VIEW : AS를 이용해 해당 컬럼을 가지는 뷰 생성&lt;/li&gt;
+&lt;li&gt;ALTER VIEW : 뷰 수정&lt;/li&gt;
+&lt;li&gt;DROP VIEW : 뷰 삭제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-데이터-추가&#34;&gt;3. 데이터 추가&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;INSERT : INTO를 사용하여 데이터 추가&lt;/li&gt;
+&lt;li&gt;INSERT INTO SELECT : 다른 테이블에 있는 데이터를 추가&lt;/li&gt;
+&lt;li&gt;UPDATE : SET을 사용하여 데이터를 수정&lt;/li&gt;
+&lt;li&gt;DELETE : 데이터 삭제, 테이블 용량 자체는 줄지 않는다&lt;/li&gt;
+&lt;li&gt;TRUNCATE : 데이터 삭제, 복구 불가&lt;/li&gt;
+&lt;li&gt;DROP TABLE : 테이블 삭제&lt;/li&gt;
+&lt;li&gt;DROP DATABASE : DB 삭제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-문제-풀이&#34;&gt;4. 문제 풀이&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://programmers.co.kr/learn/challenges&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;프로그래머스 SQL 고득점 Kit 문제&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;추가-내용&#34;&gt;추가 내용&lt;/h3&gt;
+&lt;h4 id=&#34;1-set변수-활용&#34;&gt;1. SET변수 활용&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;SET&lt;/code&gt;을 이용하면 변수처럼 활용할 수 있다. 단, &lt;code&gt;SET&lt;/code&gt; 이외의 명령문에서는 &lt;code&gt;=&lt;/code&gt;가 비교연산자로 취급되므로 &lt;code&gt;SELECT&lt;/code&gt;로 변수를 선언하고 값을 대입할 때는 &lt;code&gt;:=&lt;/code&gt;를 사용해야 한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 0~24시까지 시간별로 데이터를 카운트 할 때
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;-- 데이터에 없는 시간까지 출력하기 위해서 SET변수 활용
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;SET&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HOUR&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HOUR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HOUR&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;AS&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;HOUR&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;COUNT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ANIMAL_OUTS&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;HOUR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;DATETIME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HOUR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;AS&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;COUNT&amp;#39;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ANIMAL_OUTS&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HOUR&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;23&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;2-outer-join&#34;&gt;2. OUTER JOIN&lt;/h4&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 161; flex-basis: 387px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/sqlmysql/join.PNG&#34; data-size=&#34;1013x627&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/sqlmysql/join.PNG&#34;
+				srcset=&#34;https://ssabum.github.io/content/sqlmysql/join_hu69034b6256c20cceff54082638f58d32_98362_480x0_resize_box_2.PNG 480w, https://ssabum.github.io/content/sqlmysql/join_hu69034b6256c20cceff54082638f58d32_98362_1024x0_resize_box_2.PNG 1024w&#34;
+				width=&#34;1013&#34;
+				height=&#34;627&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&#34;3-data_format&#34;&gt;3. DATA_FORMAT&lt;/h4&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 73; flex-basis: 175px&#34;&gt;
+		&lt;a href=&#34;https://ssabum.github.io/content/sqlmysql/format.jpg&#34; data-size=&#34;1140x1559&#34;&gt;&lt;img src=&#34;https://ssabum.github.io/content/sqlmysql/format.jpg&#34;
+				srcset=&#34;https://ssabum.github.io/content/sqlmysql/format_hu63972fa01301ee4ee3153a7b971cddbe_166924_480x0_resize_q75_box.jpg 480w, https://ssabum.github.io/content/sqlmysql/format_hu63972fa01301ee4ee3153a7b971cddbe_166924_1024x0_resize_q75_box.jpg 1024w&#34;
+				width=&#34;1140&#34;
+				height=&#34;1559&#34;
+				loading=&#34;lazy&#34;
+				&gt;
+		&lt;/a&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>[CS]이산수학 3rd</title>
         <link>https://ssabum.github.io/content/cs%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-3rd/</link>
         <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
