@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git-flow on Ssabum&#39;s Devlog</title>
+    <link>https://ssabum.github.io/tags/git-flow/</link>
+    <description>Recent content in git-flow on Ssabum&#39;s Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ssabum.github.io/tags/git-flow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Git]git-flow</title>
+      <link>https://ssabum.github.io/content/gitgit-flow/</link>
+      <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ssabum.github.io/content/gitgit-flow/</guid>
+      <description>🛠 버전 관리 시스템 어느 정도 규모가 있는 소프트웨어를 개발하다보면 소스코드의 버전 관리 시스템(Version Control System)을 사용하게 된다. 비교적 오래된 프로젝트의 경우 SVN(Subversion)이나 CVS(Concurrent Versions System), 심지어 파일 서버에 소스코드를 보관하는 형태로 코드를 관리하는 경우도 있다. 하지만 최근에는 DVCS(Distributed Concurrent Versions System) 인 git으로 어느정도 통일되는 추세이다. git이 갖는 큰 장점중 하나는 효율적인 브랜치 관리다. 쉽게 브랜치를 생성하여 기능을 추가하거나 버그를 수정할 수 있고, 만들어진 브랜치를 손쉽게 병합 할 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>

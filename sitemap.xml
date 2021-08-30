@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ssabum.github.io/content/sqlmysql/</loc>
-    <lastmod>2021-08-14T00:00:00+00:00</lastmod>
+    <loc>https://ssabum.github.io/content/gitgit-flow/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ssabum.github.io/categories/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/git/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/git-flow/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/post/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/categories/til/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/content/sqlmysql/</loc>
     <lastmod>2021-08-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -18,27 +53,7 @@
   </url>
   
   <url>
-    <loc>https://ssabum.github.io/post/</loc>
-    <lastmod>2021-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ssabum.github.io/tags/sql/</loc>
-    <lastmod>2021-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/</loc>
-    <lastmod>2021-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/tags/</loc>
-    <lastmod>2021-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/categories/til/</loc>
     <lastmod>2021-08-14T00:00:00+00:00</lastmod>
   </url>
   
