@@ -3,12 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ssabum.github.io/content/gitgit-flow/</loc>
-    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+    <loc>https://ssabum.github.io/categories/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ssabum.github.io/categories/</loc>
+    <loc>https://ssabum.github.io/post/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/project/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/sports/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/ssafy/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/tags/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/categories/toy-project/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/content/%ED%98%BC%EC%9E%90%EB%AD%90%ED%95%98%EB%8B%88/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ssabum.github.io/content/gitgit-flow/</loc>
     <lastmod>2021-08-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -19,21 +59,6 @@
   
   <url>
     <loc>https://ssabum.github.io/tags/git-flow/</loc>
-    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/post/</loc>
-    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/</loc>
-    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/tags/</loc>
     <lastmod>2021-08-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -349,11 +374,6 @@
   
   <url>
     <loc>https://ssabum.github.io/content/samsung-sw-academy-for-youth/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/tags/ssafy/</loc>
     <lastmod>2021-04-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -674,10 +694,6 @@
   
   <url>
     <loc>https://ssabum.github.io/search/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ssabum.github.io/categories/toy-project/</loc>
   </url>
   
 </urlset>
